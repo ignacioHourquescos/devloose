@@ -2,10 +2,16 @@
 import ss from './CardContainer.module.scss'
 import Card from '../Card/Card'
 import portfolio from '../../utils/utils.js'
+import { useEffect, useState } from "react";
+import useAppContext from "../../Context/UseAppContext";
 
-export default function CardContainer() {
+ const CardContainer = () => {
+   const {lang} = useAppContext();
+
+
+
   return (
-    <div className={ss.container}>
+    <div className={ss.container} >
 
       {portfolio.map(element =>
          <Card project={element}/>
@@ -14,3 +20,5 @@ export default function CardContainer() {
     
   )
 }
+
+export default CardContainer

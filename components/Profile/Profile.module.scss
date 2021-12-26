@@ -3,12 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 
 .container{
-   border:2px solid black;
-   border-left:6px solid black;
+   // border:2px solid black;
+   //border-right:6px solid black;
    margin:2rem;
    width:80%;
    padding:2rem;
    height:100%;
+   position:relative;
       @media screen and (max-width: 800px){
       width:90%;
       position:relative;
@@ -26,6 +27,38 @@
    }
    .brief{
       font-family: 'Quattrocento', serif;
+      margin-top:2rem;
+      font-size:1.5rem;
+   }
+
+   .index{
+      position:absolute;
+      right:0;
+      top:0;
+   }
+
+}
+
+.tools{
+   // height:4rem;
+   display:flex;
+   flex-direction:row;
+   justify-content:flex-start;
+   margin-top:4rem;
+   // width: min-content;
+   // border-radius:200px;
+   padding-right:1rem;
+
+   svg{
+      //  background-color: rgba(63, 63, 63, 0.918);
+      //  padding:1rem;
+      //  border-radius:400px;
+      //  border:0px;
+      //  height:2rem;
+      //  width:2rem;
+       margin:0.5rem;
+
+   
    }
 
 }

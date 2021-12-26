@@ -3,14 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 .container{
 
-
-   
+  
    margin-bottom:5%;
    margin-right:5%;
 
    position:relative;
    display: flex;
    flex-direction: column;
+justify-content: center;
+justify-items: center;
    @media screen and (max-width: 800px){
       width:90%;
       position:relative;
@@ -28,9 +29,14 @@
    padding-top:10%;
    font-family: 'Oswald', sans-serif;
    height:80vh;
+   margin:10vh 0;
    margin-bottom:10%;
+  
    border: 2px solid black;
    border-left: 6px solid black;
+
+   display: flex;
+
    
   
    .title{
@@ -68,9 +74,14 @@
    }
    .arrowBack{
       position:absolute;
-      left:2rem;
-      top:2rem;
+      left:4rem;
+      top:4rem;
       z-index:110;
+      @media screen and (max-width: 800px){
+       left:0.5rem;
+         
+         
+      }
    }
    .phone{
       border: 40px solid #ddd;

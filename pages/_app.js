@@ -1,13 +1,12 @@
 import '../styles/globals.css'
+import { AppProvider }  from '../Context/UseAppContext'
 
-
-import Selectors from '../components/Selectors/Selectors'
 function MyApp({ Component, pageProps }) {
-  return (<>
-  {/* <Selectors/> */}
+  return ( <AppProvider>
 
   <Component {...pageProps} />
-  </>)
+  </AppProvider>)
+  
 }
 
 export default MyApp
