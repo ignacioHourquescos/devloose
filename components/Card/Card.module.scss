@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+.container{
+
+
+   
+   margin-bottom:5%;
+   margin-right:5%;
+
+   position:relative;
+   display: flex;
+   flex-direction: column;
+   @media screen and (max-width: 800px){
+      width:90%;
+      position:relative;
+      top:0;
+      left:0;
+      margin:5%;
+      margin-bottom:5%;
+      
+      
+   }
+}
+
+.description{
+   padding:1rem;
+   padding-top:10%;
+   font-family: 'Oswald', sans-serif;
+   height:80vh;
+   margin-bottom:10%;
+   border: 2px solid black;
+   border-left: 6px solid black;
+   
+  
+   .title{
+      margin-bottom: 0;
+      margin-top:0;
+      padding-bottom: 0;
+      margin-top:2rem;
+   }
+
+   .detail{
+      padding:0;
+      margin:0;
+      color:rgb(58, 58, 58);
+      margin-bottom:2rem;
+   }
+   .type{
+      margin:0;
+      padding:0;
+      font-size:1.5rem;
+      color:rgb(8, 8, 8);
+      border:2px solid grey;
+      padding:0 0.5rem;
+      margin-right:0.5rem;
+      margin-bottom:4rem;
+      background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAADtJREFUKFOFzMkNACAMA0FSpKtMkSAjgTicZN+jtVbk7t0yQwDAQrQAJxKdQKIXfEiBC0VgowxMVAGiASgaIwpVaFH0AAAAAElFTkSuQmCC) repeat;
+   }
+   .brief{
+      font-family: 'Quattrocento', serif;
+   }
+   .arrow{
+      position:absolute;
+      right:2rem;
+      bottom:4rem;
+      z-index:110;
+   }
+   .arrowBack{
+      position:absolute;
+      left:2rem;
+      top:2rem;
+      z-index:110;
+   }
+   .phone{
+      border: 40px solid #ddd;
+      border-width: 55px 7px;
+      border-radius: 40px;
+      margin: 50px auto;
+      overflow: hidden;
+      transition: all 0.5s ease;   
+   }
+}

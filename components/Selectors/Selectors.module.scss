@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+.container{
+
+   
+   .language_selection{
+         position:fixed;
+   right:4rem;
+   bottom:calc(50% - 50px);
+   font-family: 'Oswald', sans-serif;
+   font-size:1.5rem;
+      padding:0.5rem;
+
+      .language{
+         padding:0.5rem;
+         border-bottom:2px solid black;
+      }
+   }
+
+   .mode_selection{
+      position:fixed;
+left:4rem;
+bottom:calc(50% - 50px);
+font-family: 'Oswald', sans-serif;
+font-size:1.5rem;
+   padding:0.5rem;
+
+   .mode{
+      padding:0.5rem;
+      border-bottom:2px solid black;
+   }
+}
+
+}
