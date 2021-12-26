@@ -1,7 +1,6 @@
 
 import ss from './Card.module.scss'
 import { useState } from 'react'
-import useAppContext from "../../Context/UseAppContext";
 
 
 const Card =({project})=> {
@@ -71,7 +70,7 @@ const renderVideo = (path) =>{
       style="  
                margin:5%;
                
-               position:absolute;top:5%;right:0%;height:90%;object-fit:contain; z-index:1;
+               position:absolute;top:5%;right:0%;height:80%;object-fit:contain; z-index:1;
       
                
                "

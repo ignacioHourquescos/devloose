@@ -1,7 +1,7 @@
 const portfolio=[
        ///HSR ABOGADOS
        {   
-         color: "WEB",
+         color: "DESIGN + DEVELOPMENT",
        title:
            {
                es:"WEB INSTITUCIONAL PARA ESTUDIO DE ABOGADOS",
@@ -47,7 +47,7 @@ const portfolio=[
     img:"/renovapp.png",
        // icons:{html:1, css:0, react:1, node:0, bootstrap:0, mysql:0, firebase:1, sass:1, js:0, google:1, next:1, firebase:1 },
        icons:["node","html"],
-    color: "WEBAPP",
+    color: "DEVELOPMNET",
     size:1
  },
   
