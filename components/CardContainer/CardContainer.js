@@ -14,7 +14,7 @@ import useAppContext from "../../Context/UseAppContext";
     <div className={ss.container} >
 
       {portfolio.map(element =>
-         <Card project={element}/>
+         <Card key={portfolio.link} project={element}/>
       )}
     </div>
     
