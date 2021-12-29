@@ -18,6 +18,8 @@
       left:0;
       margin:5%;
       margin-bottom:10%;
+      margin:0;
+      width:100%;
       
       
    }
@@ -25,11 +27,19 @@
    .intro{
       font-family: 'Oswald', sans-serif;
       font-size:3rem;
+      @media #{$mobile} {
+        font-size: 3rem;
+        text-align: center;
+      }
    }
    .brief{
       font-family: 'Quattrocento', serif;
       margin-top:2rem;
       font-size:1.5rem;
+      @media #{$mobile} {
+         font-size: 1.2rem;
+         text-align: center;
+       }
    }
 
    .index{
@@ -49,6 +59,9 @@
    // width: min-content;
    // border-radius:200px;
    padding-right:1rem;
+   @media #{$mobile} {
+      justify-content:center;
+    }
 
    svg{
       //  background-color: rgba(63, 63, 63, 0.918);
@@ -58,6 +71,7 @@
       //  height:2rem;
       //  width:2rem;
        margin:0.5rem;
+
 
    
    }

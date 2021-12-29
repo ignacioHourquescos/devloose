@@ -4,35 +4,51 @@
 
 @import "../../styles/constants.scss";
 
-.container{
+.container {
 
-   
-   .language_selection{
-         position:fixed;
-   right:4rem;
-   bottom:calc(50% - 50px);
-   font-family: 'Oswald', sans-serif;
-   font-size:1.5rem;
-      padding:0.5rem;
 
-      .language{
-         padding:0.5rem;
-         border-bottom:2px solid black;
+   .language_selection {
+      // position:fixed;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: 4rem;
+      bottom: 0;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      padding: 0.5rem;
+
+      .language {
+         padding: 0.5rem;
+         border-bottom: 2px solid black;
       }
    }
 
-   .mode_selection{
-      position:fixed;
-left:4rem;
-bottom:calc(50% - 50px);
-font-family: 'Oswald', sans-serif;
-font-size:1.5rem;
-   padding:0.5rem;
 
-   .mode{
-      padding:0.5rem;
-      border-bottom:2px solid black;
+   
+   .mode_selection {
+      position: fixed;
+      left: 4rem;
+      bottom: calc(50% - 50px);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+
+      .mode {
+         padding: 0.5rem;
+         border-bottom: 2px solid black;
+      }
    }
+
 }
 
+.lang_mobile {
+   position: fixed;
+   top:2.5rem;
+   right:1.2rem;
+
+   font-family: 'Oswald', sans-serif;
+   font-size: 1rem;
+   padding: 0 0.5rem;
+   border: 2px solid black;  
 }

@@ -8,12 +8,16 @@ export const AppProvider = ({ children }) => {
     const [lang, setLang] = useState("ESP");
    const [generalDisplayVideo, setGeneralDisplayVideo]  =useState(false)
 
-    const displayIngles = (value) =>{
+    const displayENG = (value) =>{
         setLang("ENG");
 	}
-    const displayEspañol = (value) =>{
+    const displayESP = (value) =>{
         setLang("ESP");
 	}
+
+   const displayPOR = (value) =>{
+      setLang("POR");
+ }
 
    const handleGeneralDisplayVideo = (value) =>{
       setGeneralDisplayVideo(value);
@@ -24,8 +28,9 @@ export const AppProvider = ({ children }) => {
         <AppContext.Provider value={{
 				lang, generalDisplayVideo,
             handleGeneralDisplayVideo,
-                  displayIngles,
-                  displayEspañol
+                  displayENG,
+                  displayESP,
+                  displayPOR
             }}>{children}</AppContext.Provider>)
 }
 
