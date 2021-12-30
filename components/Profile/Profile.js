@@ -43,9 +43,9 @@ export default function CardContainer() {
 const mainData = 
    {
       a: {
-         esp:"Hola, soy Ignacio",
-         eng:"Hi,I am Ignacio",
-         por:"Oi, sou Ignacio"
+         esp:"HOLA, SOY IGNACIO",
+         eng:"HI, I AM IGNACIO",
+         por:"Oi, SOU O IGNACIO"
       },
       b: {
          esp:"Estos son algunos de los trabajos que vengo desarollando desde el 2019",

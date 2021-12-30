@@ -2,10 +2,15 @@
 import ss from './Card.module.scss'
 import { useState } from 'react'
 
+import useAppContext from "../../Context/UseAppContext";
+
+
+  
 
 const Card =({project})=> {
 
    const[displayVideo, setDisplayVideo] = useState(false)
+   const {lang} = useAppContext();
 
    const showCard = () =>{
       setDisplayVideo(false);
@@ -24,7 +29,7 @@ const Card =({project})=> {
             displayVideo
          ?
             <div className={ss.video}>
-               <div style={{padding:"0%"}} dangerouslySetInnerHTML={{__html: renderVideo('./HSR.m4v')}}/>
+               <div style={{padding:"0%"}} dangerouslySetInnerHTML={{__html: renderVideo(project.video)}}/>
 
                <div className={ss.arrowBack} onClick={()=>showCard()}>{close}</div>
             </div>
@@ -34,7 +39,8 @@ const Card =({project})=> {
                <h1 className={ss.title} >{project.title.es} </h1>
                <h4 className={ss.detail} >Made for HSR abogados / Ago2021</h4>
                <h3 className={ss.brief}>{project.desc.es}</h3>
-               <div className={ss.arrow} onClick={()=>showVideo()}>Mas Detalle</div>
+               <div className={ss.arrow} onClick={()=>showVideo()}>
+               {lang=="ESP" ? "Mas Detalle" : lang=="ENG" ? "More Detail":"Mas detalhe"}</div>
             </div>
          }
       </div>

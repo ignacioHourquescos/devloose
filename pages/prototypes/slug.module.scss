@@ -1,0 +1,11 @@
+.arrow_back{
+   position:fixed;
+   top:2rem;
+   left:50%;
+   z-index:101;
+   @media screen and (max-width: 800px){
+      top:0.5rem;
+      
+      
+   }
+}
