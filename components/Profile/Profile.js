@@ -43,24 +43,24 @@ export default function CardContainer() {
 const mainData = 
    {
       a: {
-         esp:"HOLA, SOY IGNACIO",
-         eng:"HI, I AM IGNACIO",
-         por:"Oi, SOU O IGNACIO"
+         esp:"WEBALUX",
+         eng:"BARBELUX",
+         por:"BELUX"
       },
       b: {
-         esp:"Estos son algunos de los trabajos que vengo desarollando desde el 2019",
-         eng:"Here you can find some projects that I have been developing since 2019",
-         por:"Esses som algums projeitos que eu venho desenvolvende desde 2019 "
+         esp:"Combinamos logica, innovacion y diseño para crear productos de alto valor",
+         eng:"We combine logic, innovation and design to create digital products",
+         por:"Combinamos logica, desenho e innovacao para criar produos de alto valor "
       },
       c: {
-         esp:"Esta compuesto por aplicaciones web y prototipos funcionales",
-         eng:"it's composed by web apps and functional prototipes",
-         por:"É composto por aplicativos da web e protótipos funcionais"
+         esp:"De la idea a la acción",
+         eng:"From ideas to action",
+         por:"Das ideais a accao"
       },
       d: {
-         esp:"Espero que te gusten",
-         eng:"Hope you like them",
-         por:"Espero que voce goste"
+        esp:"Siempre abiertos a nuevos desafios",
+        eng:"Always open to new challenges",
+        por:"Sempre aberto a novos desafios"
       },
    }
 

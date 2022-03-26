@@ -13,6 +13,9 @@
    flex-direction: column;
 justify-content: center;
 justify-items: center;
+:hover{
+  background-color: violet;
+}
    @media screen and (max-width: 800px){
       width:90%;
       position:relative;
@@ -91,9 +94,10 @@ justify-items: center;
       right:2rem;
       bottom:4rem;
       z-index:110;
-      font-size:1.3rem;
+      font-size:1.5rem;
+      font-weight: bold;
       border:2px solid grey;
-      padding:0.3rem 0.7rem;
+      padding:0.3rem 0.9rem;
       margin-right:0.5rem;
       margin-bottom:2rem;
       background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAADtJREFUKFOFzMkNACAMA0FSpKtMkSAjgTicZN+jtVbk7t0yQwDAQrQAJxKdQKIXfEiBC0VgowxMVAGiASgaIwpVaFH0AAAAAElFTkSuQmCC) repeat;

@@ -1,9 +1,44 @@
 const portfolio = [
-	///1)HSR ABOGADOS
-	{
+    //0)SYSONE
+    {
       link: "https://www.mayoristaelfuerte.com",
+      type: "DESIGN + DEVEOLPMENT",
+      video: "/queHacemosHoy.m4v",
+      client: "SYSONE",
+      title: {
+        es: "APLICACIÓN WEB PARA ASEGURADORAS",
+        en: "ASSURANCE APP",
+        pt: "APLICACIÓN WEB PARA ASEGURADORAS",
+      },
+      desc: {
+        es: "Se desarollo la interfaz para sistema de back office de emrpesas aseguradoras",
+        en: "WEb design for food wholesaler. Focused on builidng a dynamic price list for clients ",
+        pt: "Disenho web para atacadista de produtos naturais. Foco em lista de precos",
+      },
+    },
+
+
+   	///1)RENOVAPP
+	{
+		link: "https://www.mayoristaelfuerte.com",
+		type: "WEBAPP + PWA",
+		video: "/queHacemosHoy.m4v",
+		title: {
+			es: "SISTEMA DE GESTION DE PEDIDOS",
+			en: "WHOLESALER MANAGEMENT SYSTEM",
+			pt: "Mayorista El Fuerte",
+		},
+		desc: {
+			es: "Se desarollo un sistema de gestion de pedidos con estadisticas de ventes y manejo de mercaderia faltatne ",
+			en: "WEb design for food wholesaler. Focused on builidng a dynamic price list for clients ",
+			pt: "Disenho web para atacadista de produtos naturais. Foco em lista de precos",
+		},
+	},
+	///2)HSR ABOGADOS
+	{
+      link: "https://www.hsrabogados.com",
 		video: "/HSR.m4v",
-		color: "DESIGN + DEVELOPMENT",
+		type: "WEB DESIGN",
 		title: {
 			es: "WEB INSTITUCIONAL PARA ESTUDIO DE ABOGADOS",
 			en: "Mayorista El Fuerte",
@@ -14,43 +49,13 @@ const portfolio = [
 			pt: "Disenho web para atacadista de produtos naturais. Foco em lista de precos",
 		},
 	},
-	///2)RENOVAPP
-	{
-		link: "https://www.mayoristaelfuerte.com",
-		color: "DEVELOPMNET",
-		video: "/queHacemosHoy.m4v",
-		title: {
-			es: "PANEL DE CONTROL A MEDIDA",
-			en: "Mayorista El Fuerte",
-			pt: "Mayorista El Fuerte",
-		},
-		desc: {
-			es: "Se desarollo una aplicacion web para mostrar los principales indicadores del negocio en tiempo real, e incluir algunos aspectos relacionasdos con inventario e informaciond e clietnes ",
-			en: "WEb design for food wholesaler. Focused on builidng a dynamic price list for clients ",
-			pt: "Disenho web para atacadista de produtos naturais. Foco em lista de precos",
-		},
-	},
 
-	//3)GREEN HAB
-	{
-		link: "https://www.libreria770.com",
-		color: "WEBAPP",
-		video: "/greenHab.m4v",
-		title: {
-			es: "WEBAPP PARA EMPRENDIMIENTO DE HIDROPONIA",
-			en: "Office supplies Wholesaler",
-			pt: "Livrería de atacado ",
-		},
-		desc: {
-			es: "Web comercial para librería. Se armaron secciones de ofertas de productos puntuales para diferentes tipos de clientes",
-			en: "Commercial web for office supplies company. Specific section were designed for different tpo of clients",
-			pt: "Site comercial para livraría. Seções de ofertas de produtos específicos foram disenhadas para diferentes tipos de clientes",
-		},
-	},
+
+
 
 	//4)CAMARA
 	{
-		color: "WEB",
+		type: "WEB DESIGN",
 		link: "https://camaraquilmes.netlify.app",
 		video: "/queHacemosHoy.m4v",
 		title: {
@@ -67,7 +72,7 @@ const portfolio = [
 
 	//5)RENOVA
 	{
-		color: "WEBAPP",
+		type: "WEB DESIGN",
 		video: "/queHacemosHoy.m4v",
 		link: "https://listasrenova.netlify.app/views/html/indexofertas.html",
 		title: {
@@ -84,7 +89,7 @@ const portfolio = [
 
 	///6)ELFUERTE
 	{
-		color: "WEBAPP",
+		type: "WEB DESIGN",
 		link: "https://www.mayoristaelfuerte.com",
 		video: "/queHacemosHoy.m4v",
 		title: {
@@ -98,10 +103,10 @@ const portfolio = [
 			pt: "Disenho web para atacadista de produtos naturais. Foco em lista de precos",
 		},
 	},
-   ///7)ELFUERTE
+   ///7)LA GALERA
 	{
 		link: "https://lagalera.netlify.app",
-		color: "WEBAPP",
+		type: "E COMMERCE",
 		video: "/queHacemosHoy.m4v",
 		title: {
 			es: "ECOMMERCE PARA EMPRENDIMIENTO DE COMIDA",
@@ -115,13 +120,29 @@ const portfolio = [
 		},
 	},
 	//8)QUE HACEMOS HOY
+   	//3)GREEN HAB
+	{
+
+		type: "PROTOTYPE",
+		video: "greenHab",
+		title: {
+			es: "WEBAPP PARA EMPRENDIMIENTO DE HIDROPONIA",
+			en: "Office supplies Wholesaler",
+			pt: "Livrería de atacado ",
+		},
+		desc: {
+			es: "Web comercial para librería. Se armaron secciones de ofertas de productos puntuales para diferentes tipos de clientes",
+			en: "Commercial web for office supplies company. Specific section were designed for different tpo of clients",
+			pt: "Site comercial para livraría. Seções de ofertas de produtos específicos foram disenhadas para diferentes tipos de clientes",
+		},
+	},
 	{
 		link: "https://www.behance.net/gallery/96068307/QueHacemosHoy",
-		color: "PROTOTYPE",
-		video: "/queHacemosHoy.m4v",
+		type: "PROTOTYPE",
+		video: "queHacemosHoy",
 		title: {
-			es: "Que Hacemos Hoy",
-			en: "Que Hacemos Hoy",
+			es: "APPLICACION DE EVENTOS CULTURALES",
+			en: "CULTURAL EVENTS APP",
 			pt: "Que Hacemos Hoy",
 		},
 		desc: {

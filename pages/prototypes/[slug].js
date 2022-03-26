@@ -10,7 +10,7 @@ const Prototype =({project})=> {
 	const slug = router.query.slug;
 
   return (
-    <div className={ss.container}  style={{ scrollSnapAlign: "center", scrollSnapStop: "always" }} >
+    <div className={ss.container}  style={{ backgroundColor:"black !important",scrollSnapAlign: "center", scrollSnapStop: "always" }} >
 
       <div className={ss.description} style={{backgroundImage:"none"}} >
    
@@ -47,8 +47,7 @@ const renderVideoMobile = (path) => {
       playsinline
       muted
       autoplay
-      style=" position:fixed;margin:10%;height:90%;object-fit:contain; z-index:1;
-      border:10px solid black;  border-radius:30px"
+      style=" position:fixed;margin:10%;height:90%;object-fit:contain; z-index:1;"
       preload="metadata"
       
             >
@@ -64,8 +63,7 @@ const renderVideoDesktop = (path) => {
       playsinline
       muted
       autoplay
-      style=" position:fixed;margin:5%;left:35%;height:80%;object-fit:contain; z-index:1;      border:10px solid black;  border-radius:30px"
-      preload="metadata"
+      style=" position:fixed;margin:5%;left:35%;height:80%;object-fit:contain; z-index:1;"
             >
    <source src=${path} type="video/mp4" />
 </video>`;
