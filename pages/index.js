@@ -59,7 +59,7 @@ stroke-dasharray: ${dasharray};
 			</div>
       :
       <div className={ss.main} onClick={()=>setDisplayContent(true)}>
-		<svg viewBox="0 0 500 500" width="100%" height="100%" style={{padding:"5rem", border:"2px solid green",display:"flex",alignContent:"center", alignItems:"center"}}>
+		<svg viewBox="0 0 600 400" width="100%" height="100%" style={{padding:"1rem 0rem", marginTop:"15rem",display:"flex",alignContent:"center", alignItems:"center"}}>
 				<PulseButton 
 					d={svgDrawings.chaosClarity}
 					fill="none"
@@ -67,6 +67,7 @@ stroke-dasharray: ${dasharray};
 					strokeWidth={1}
 				/>
 			</svg>
+      <button className={ss.action_button}>what is this?s</button>
       </div>
     }
 		</>

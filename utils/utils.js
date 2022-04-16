@@ -2,7 +2,7 @@ const portfolio = [
     //0)SYSONE
     {
       link: "https://www.mayoristaelfuerte.com",
-      type: "DESIGN + DEVEOLPMENT",
+      type: "PROTOTYPE",
       video: "/queHacemosHoy.m4v",
       client: "SYSONE",
       title: {
@@ -51,24 +51,22 @@ const portfolio = [
 	},
 
 
-
-
 	//4)CAMARA
-	{
-		type: "WEB DESIGN",
-		link: "https://camaraquilmes.netlify.app",
-		video: "/queHacemosHoy.m4v",
-		title: {
-			es: "WEB INSTITUCIONAL PARA CAMARA GASTRONOMICA ",
-			en: "Gastronomic Chamber ",
-			pt: "Câmara Gastronomica ",
-		},
-		desc: {
-			es: "Primera etapa de proyecto que agrupa agentes gastronomicos con el fin de compartir información para mejorar la competitividad del sector",
-			en: "First phase of a long term plan which seekes to group gastonomic agents which share information in order to improve competitiveness",
-			pt: "Primeira etapa do projeto que reúne agentes gastronômicos com o objetivo de compartilhar informações para melhorar a competitividade do setor",
-		},
-	},
+	// {
+	// 	type: "WEB DESIGN",
+	// 	link: "https://camaraquilmes.netlify.app",
+	// 	video: "/queHacemosHoy.m4v",
+	// 	title: {
+	// 		es: "WEB INSTITUCIONAL PARA CAMARA GASTRONOMICA ",
+	// 		en: "Gastronomic Chamber ",
+	// 		pt: "Câmara Gastronomica ",
+	// 	},
+	// 	desc: {
+	// 		es: "Primera etapa de proyecto que agrupa agentes gastronomicos con el fin de compartir información para mejorar la competitividad del sector",
+	// 		en: "First phase of a long term plan which seekes to group gastonomic agents which share information in order to improve competitiveness",
+	// 		pt: "Primeira etapa do projeto que reúne agentes gastronômicos com o objetivo de compartilhar informações para melhorar a competitividade do setor",
+	// 	},
+	// },
 
 	//5)RENOVA
 	{
@@ -119,7 +117,7 @@ const portfolio = [
 			pt: "Disenho centrado no usuario que permite adicionar e remover produtos de forma dinâmica, e poder visualizar as promoções de forma eficaz",
 		},
 	},
-	//8)QUE HACEMOS HOY
+
    	//3)GREEN HAB
 	{
 
@@ -136,6 +134,7 @@ const portfolio = [
 			pt: "Site comercial para livraría. Seções de ofertas de produtos específicos foram disenhadas para diferentes tipos de clientes",
 		},
 	},
+  	//8)QUE HACEMOS HOY
 	{
 		link: "https://www.behance.net/gallery/96068307/QueHacemosHoy",
 		type: "PROTOTYPE",

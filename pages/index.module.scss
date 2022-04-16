@@ -23,12 +23,23 @@
   justify-content: center;
   justify-items: center;
   align-items: center;
-  border:10px solid red;
+  position:relative;
   align-content: center;
   background-color: white;
    
   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAACNJREFUKFNj3LFjx38PDw9GBgKAoAKY/sGmEJsHB5sbsYU9ADwoCAuEH7F9AAAAAElFTkSuQmCC
   ) repeat;
+
+  .action_button{
+    position:absolute;
+    bottom:2rem;
+    right:2rem;
+    background-color: none;
+    color:none;
+    border:2px solid black;
+    padding:2rem;
+  }
+
 }
 
 
