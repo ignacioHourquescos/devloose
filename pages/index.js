@@ -2,19 +2,21 @@ import ss from "./index.module.scss";
 import CardContainer from "../components/CardContainer/CardContainer";
 import Profile from "../components/Profile/Profile";
 import Head from "next/head";
-
+import { useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 
 export default function Home() {
 
+  const [displayContent, setDisplayContent] = useState(false)
+
   const dasharray= 4001;
 
   const dash = keyframes`
-  from { stroke-dashoffset: 801;}
+  from { stroke-dashoffset: 4001;}
   to {stroke-dashoffset: 0; }`
 
 const animation = props =>
-css`${dash} 2s ease-out forwards`
+css`${dash} 5s ease-out forwards`
 
 const PulseButton = styled.path`
 animation: ${animation};
@@ -23,6 +25,7 @@ justify-content:center;
 justify-items:center;
 align-content:center;
 align-items:center;
+border: 2px solid blue;
 
 stroke-dasharray: ${dasharray};
 
@@ -39,17 +42,11 @@ stroke-dasharray: ${dasharray};
 				<meta property="og:description" content="Socios" />
 				<meta property="og:image" content="/logo.jpg" />
 			</Head>
-      {/* <div className={ss.main}>
-		<svg viewBox="0 0 400 400" width="100%" height="100%" style={{margin:"4rem"}}>
-				<PulseButton
-					d={svgDrawings.chaosClarity}
-					fill="none"
-					stroke="black"
-					strokeWidth={1}
-				/>
-			</svg>
-      </div> */}
+    
 
+      {displayContent
+      ?
+     
 			<div className={ss.container}>
 
 
@@ -60,6 +57,18 @@ stroke-dasharray: ${dasharray};
 					<CardContainer />
 				</div>
 			</div>
+      :
+      <div className={ss.main} onClick={()=>setDisplayContent(true)}>
+		<svg viewBox="0 0 500 500" width="100%" height="100%" style={{padding:"5rem", border:"2px solid green",display:"flex",alignContent:"center", alignItems:"center"}}>
+				<PulseButton 
+					d={svgDrawings.chaosClarity}
+					fill="none"
+					stroke="black"
+					strokeWidth={1}
+				/>
+			</svg>
+      </div>
+    }
 		</>
 	);
 }
