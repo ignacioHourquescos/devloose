@@ -39,7 +39,7 @@ stroke-dasharray: ${dasharray};
 				<meta property="og:description" content="Socios" />
 				<meta property="og:image" content="/logo.jpg" />
 			</Head>
-      <div className={ss.main}>
+      {/* <div className={ss.main}>
 		<svg viewBox="0 0 400 400" width="100%" height="100%" style={{margin:"4rem"}}>
 				<PulseButton
 					d={svgDrawings.chaosClarity}
@@ -48,7 +48,7 @@ stroke-dasharray: ${dasharray};
 					strokeWidth={1}
 				/>
 			</svg>
-      </div>
+      </div> */}
 
 			<div className={ss.container}>
 
