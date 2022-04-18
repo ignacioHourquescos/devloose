@@ -28,7 +28,7 @@ const Card =({project,color})=> {
  }
 
   return (
-    <div className={ss.container}  style={{ scrollSnapAlign: "center", scrollSnapStop: "always" }} >
+    <div className={ss.container}  style={{ scrollSnapAlign: "center", scrollSnapStop: "always", scrollBehavior: "smooth"}} >
 
       <div className={ss.description} >
       {/* {displayVideo?

@@ -34,7 +34,7 @@ export default function CardContainer() {
          <div className={ss.go_to_page}> <a href="https://github.com/ignacioHourquescos"><FaGithub size={40} color="black"/></a></div>               
        </div> */}
        {/* <Selectors/> */}
-       <span>us</span>
+       
     </div>
     
   )

@@ -14,7 +14,7 @@
 }
 
 .main{
-  height:90vh;
+  height:80vh;
   position:fixed;
   width:100%;
   background-color: white;
@@ -30,6 +30,11 @@
   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAACNJREFUKFNj3LFjx38PDw9GBgKAoAKY/sGmEJsHB5sbsYU9ADwoCAuEH7F9AAAAAElFTkSuQmCC
   ) repeat;
 
+  @media screen and (max-width: 800px){
+
+    padding:1rem;
+ }
+
   .action_button{
     position:absolute;
     bottom:2rem;
@@ -38,6 +43,15 @@
     color:none;
     border:2px solid black;
     padding:2rem;
+    @media screen and (max-width: 800px){
+      transform: rotate(90deg);
+      position:fixed;
+      bottom:0;
+      
+      
+   }
+
+
   }
 
 }
@@ -83,4 +97,27 @@
       height:80vh;
       
    }
+}
+
+.labels{
+  position:fixed;
+  top:5rem;
+  left:45%;
+  font-size:1.2rem;
+  width:30%;
+  @media screen and (max-width: 800px){
+    top:2rem;
+left:40%;
+    width:50%;
+    font-size:0.8rem;
+ }
+
+}
+
+.labels2{
+  position:fixed;
+  bottom:2rem;
+  right:2rem;
+  color:blue;
+  text-decoration: underline;
 }
