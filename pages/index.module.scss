@@ -14,7 +14,7 @@
 }
 
 .main{
-  height:100vh;
+  height:90vh;
   position:fixed;
   width:100%;
   background-color: white;
@@ -45,18 +45,22 @@
 
 .left_container{
    // border-top: 4px solid black;
-   width:40%;
-   height:80vh;
+   width:45%;
+   height:90vh;
+   margin:5vh 0;
     position:fixed;
-    left:14%;
+    left:11%;
+    
    @media screen and (max-width: 800px){
       width:100%;
       position:relative;
       top:0;
       left:0;
-      margin:5vh 0;
-      margin-top:2.5vh;
-      height:80vh;
+      margin:0;
+      height:100vh;
+      // margin:5vh 0;
+      // margin-top:2.5vh;
+      // height:80vh;
       
    }
 }
@@ -67,6 +71,7 @@
    right:13%;
     position:absolute;
     height:80vh;
+    
 
    @media screen and (max-width: 800px){
       width:100%;

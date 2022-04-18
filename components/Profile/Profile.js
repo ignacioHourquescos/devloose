@@ -28,12 +28,13 @@ export default function CardContainer() {
       {lang=="ESP" ? mainData.d.esp : lang=="ENG" ? mainData.d.eng : mainData.d.por}
       </div>
   
-      <div className={ss.tools}>
+      {/* <div className={ss.tools}>
          <div className={ss.go_to_page}> <a href="https://www.linkedin.com/in/ihourquescos/"><FaLinkedin size={40} color="black"/></a></div>
          <div className={ss.go_to_page}> <a href="https://www.behance.net/ignaciohourquescos"><FaBehance size={40} color="black"/></a></div>
          <div className={ss.go_to_page}> <a href="https://github.com/ignacioHourquescos"><FaGithub size={40} color="black"/></a></div>               
-       </div>
-       <Selectors/>
+       </div> */}
+       {/* <Selectors/> */}
+       <span>us</span>
     </div>
     
   )

@@ -7,9 +7,9 @@ import styled, { css, keyframes } from "styled-components";
 
 export default function Home() {
 
-  const [displayContent, setDisplayContent] = useState(false)
+  const [displayContent, setDisplayContent] = useState(true)
 
-  const dasharray= 4001;
+  const dasharray= 4000;
 
   const dash = keyframes`
   from { stroke-dashoffset: 4001;}
@@ -67,7 +67,7 @@ stroke-dasharray: ${dasharray};
 					strokeWidth={1}
 				/>
 			</svg>
-      <button className={ss.action_button}>what is this?s</button>
+      <button className={ss.action_button}>what iss this?s</button>
       </div>
     }
 		</>

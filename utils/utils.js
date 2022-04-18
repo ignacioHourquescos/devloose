@@ -1,10 +1,92 @@
+import { FaDesktop } from "react-icons/fa";
+
 const portfolio = [
+  //0)SYSONE
+  {
+    type: "WEBAPP",
+    video: "/sysone.m4v",
+    videoType:"landscape",
+    date:"ONGOING",
+    title: {es: "1. INSURANCE CLOUD SOLUTION",},
+    desc: {es: "Diseño y desarollo la interfaz para sistema de back office de empresas aseguradoras. Arquitectura de micro front ends",},
+  },
+   ///1)RENOVAPP
+  {
+  type: "WEBAPP + PWA",
+  videoType:"landscape",
+  date:"ENERO 2022",
+  video: "/Renovapp-1.m4v",
+  title: {es: "2. SISTEMA DE GESTION DE PEDIDOS",},
+  desc: {es: "Desarollo integral de sistema de gestion de pedidos para distribuidores mayoristas.  ",},
+},
+///2)HSR ABOGADOS
+{
+  type: "WEB DESIGN",
+  video: "/HSR_desktop.m4v",
+  date: "OCT 2021",
+  videoType:"landscape",
+  title: {es: "3. WEB INSTITUCIONAL PARA ESTUDIO DE ABOGADOS",},
+  desc: {es: "Web Institucional para firma de abogados. ",},
+},
+
+//5)RENOVA
+{
+  type: "WEB DESIGN",
+  video: "/renova.m4v",
+  date:"NOV 2020",
+  title: {es: "4. APLICACION WEB PARA DISTRIBUIDORA DE AUTOPARTES",},
+  desc: {es: "A partir de un sistema de gestión en SQL, se hizo una conexión via Node.js, generando una vista web para mostrar precios y stock de manera dinámica",},
+},
+
+///6)ELFUERTE
+{
+  type: "WEBAPP",
+  video: "/queHacemosHoy.m4v",
+  date:"DIC 2020",
+  title: {es: "5. WEB PARA MAYORISTA DE ALIMENTOS ",},
+  desc: {es: "Se diseno una pagina web, y se desarollo un sistema de lista de precios acoplados a una planilla de calculo",},
+},
+ ///7)LA GALERA
+{
+  type: "WEBAPP",
+  date:"ENERO 2022",
+  video: "/queHacemosHoy.m4v",
+  title: {es: "6. ECOMMERCE PARA EMPRENDIMIENTO DE COMIDA",},
+  desc: { es: "Diseño centrado en el usuario que permite agregar y quitar productos de manera dinamica, y poder visualizar promociones de manera efectiva",},
+},
+
+//3)GREEN HAB
+{
+  type: "PROTOTYPE",
+  video: "greenHab",
+  date:"ENERO 2022",
+  title: {es: "7. WEBAPP PARA EMPRENDIMIENTO DE HIDROPONIA",},
+  desc: {es: "Web comercial para librería. Se armaron secciones de ofertas de productos puntuales para diferentes tipos de clientes",},
+},
+  //8)QUE HACEMOS HOY
+{
+  type: "PROTOTYPE",
+  date:"ENERO 2022",
+  video: "queHacemosHoy",
+  title: {es: "8. APPLICACION DE EVENTOS CULTURALES",},
+  desc: {es: "Prototipo funcional de apliación de información de eventos culturales",
+  },
+},
+];
+
+
+
+
+const portfolio2 = [
     //0)SYSONE
     {
       link: "https://www.mayoristaelfuerte.com",
       type: "PROTOTYPE",
-      video: "/queHacemosHoy.m4v",
+      video: "/sysone.m4v",
+      videoType:"landscape",
       client: "SYSONE",
+      date:"ONGOING",
+      color:"#FF6700",
       title: {
         es: "APLICACIÓN WEB PARA ASEGURADORAS",
         en: "ASSURANCE APP",
@@ -22,7 +104,10 @@ const portfolio = [
 	{
 		link: "https://www.mayoristaelfuerte.com",
 		type: "WEBAPP + PWA",
-		video: "/queHacemosHoy.m4v",
+    color:"#C4CB57",
+    videoType:"landscape",
+    date:"ENERO 2022",
+		video: "/Renovapp-1.m4v",
 		title: {
 			es: "SISTEMA DE GESTION DE PEDIDOS",
 			en: "WHOLESALER MANAGEMENT SYSTEM",
@@ -37,8 +122,10 @@ const portfolio = [
 	///2)HSR ABOGADOS
 	{
       link: "https://www.hsrabogados.com",
-		video: "/HSR.m4v",
+		video: "/HSR_desktop.m4v",
 		type: "WEB DESIGN",
+    date: "OCT 2021",
+    videoType:"landscape",
 		title: {
 			es: "WEB INSTITUCIONAL PARA ESTUDIO DE ABOGADOS",
 			en: "Mayorista El Fuerte",
@@ -71,8 +158,9 @@ const portfolio = [
 	//5)RENOVA
 	{
 		type: "WEB DESIGN",
-		video: "/queHacemosHoy.m4v",
+		video: "/renova.m4v",
 		link: "https://listasrenova.netlify.app/views/html/indexofertas.html",
+    date:"NOV 2020",
 		title: {
 			es: "APLICACION WEB PARA DISTRIBUIDORA DE AUTOPARTES",
 			en: "Car Wholesaler",
@@ -90,6 +178,7 @@ const portfolio = [
 		type: "WEB DESIGN",
 		link: "https://www.mayoristaelfuerte.com",
 		video: "/queHacemosHoy.m4v",
+    date:"DIC 2020",
 		title: {
 			es: "WEB PARA MAYORISTA DE ALIMENTOS ",
 			en: "Mayorista El Fuerte",
@@ -105,6 +194,7 @@ const portfolio = [
 	{
 		link: "https://lagalera.netlify.app",
 		type: "E COMMERCE",
+    date:"ENERO 2022",
 		video: "/queHacemosHoy.m4v",
 		title: {
 			es: "ECOMMERCE PARA EMPRENDIMIENTO DE COMIDA",
@@ -123,6 +213,7 @@ const portfolio = [
 
 		type: "PROTOTYPE",
 		video: "greenHab",
+    date:"ENERO 2022",
 		title: {
 			es: "WEBAPP PARA EMPRENDIMIENTO DE HIDROPONIA",
 			en: "Office supplies Wholesaler",
@@ -138,6 +229,7 @@ const portfolio = [
 	{
 		link: "https://www.behance.net/gallery/96068307/QueHacemosHoy",
 		type: "PROTOTYPE",
+    date:"ENERO 2022",
 		video: "queHacemosHoy",
 		title: {
 			es: "APPLICACION DE EVENTOS CULTURALES",

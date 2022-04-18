@@ -6,7 +6,7 @@ const Prototype =({})=> {
 
   return (
     <div >
-hello
+helloi
 
     </div>
   )

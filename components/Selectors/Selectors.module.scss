@@ -13,7 +13,7 @@
       display: flex;
       flex-direction: column;
       right: 4rem;
-      bottom: 0;
+      bottom: 2rem;
       font-family: 'Oswald', sans-serif;
       font-size: 1.2rem;
       padding: 0.5rem;
@@ -21,6 +21,9 @@
       .language {
          padding: 0.5rem;
          border-bottom: 2px solid black;
+      }
+      :hover{
+        cursor: pointer;
       }
    }
 
@@ -46,6 +49,7 @@
    position: fixed;
    top:2.5rem;
    right:1.2rem;
+   bottom:2rem;
 
    font-family: 'Oswald', sans-serif;
    font-size: 1rem;
