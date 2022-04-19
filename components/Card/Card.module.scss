@@ -29,7 +29,7 @@ justify-items: center;
 }
 
 .description{
-   padding:1.5rem;
+  padding:1.5rem;
    padding-top:9%;
    font-family: 'Oswald', sans-serif;
    height:80vh;
@@ -41,6 +41,12 @@ justify-items: center;
   // border:2px solid black;
   position:relative;
    display: flex;
+
+   @media screen and (max-width: 800px){
+padding:0%;
+    
+    
+ }
    .card_color{
     width:100%;
     height:100%;
@@ -64,8 +70,10 @@ justify-items: center;
       margin-top:0;
       padding-bottom: 0;
       margin-top:2rem;
+
       @media screen and (max-width: 800px){
          font-size:1.8rem;
+         padding-left:5%;
          
          
       }
@@ -76,6 +84,8 @@ justify-items: center;
       margin:0;
       color:rgb(58, 58, 58);
       margin-bottom:2rem;
+      margin-left:5%;
+      margin-left:5%;
   
    }
    .type{
@@ -90,17 +100,21 @@ justify-items: center;
       padding:0 0.5rem;
       margin-right:0.5rem;
       margin-bottom:2rem;
+
       // background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAADtJREFUKFOFzMkNACAMA0FSpKtMkSAjgTicZN+jtVbk7t0yQwDAQrQAJxKdQKIXfEiBC0VgowxMVAGiASgaIwpVaFH0AAAAAElFTkSuQmCC) repeat;
          @media screen and (max-width: 800px){
       font-size:1.3rem;
+      margin-left:5%;
       
       
    }
    }
    .brief{
       font-family: 'Quattrocento', serif;
+      margin-left:5%;
       @media screen and (max-width: 800px){
          font-size:1rem;
+         margin-left:5%;
          
          
       }
@@ -154,9 +168,37 @@ flex-direction: column;
 }
 
 .close_video{
-  position:fixed;
-  top:10%;
-  right:15%;
+  position:absolute;
+  top:3%;
+  right:5%;
   z-index:2;
+  @media screen and (max-width: 800px){
+    top:1%;
 
+     }
+
+}
+
+.video_container_2{
+  width:100%;
+  padding:0 2rem;
+    //  padding:1.5rem;
+  //  padding-top:9%;
+   font-family: 'Oswald', sans-serif;
+  height:80vh;
+   margin:0vh 0;
+  //  margin-bottom:10VH;
+  
+  //  border: 2px solid black;
+  //  border-left: 6px solid black;
+  // border:2px solid black;
+  position:relative;
+  top:0;
+  background-color: black;
+  //  display: flex;
+  @media screen and (max-width: 800px){
+ width:90%;
+      
+      
+   }
 }

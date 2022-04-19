@@ -24,11 +24,11 @@
       padding:0;
       margin-bottom:10%;
       margin:0;
-      height:100%;
+      height:70%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start
       
       
    }
@@ -36,7 +36,7 @@
    .intro{
       font-family: 'Oswald', sans-serif;
       font-size:4rem;
-      margin-top:7vh;
+      margin-top:1vh;
       padding:0 2rem;
 
       @media #{$mobile} {
@@ -91,4 +91,77 @@
    
    }
 
+}
+
+.sections{
+  display:flex;
+
+    left: 4rem;
+    bottom: calc(50% - 50px);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin:0em;
+
+    .sections_detail {
+       padding: 0.5rem;
+       border-bottom: 2px solid #232C3E;
+       margin:0 1rem;
+    }
+ 
+}
+
+.section06 { background: url(https://www.nxworld.net/example/css-scroll-down-button/bg06.jpg) center center / cover no-repeat;}
+
+.section06 a {
+  padding-top: 70px;
+}
+.arrow2 {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotateZ(-0deg);
+  transform: rotateZ(-0deg);
+  -webkit-animation: sdb06 4.5s infinite;
+  animation: sdb06 4.5s 3 ease-in-out;
+    box-sizing: border-box;
+    opacity:0;
+
+  @media screen and (min-width: 800px){
+    right:-100%;
+    postion:relative;
+    left:auto;    
+    top:-200px;
+ }
+}
+@-webkit-keyframes sdb06 {
+  0% {
+    -webkit-transform: rotateY(0) rotateZ(-0deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateY(720deg) rotateZ(-0deg) translate(-5px, 400px);
+    opacity: 0;
+  }
+}
+@keyframes sdb06 {
+  0% {
+    transform: rotateY(0) rotateZ(-3deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(360deg) rotateZ(-3deg) translate(-5px, 400px);
+    opacity: 0;
+  }
 }

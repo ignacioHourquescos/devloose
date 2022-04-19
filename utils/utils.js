@@ -8,7 +8,7 @@ const portfolio = [
     videoType:"landscape",
     date:"ONGOING",
     title: {es: "1. INSURANCE CLOUD SOLUTION",},
-    desc: {es: "Diseño y desarollo la interfaz para sistema de back office de empresas aseguradoras. Arquitectura de micro front ends",},
+    desc: {es: "Diseño y desarollo la interfaz para sistema de back office de empresas aseguradoras. Arquitectura de Micro Front ends",},
   },
    ///1)RENOVAPP
   {
@@ -17,7 +17,7 @@ const portfolio = [
   date:"ENERO 2022",
   video: "/Renovapp-1.m4v",
   title: {es: "2. GESTION DE PEDIDOS MAYORISTA",},
-  desc: {es: "Desarollo integral de sistema de gestion de pedidos para distribuidores mayoristas.  ",},
+  desc: {es: "Desarollo integral de sistema de gestión de pedidos para distribuidores mayoristas. Cosntruida con React + Firebase  ",},
 },
 ///2)HSR ABOGADOS
 {
@@ -25,18 +25,19 @@ const portfolio = [
   video: "/HSR_desktop.m4v",
   date: "OCT 2021",
   videoType:"landscape",
-  title: {es: "3. INSTITUCIONAL"},
-  desc: {es: "Web Institucional para firma de abogados. ",},
+  link: "https://www.hsrabogados.com",
+  title: {es: "3. WEB INSTITUCIONAL"},
+  desc: {es: "Web Institucional para firma de abogados. Construida con arquitectura JAMSTACK (Next.js + Headless CMS)  ",},
 },
 
 //5)RENOVA
-{
-  type: "WEB APP",
-  video: "/renova.m4v",
-  date:"NOV 2020",
-  title: {es: "4. APLICACION B2B DE AUTOPARTES",},
-  desc: {es: "A partir de un sistema de gestión en SQL, se hizo una conexión via Node.js, generando una vista web para mostrar precios y stock de manera dinámica",},
-},
+// {
+//   type: "WEB APP",
+//   video: "/renova.m4v",
+//   date:"NOV 2020",
+//   title: {es: "4. APLICACION B2B DE AUTOPARTES",},
+//   desc: {es: "A partir de un sistema de gestión en SQL, se hizo una conexión via Node.js, generando una vista web para mostrar precios y stock de manera dinámica",},
+// },
 
 
  ///7)LA GALERA
@@ -49,22 +50,22 @@ const portfolio = [
 // },
 
 //3)GREEN HAB
-{
-  type: "PROTOTYPE",
- video: "/greenHab.m4v",
-  date:"ENERO 2022",
-  title: {es: "5. HIDROPONIA",},
-  desc: {es: "Web comercial para librería. Se armaron secciones de ofertas de productos puntuales para diferentes tipos de clientes",},
-},
+// {
+//   type: "PROTOTYPE",
+//  video: "/greenHab.m4v",
+//   date:"ENERO 2022",
+//   title: {es: "5. HIDROPONIA",},
+//   desc: {es: "Web comercial para librería. Se armaron secciones de ofertas de productos puntuales para diferentes tipos de clientes",},
+// },
   //8)QUE HACEMOS HOY
-{
-  type: "PROTOTYPE",
-  date:"ENERO 2022",
-  video: "/queHacemosHoy.m4v",
-  title: {es: "6. EVENTOS CULTURALES",},
-  desc: {es: "Prototipo funcional de apliación de información de eventos culturales",
-  },
-},
+// {
+//   type: "PROTOTYPE",
+//   date:"ENERO 2022",
+//   video: "/queHacemosHoy.m4v",
+//   title: {es: "6. EVENTOS CULTURALES",},
+//   desc: {es: "Prototipo funcional de apliación de información de eventos culturales",
+//   },
+// },
 ];
 
 
