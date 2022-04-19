@@ -34,7 +34,14 @@ export default function CardContainer() {
          <div className={ss.go_to_page}> <a href="https://github.com/ignacioHourquescos"><FaGithub size={40} color="black"/></a></div>               
        </div> */}
        {/* <Selectors/> */}
-       
+
+         
+      {/* <div className={ss.tools}>
+         <div className={ss.go_to_page}> <a href="https://www.linkedin.com/in/ihourquescos/">About</a></div>
+         <div className={ss.go_to_page}> <a href="https://www.behance.net/ignaciohourquescos">Services</a></div>
+         <div className={ss.go_to_page}> <a href="https://github.com/ignacioHourquescos">Principles</a></div>               
+       </div> 
+        */}
     </div>
     
   )
@@ -49,17 +56,17 @@ const mainData =
          por:"BELUX"
       },
       b: {
-         esp:"Combinamos logica, innovacion y diseño para crear productos de alto valor",
+         esp:"Combinamos logica, innovacion y diseño para crear productos digitales.",
          eng:"We combine logic, innovation and design to create digital products",
          por:"Combinamos logica, desenho e innovacao para criar produos de alto valor "
       },
       c: {
-         esp:"De la idea a la acción",
+         esp:"De la idea a la acción.",
          eng:"From ideas to action",
          por:"Das ideais a accao"
       },
       d: {
-        esp:"Siempre abiertos a nuevos desafios",
+        esp:"Siempre abiertos a nuevos desafios.",
         eng:"Always open to new challenges",
         por:"Sempre aberto a novos desafios"
       },

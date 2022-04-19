@@ -7,7 +7,7 @@ import styled, { css, keyframes } from "styled-components";
 
 export default function Home() {
 
-  const [displayContent, setDisplayContent] = useState(false)
+  const [displayContent, setDisplayContent] = useState(true)
 
   const dasharray= 4000;
 
@@ -68,7 +68,7 @@ stroke-dasharray: ${dasharray};
 				<PulseButton 
 					d={svgDrawings.chaosClarity}
 					fill="none"
-					stroke="black"
+					stroke="#232C3E"
 					strokeWidth={1}
 				/>
   

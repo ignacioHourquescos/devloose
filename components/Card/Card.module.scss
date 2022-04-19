@@ -113,11 +113,12 @@ justify-items: center;
       font-size:1.1rem;
       font-weight: bold;
       border:2px solid grey;
-      
+      // border-radius:0 40px 40px 0;
+    
       padding:0.3rem 0.9rem;
       margin-right:0.5rem;
       margin-bottom:2rem;
-      background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAADtJREFUKFOFzMkNACAMA0FSpKtMkSAjgTicZN+jtVbk7t0yQwDAQrQAJxKdQKIXfEiBC0VgowxMVAGiASgaIwpVaFH0AAAAAElFTkSuQmCC) repeat;
+      // background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAADtJREFUKFOFzMkNACAMA0FSpKtMkSAjgTicZN+jtVbk7t0yQwDAQrQAJxKdQKIXfEiBC0VgowxMVAGiASgaIwpVaFH0AAAAAElFTkSuQmCC) repeat;
       @media screen and (min-width: 800px){
      right:2rem;
         left:auto;

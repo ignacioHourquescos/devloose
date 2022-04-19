@@ -45,7 +45,7 @@ const Card =({project,color})=> {
                <h3 className={ss.brief}>{project.desc.es}</h3>
                {/* <div className={ss.arrow} onClick={()=>showMoreInfo()}> */}
                <div className={ss.arrow} onClick={()=>setDisplayVideo(false)}>
-               PEEK
+               ECHAR UN VISTAZO
                {/* {returnButton(lang,project)} */}
 
                </div>
