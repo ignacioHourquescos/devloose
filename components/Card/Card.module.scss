@@ -4,7 +4,8 @@
 @import "../../styles/constants.scss";
 .container{
 
-  
+  border-bottom:1px solid rgb(148, 148, 148);
+
    margin-bottom:5%;
    margin-right:5%;
 
@@ -13,9 +14,8 @@
    flex-direction: column;
 justify-content: center;
 justify-items: center;
-:hover{
-  background-color: violet;
-}
+
+
    @media screen and (max-width: 800px){
       width:90%;
       position:relative;
@@ -29,17 +29,39 @@ justify-items: center;
 }
 
 .description{
-   padding:1.5rem;
+  padding:1.5rem;
    padding-top:9%;
    font-family: 'Oswald', sans-serif;
    height:80vh;
    margin:10vh 0;
    margin-bottom:10VH;
   
-   border: 2px solid black;
-   border-left: 6px solid black;
-
+  //  border: 2px solid black;
+  //  border-left: 6px solid black;
+  // border:2px solid black;
+  position:relative;
    display: flex;
+
+   @media screen and (max-width: 800px){
+padding:0%;
+    
+    
+ }
+   .card_color{
+    width:100%;
+    height:100%;
+    // background-color: #9a5905;
+    position:absolute;
+    bottom:0;
+    left:0;
+    border-radius:0 80px 80px 0px;
+
+    justify-content: center;
+
+
+    display:flex;
+
+  }
 
    
   
@@ -48,8 +70,10 @@ justify-items: center;
       margin-top:0;
       padding-bottom: 0;
       margin-top:2rem;
+
       @media screen and (max-width: 800px){
          font-size:1.8rem;
+         padding-left:5%;
          
          
       }
@@ -60,6 +84,8 @@ justify-items: center;
       margin:0;
       color:rgb(58, 58, 58);
       margin-bottom:2rem;
+      margin-left:5%;
+      margin-left:5%;
   
    }
    .type{
@@ -74,34 +100,45 @@ justify-items: center;
       padding:0 0.5rem;
       margin-right:0.5rem;
       margin-bottom:2rem;
+
       // background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAADtJREFUKFOFzMkNACAMA0FSpKtMkSAjgTicZN+jtVbk7t0yQwDAQrQAJxKdQKIXfEiBC0VgowxMVAGiASgaIwpVaFH0AAAAAElFTkSuQmCC) repeat;
          @media screen and (max-width: 800px){
       font-size:1.3rem;
+      margin-left:5%;
       
       
    }
    }
    .brief{
       font-family: 'Quattrocento', serif;
+      margin-left:5%;
       @media screen and (max-width: 800px){
          font-size:1rem;
+         margin-left:5%;
          
          
       }
    }
    .arrow{
       position:absolute;
-      right:2rem;
+      left:2rem;
       bottom:4rem;
       z-index:110;
-      font-size:1.5rem;
+      font-size:1.1rem;
       font-weight: bold;
       border:2px solid grey;
+      // border-radius:0 40px 40px 0;
+    
       padding:0.3rem 0.9rem;
       margin-right:0.5rem;
       margin-bottom:2rem;
-      background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAADtJREFUKFOFzMkNACAMA0FSpKtMkSAjgTicZN+jtVbk7t0yQwDAQrQAJxKdQKIXfEiBC0VgowxMVAGiASgaIwpVaFH0AAAAAElFTkSuQmCC) repeat;
-   }
+      // background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAADtJREFUKFOFzMkNACAMA0FSpKtMkSAjgTicZN+jtVbk7t0yQwDAQrQAJxKdQKIXfEiBC0VgowxMVAGiASgaIwpVaFH0AAAAAElFTkSuQmCC) repeat;
+      @media screen and (min-width: 800px){
+     right:2rem;
+        left:auto;
+      }
+   
+    }
    .arrowBack{
       position:absolute;
       left:4rem;
@@ -113,12 +150,55 @@ justify-items: center;
          
       }
    }
-   .phone{
-      border: 40px solid #ddd;
-      border-width: 55px 7px;
-      border-radius: 40px;
-      margin: 50px auto;
-      overflow: hidden;
-      transition: all 0.5s ease;   
+
+}
+
+.video_container{
+  display:flex;
+flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  position:absolute;
+  top:-100%;
+  justify-content: center;
+  transform:translatey(100%);
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
+}
+
+.close_video{
+  position:absolute;
+  top:3%;
+  right:5%;
+  z-index:2;
+  @media screen and (max-width: 800px){
+    top:1%;
+
+     }
+
+}
+
+.video_container_2{
+  width:100%;
+  padding:0 2rem;
+    //  padding:1.5rem;
+  //  padding-top:9%;
+   font-family: 'Oswald', sans-serif;
+  height:80vh;
+   margin:0vh 0;
+  //  margin-bottom:10VH;
+  
+  //  border: 2px solid black;
+  //  border-left: 6px solid black;
+  // border:2px solid black;
+  position:relative;
+  top:0;
+  background-color: black;
+  //  display: flex;
+  @media screen and (max-width: 800px){
+ width:90%;
+      
+      
    }
 }

@@ -13,7 +13,7 @@ const Prototype =({project})=> {
     <div className={ss.container}  style={{ backgroundColor:"black !important",scrollSnapAlign: "center", scrollSnapStop: "always" }} >
 
       <div className={ss.description} style={{backgroundImage:"none"}} >
-   
+
             <div className={ss.video}>
             {
                isMobile 
@@ -58,15 +58,17 @@ const renderVideoMobile = (path) => {
 
 const renderVideoDesktop = (path) => {
 	return `
+  <div style="border:5px solid black">
    <video
       loop
       playsinline
       muted
       autoplay
-      style=" position:fixed;margin:5%;left:35%;height:80%;object-fit:contain; z-index:1;"
+      style="  position:fixed;margin:5%;left:35%;height:80%;object-fit:contain; z-index:1;"
             >
    <source src=${path} type="video/mp4" />
-</video>`;
+</video>
+</div>`;
 };
 
 const close = <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

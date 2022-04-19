@@ -1,10 +1,86 @@
+import { FaDesktop } from "react-icons/fa";
+
 const portfolio = [
+  //0)SYSONE
+  {
+    type: "WEBAPP",
+    video: "/sysone.m4v",
+    videoType:"landscape",
+    date:"ONGOING",
+    title: {es: "1. INSURANCE CLOUD SOLUTION",},
+    desc: {es: "Diseño y desarollo la interfaz para sistema de back office de empresas aseguradoras. Arquitectura de Micro Front ends",},
+  },
+   ///1)RENOVAPP
+  {
+  type: "WEBAPP",
+  videoType:"landscape",
+  date:"ENERO 2022",
+  video: "/Renovapp-1.m4v",
+  title: {es: "2. GESTION DE PEDIDOS MAYORISTA",},
+  desc: {es: "Desarollo integral de sistema de gestión de pedidos para distribuidores mayoristas. Cosntruida con React + Firebase  ",},
+},
+///2)HSR ABOGADOS
+{
+  type: "WEB DESIGN",
+  video: "/HSR_desktop.m4v",
+  date: "OCT 2021",
+  videoType:"landscape",
+  link: "https://www.hsrabogados.com",
+  title: {es: "3. WEB INSTITUCIONAL"},
+  desc: {es: "Web Institucional para firma de abogados. Construida con arquitectura JAMSTACK (Next.js + Headless CMS)  ",},
+},
+
+//5)RENOVA
+// {
+//   type: "WEB APP",
+//   video: "/renova.m4v",
+//   date:"NOV 2020",
+//   title: {es: "4. APLICACION B2B DE AUTOPARTES",},
+//   desc: {es: "A partir de un sistema de gestión en SQL, se hizo una conexión via Node.js, generando una vista web para mostrar precios y stock de manera dinámica",},
+// },
+
+
+ ///7)LA GALERA
+// {
+//   type: "WEBAPP",
+//   date:"ENERO 2022",
+//   video: "/greenHab.m4v",
+//   title: {es: "5. DELY ECOMMERCE",},
+//   desc: { es: "Diseño centrado en el usuario que permite agregar y quitar productos de manera dinamica, y poder visualizar promociones de manera efectiva",},
+// },
+
+//3)GREEN HAB
+// {
+//   type: "PROTOTYPE",
+//  video: "/greenHab.m4v",
+//   date:"ENERO 2022",
+//   title: {es: "5. HIDROPONIA",},
+//   desc: {es: "Web comercial para librería. Se armaron secciones de ofertas de productos puntuales para diferentes tipos de clientes",},
+// },
+  //8)QUE HACEMOS HOY
+// {
+//   type: "PROTOTYPE",
+//   date:"ENERO 2022",
+//   video: "/queHacemosHoy.m4v",
+//   title: {es: "6. EVENTOS CULTURALES",},
+//   desc: {es: "Prototipo funcional de apliación de información de eventos culturales",
+//   },
+// },
+];
+
+
+
+
+const portfolio2 = [
     //0)SYSONE
     {
       link: "https://www.mayoristaelfuerte.com",
-      type: "DESIGN + DEVEOLPMENT",
-      video: "/queHacemosHoy.m4v",
+      type: "PROTOTYPE",
+      video: "/sysone.m4v",
+      videoType:"landscape",
       client: "SYSONE",
+      date:"ONGOING",
+      color:"#FF6700",
       title: {
         es: "APLICACIÓN WEB PARA ASEGURADORAS",
         en: "ASSURANCE APP",
@@ -22,7 +98,10 @@ const portfolio = [
 	{
 		link: "https://www.mayoristaelfuerte.com",
 		type: "WEBAPP + PWA",
-		video: "/queHacemosHoy.m4v",
+    color:"#C4CB57",
+    videoType:"landscape",
+    date:"ENERO 2022",
+		video: "/Renovapp-1.m4v",
 		title: {
 			es: "SISTEMA DE GESTION DE PEDIDOS",
 			en: "WHOLESALER MANAGEMENT SYSTEM",
@@ -37,8 +116,10 @@ const portfolio = [
 	///2)HSR ABOGADOS
 	{
       link: "https://www.hsrabogados.com",
-		video: "/HSR.m4v",
+		video: "/HSR_desktop.m4v",
 		type: "WEB DESIGN",
+    date: "OCT 2021",
+    videoType:"landscape",
 		title: {
 			es: "WEB INSTITUCIONAL PARA ESTUDIO DE ABOGADOS",
 			en: "Mayorista El Fuerte",
@@ -51,30 +132,29 @@ const portfolio = [
 	},
 
 
-
-
 	//4)CAMARA
-	{
-		type: "WEB DESIGN",
-		link: "https://camaraquilmes.netlify.app",
-		video: "/queHacemosHoy.m4v",
-		title: {
-			es: "WEB INSTITUCIONAL PARA CAMARA GASTRONOMICA ",
-			en: "Gastronomic Chamber ",
-			pt: "Câmara Gastronomica ",
-		},
-		desc: {
-			es: "Primera etapa de proyecto que agrupa agentes gastronomicos con el fin de compartir información para mejorar la competitividad del sector",
-			en: "First phase of a long term plan which seekes to group gastonomic agents which share information in order to improve competitiveness",
-			pt: "Primeira etapa do projeto que reúne agentes gastronômicos com o objetivo de compartilhar informações para melhorar a competitividade do setor",
-		},
-	},
+	// {
+	// 	type: "WEB DESIGN",
+	// 	link: "https://camaraquilmes.netlify.app",
+	// 	video: "/queHacemosHoy.m4v",
+	// 	title: {
+	// 		es: "WEB INSTITUCIONAL PARA CAMARA GASTRONOMICA ",
+	// 		en: "Gastronomic Chamber ",
+	// 		pt: "Câmara Gastronomica ",
+	// 	},
+	// 	desc: {
+	// 		es: "Primera etapa de proyecto que agrupa agentes gastronomicos con el fin de compartir información para mejorar la competitividad del sector",
+	// 		en: "First phase of a long term plan which seekes to group gastonomic agents which share information in order to improve competitiveness",
+	// 		pt: "Primeira etapa do projeto que reúne agentes gastronômicos com o objetivo de compartilhar informações para melhorar a competitividade do setor",
+	// 	},
+	// },
 
 	//5)RENOVA
 	{
 		type: "WEB DESIGN",
-		video: "/queHacemosHoy.m4v",
+		video: "/renova.m4v",
 		link: "https://listasrenova.netlify.app/views/html/indexofertas.html",
+    date:"NOV 2020",
 		title: {
 			es: "APLICACION WEB PARA DISTRIBUIDORA DE AUTOPARTES",
 			en: "Car Wholesaler",
@@ -92,6 +172,7 @@ const portfolio = [
 		type: "WEB DESIGN",
 		link: "https://www.mayoristaelfuerte.com",
 		video: "/queHacemosHoy.m4v",
+    date:"DIC 2020",
 		title: {
 			es: "WEB PARA MAYORISTA DE ALIMENTOS ",
 			en: "Mayorista El Fuerte",
@@ -107,6 +188,7 @@ const portfolio = [
 	{
 		link: "https://lagalera.netlify.app",
 		type: "E COMMERCE",
+    date:"ENERO 2022",
 		video: "/queHacemosHoy.m4v",
 		title: {
 			es: "ECOMMERCE PARA EMPRENDIMIENTO DE COMIDA",
@@ -119,12 +201,13 @@ const portfolio = [
 			pt: "Disenho centrado no usuario que permite adicionar e remover produtos de forma dinâmica, e poder visualizar as promoções de forma eficaz",
 		},
 	},
-	//8)QUE HACEMOS HOY
+
    	//3)GREEN HAB
 	{
 
 		type: "PROTOTYPE",
 		video: "greenHab",
+    date:"ENERO 2022",
 		title: {
 			es: "WEBAPP PARA EMPRENDIMIENTO DE HIDROPONIA",
 			en: "Office supplies Wholesaler",
@@ -136,9 +219,11 @@ const portfolio = [
 			pt: "Site comercial para livraría. Seções de ofertas de produtos específicos foram disenhadas para diferentes tipos de clientes",
 		},
 	},
+  	//8)QUE HACEMOS HOY
 	{
 		link: "https://www.behance.net/gallery/96068307/QueHacemosHoy",
 		type: "PROTOTYPE",
+    date:"ENERO 2022",
 		video: "queHacemosHoy",
 		title: {
 			es: "APPLICACION DE EVENTOS CULTURALES",

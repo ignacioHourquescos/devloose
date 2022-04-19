@@ -30,7 +30,7 @@ const Selectors =()=> {
          <div className={ss.language_selection}>
          <div className={ss.language} onClick={()=>displayESP()}>ESP</div>
          <div className={ss.language} onClick={()=>displayENG()}>ENG</div>
-         <div className={ss.language} onClick={()=>displayPOR()}>POR</div>
+         {/* <div className={ss.language} onClick={()=>displayPOR()}>POR</div> */}
       </div>
       :
       
