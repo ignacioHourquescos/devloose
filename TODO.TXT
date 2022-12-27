@@ -1,0 +1,13 @@
+⚪HEader Logo + nombre
+⚪Cohete despegando
+⚪Card desktop y mobile
+⚪Servicios
+⚪About us
+⚪quienes somos
+⚪footer
+⚪Menu
+⚪Idioma
+
+
+
+
