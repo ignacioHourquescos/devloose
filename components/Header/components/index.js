@@ -22,3 +22,7 @@ Hero.Logo = ({ children, path, ...restProps }) => {
 Hero.Title = ({ children, path, ...restProps }) => {
 	return <Title>{children}</Title>;
 };
+
+Hero.Animation = ({ children, path, ...restProps }) => {
+	return <Title>{children}</Title>;
+};
