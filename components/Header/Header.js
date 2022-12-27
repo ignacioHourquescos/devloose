@@ -1,14 +1,17 @@
 import React from "react";
 import Hero from "./components/index";
-import { Container } from "./styles";
+import { Container, LogoAnimationContainer } from "./styles";
 
 const Header = () => {
 	return (
 		<Container>
 			<Hero>
 				<Hero.Title>Devloose</Hero.Title>
-				<Hero.Logo />
-				<Hero.Rocket />
+				<LogoAnimationContainer>
+					<Hero.Logo />
+					<Hero.Rocket />
+					<Hero.Rocket2 />
+				</LogoAnimationContainer>
 			</Hero>
 		</Container>
 	);

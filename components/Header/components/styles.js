@@ -22,35 +22,110 @@ export const Title = styled.span`
 	margin-bottom: 1rem;
 `;
 
-export const Logo = styled.div`
-	text-align: center;
+//GENERAL SETTINGS///////////////////////77
+const animationDuration = 2;
+
+//LOGO ANIMATION//////////////////////////////
+
+const opacity = keyframes`
+  0%{
+    opacity:0;
+  }
+  50% {
+    opacity:0;
+  }
+  95% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 `;
 
-//ANIMATIONS
+export const animationLogo = (props) =>
+	css`
+		${opacity} ${animationDuration}s  backwards
+	`;
+
+export const LogoAnimationContainer = styled.div`
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	animation: ${animationLogo};
+	transform: translate(-50%, -50%);
+	border: 1px solid red;
+	z-index: 1;
+`;
+
+//PROPULSION///////////////////////////////////////////////////////
 export const dasharray = 1000;
 
-export const dash = keyframes`
-from { stroke-dashoffset: -1000;}
-to { stroke-dashoffset: 0;}`;
+const dash = keyframes`
+  0%{
+    stroke-dashoffset: 1000;
+  }
+  99%{
+    stroke-dashoffset: 0;
 
-export const animation = (props) =>
+  }
+  100%{
+    stroke-dashoffset: 0;
+
+  }
+
+`;
+
+export const animationPropulsion = (props) =>
 	css`
-		${dash} 4s ease-in backwards
+		${dash} ${animationDuration}s ease-in backwards
 	`;
+
+export const Propulsion = styled.path`
+	postion: absolute;
+	top: 0;
+	right: 0;
+	animation: ${animationPropulsion};
+	border: 2px solid blue;
+	stroke-dasharray: ${dasharray};
+	border: 1px solid red;
+	-webkit-animation-fill-mode: forwards;
+`;
+
+export const PropulsionAnimationContainer = styled.div`
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid red;
+`;
+
+//ROCKET ANIMATION//////////////////////////////////////////////////
+const translate = keyframes`
+  0%{
+    transform: translateY(0);
+
+  }
+  50% {
+
+  }
+  100% {
+    transform: translateY(-350px);
+
+  }
+`;
 
 export const animationRocket = (props) =>
 	css`
-		${dash} 6s ease-in backwards
+		${translate} ${animationDuration}s ease-in backwards
 	`;
 
-export const Rocket = styled.path`
+export const RocketAnimationContainer = styled.div`
+	position: absolute;
+	top: -0%;
+	left: 42%;
 	animation: ${animationRocket};
-	border: 2px solid blue;
-	stroke-dasharray: ${dasharray};
-`;
-
-export const PulseButton = styled.path`
-	animation: ${animation};
-	border: 2px solid blue;
-	stroke-dasharray: ${dasharray};
+	border: 1px dashed red;
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: ${animationDuration - 1.75}s;
+	z-index: 1;
 `;
