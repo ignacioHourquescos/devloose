@@ -1,5 +1,5 @@
 import React from "react";
-import { Inner, Logo, Title } from "./styles";
+import { Inner, Logo, Title, Rocket, PulseButton } from "./styles";
 import Image from "next/image";
 
 const Hero = ({ children, ...restProps }) => {
@@ -25,4 +25,15 @@ Hero.Title = ({ children, path, ...restProps }) => {
 
 Hero.Animation = ({ children, path, ...restProps }) => {
 	return <Title>{children}</Title>;
+};
+
+Hero.Rocket = ({ children, path, ...restProps }) => {
+	return (
+		<Rocket
+			d={svgDrawings.rocket}
+			fill="none"
+			stroke="#232C3E"
+			strokeWidth={4}
+		/>
+	);
 };
