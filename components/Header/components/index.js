@@ -2,14 +2,14 @@ import React from "react";
 import {
 	Inner,
 	Title,
-	Propulsion,
-	Rocket,
+	PropulsionDash,
 	LogoAnimationContainer,
 	PropulsionAnimationContainer,
 	RocketAnimationContainer,
+	OuterRocketAnimationContainer,
 } from "./styles";
 import Image from "next/image";
-import { AiFillRocket } from "react-icons/ai";
+import { AiFillRocket, AiOutlineRocket } from "react-icons/ai";
 
 const Hero = ({ children, ...restProps }) => {
 	return <Inner {...restProps}>{children}</Inner>;
@@ -20,12 +20,12 @@ export default Hero;
 Hero.Logo = ({ children, ...restProps }) => {
 	return (
 		<LogoAnimationContainer>
-			<Image
-				src="/logo.svg"
+			{/* <Image
+				src="/logoBackground.svg"
 				alt="Picture of the author"
 				width="300px"
 				height="300px"
-			/>
+			/> */}
 		</LogoAnimationContainer>
 	);
 };
@@ -37,20 +37,28 @@ Hero.Title = ({ children, path, ...restProps }) => {
 Hero.Rocket = ({ children, path, ...restProps }) => {
 	return (
 		<RocketAnimationContainer>
-			<AiFillRocket fill="black" size={70} />
+			<AiFillRocket fill="white" size={70} />
 		</RocketAnimationContainer>
 	);
 };
 
-Hero.Rocket2 = ({ children, path, ...restProps }) => {
+Hero.OuterRocket = ({ children, path, ...restProps }) => {
+	return (
+		<OuterRocketAnimationContainer>
+			<AiOutlineRocket fill="black" size={90} />
+		</OuterRocketAnimationContainer>
+	);
+};
+
+Hero.Propulsion = ({ children, path, ...restProps }) => {
 	return (
 		<PropulsionAnimationContainer>
 			<svg viewBox="-60 -35 300 300" width="270px" height="270px">
 				{" "}
-				<Propulsion
+				<PropulsionDash
 					d={svgDrawings.chaosClarity}
 					fill="none"
-					stroke="#000"
+					stroke="#fff"
 					strokeWidth={4}
 				/>
 			</svg>

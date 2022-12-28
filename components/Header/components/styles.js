@@ -23,22 +23,19 @@ export const Title = styled.span`
 `;
 
 //GENERAL SETTINGS///////////////////////77
-const animationDuration = 2;
+const animationDuration = 4;
+const animationDurationRocket = animationDuration;
+const animationDurationRocketDelay = 4;
 
 //LOGO ANIMATION//////////////////////////////
 
 const opacity = keyframes`
   0%{
-    opacity:0;
+    width:140vw;
   }
-  50% {
-    opacity:0;
-  }
-  95% {
-    opacity:0;
-  }
+
   100% {
-    opacity:1;
+    width:200px;
   }
 `;
 
@@ -49,12 +46,16 @@ export const animationLogo = (props) =>
 
 export const LogoAnimationContainer = styled.div`
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	animation: ${animationLogo};
-	transform: translate(-50%, -50%);
+	top: 0%;
+	left: 25%;
+animation: ${animationLogo}; */
+	${"" /* transform: translate(-50%, -50%); */}
 	border: 1px solid red;
 	z-index: 1;
+	background-color: black;
+	border-radius: 400px;
+	-webkit-animation-fill-mode: forwards;
+	height: 200px;
 `;
 
 //PROPULSION///////////////////////////////////////////////////////
@@ -80,12 +81,11 @@ export const animationPropulsion = (props) =>
 		${dash} ${animationDuration}s ease-in backwards
 	`;
 
-export const Propulsion = styled.path`
+export const PropulsionDash = styled.path`
 	postion: absolute;
 	top: 0;
 	right: 0;
 	animation: ${animationPropulsion};
-	border: 2px solid blue;
 	stroke-dasharray: ${dasharray};
 	border: 1px solid red;
 	-webkit-animation-fill-mode: forwards;
@@ -97,12 +97,13 @@ export const PropulsionAnimationContainer = styled.div`
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border: 1px solid red;
+	z-index: 1;
 `;
 
 //ROCKET ANIMATION//////////////////////////////////////////////////
 const translate = keyframes`
   0%{
-    transform: translateY(0);
+    transform: translateY(100px);
 
   }
   50% {
@@ -116,7 +117,7 @@ const translate = keyframes`
 
 export const animationRocket = (props) =>
 	css`
-		${translate} ${animationDuration}s ease-in backwards
+		${translate} ${animationDurationRocket}s ease-in backwards
 	`;
 
 export const RocketAnimationContainer = styled.div`
@@ -126,6 +127,20 @@ export const RocketAnimationContainer = styled.div`
 	animation: ${animationRocket};
 	border: 1px dashed red;
 	-webkit-animation-fill-mode: forwards;
-	animation-delay: ${animationDuration - 1.75}s;
-	z-index: 1;
+	animation-delay: ${animationDurationRocket - animationDurationRocketDelay}s;
+	z-index: 2;
+`;
+
+//ROCKET ANIMATION//////////////////////////////////////////////////
+
+export const OuterRocketAnimationContainer = styled.div`
+	position: absolute;
+	top: -4.2%;
+	left: 39.5%;
+	animation: ${animationRocket};
+	border: 1px dashed red;
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: ${animationDurationRocket - animationDurationRocketDelay}s;
+
+	z-index: 0;
 `;

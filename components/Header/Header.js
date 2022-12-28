@@ -10,7 +10,8 @@ const Header = () => {
 				<LogoAnimationContainer>
 					<Hero.Logo />
 					<Hero.Rocket />
-					<Hero.Rocket2 />
+					<Hero.OuterRocket />
+					<Hero.Propulsion />
 				</LogoAnimationContainer>
 			</Hero>
 		</Container>
