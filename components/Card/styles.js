@@ -1,22 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 import UTILS from "../../utils/utils";
 
-const translate = keyframes`
-  0%{
-    transform: translateY(100px);
-  }
-  50% {
-  }
-  100% {
-    transform: translateY(-350px);
-  }
-`;
-
-const animationRocket = (props) =>
-	css`
-		${translate} 2s ease-in backwards
-	`;
-
 export const StyledCard = {
 	Inner: styled.div`
 		border: ${UTILS.DRAFT};
@@ -27,24 +11,21 @@ export const StyledCard = {
 		position: relative;
 		margin-bottom: 20%;
 		height: 60vh;
+		padding-bottom: 2rem;
 	`,
 
 	//LEFT SIDE OF CARD
-
-	// background-image: url(${(props) => props.imageUrl});
-
-	DataContainer: styled.svg.attrs((props) => ({
-		dataRef: props.dataRef,
-	}))`
+	DataContainer: styled.svg`
 		clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 		background-color: ${UTILS.COLORS.WHITE};
-		height: 100%;
+		height: 99%;
 		width: 50%;
+		padding: 15%;
 		position: absolute;
 		z-index: 100;
 		border-top-left-radius: 60px;
 		border-bottom-left-radius: 60px;
-		animation: ${animationRocket};
+		filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
 	`,
 
 	ImageContainer: styled.svg`
@@ -52,13 +33,15 @@ export const StyledCard = {
 		opacity: 0.6;
 		background-color: ${UTILS.COLORS.GREY};
 		transparency: 40%;
-		height: 100%;
+		height: 99%;
+		padding: 15%;
 		width: 60%;
 		position: absolute;
 		right: 0;
 		z-index: 99;
 		border-top-right-radius: 150px;
 		border-bottom-right-radius: 60px;
+		filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
 	`,
 
 	Data: styled.div`
@@ -66,18 +49,9 @@ export const StyledCard = {
 		flex-direction: column;
 		border: ${UTILS.DRAFT};
 		width: 50%;
-
 		padding: 5%;
 		z-index: 101;
 	`,
-
-	// const Divider = styled.svg`
-	// background: ${props => props.bg};
-	// svg {
-	//   fill: ${props => props.fill};
-	// }
-
-	// `;
 
 	Title: styled.div`
 		border: ${UTILS.DRAFT};

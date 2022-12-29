@@ -1,5 +1,5 @@
-⚪HEader Logo + nombre
-⚪Cohete despegando
+⚪HEader ANIMACION
+⚪HEader Nombre
 ⚪Card desktop y mobile
 ⚪Servicios
 ⚪About us
