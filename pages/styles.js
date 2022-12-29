@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = {
+const Container = {
 	Master: styled.div`
 		border-left: 1px solid grey;
 		border-right: 1px solid grey;
@@ -43,3 +43,5 @@ export const Container = {
 		width: 100%;
 	`,
 };
+
+export default Container;
