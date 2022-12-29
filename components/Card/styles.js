@@ -1,5 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 import UTILS from "../../utils/utils";
+import { animated } from "@react-spring/web";
 
 export const StyledCard = {
 	Inner: styled.div`
@@ -60,12 +61,12 @@ export const StyledCard = {
 		margin-bottom: 1rem;
 	`,
 
-	Brief: styled.div`
+	Brief: styled(animated.div)`
 		border: ${UTILS.DRAFT};
 		margin-bottom: 3rem;
 	`,
 
-	Technologies: styled.div`
+	Technologies: styled(animated.div)`
 		border: ${UTILS.DRAFT};
 		display: flex;
 		flex-direction: row;

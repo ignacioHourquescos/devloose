@@ -25,14 +25,11 @@ const Card = () => {
 				/>
 				<StyledCard.Data>
 					<StyledCard.Title>Rebuilding software</StyledCard.Title>
-					<StyledCard.Brief as={animated.div} style={BriefAnimation(dataRef)}>
+					<StyledCard.Brief style={BriefAnimation(dataRef)}>
 						UI developemnt on a microfront end architecutre. Minimalist and
 						differetn flow sin order to mantainr high quality usability
 					</StyledCard.Brief>
-					<StyledCard.Technologies
-						as={animated.div}
-						style={headerStyle(dataRef)}
-					>
+					<StyledCard.Technologies style={headerStyle(dataRef)}>
 						<FaReact />
 						<SiStyledcomponents />
 					</StyledCard.Technologies>

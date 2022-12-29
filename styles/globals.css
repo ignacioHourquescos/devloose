@@ -9,6 +9,7 @@ body {
    color: #232C3E;
    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAACNJREFUKFNj3LFjx38PDw9GBgKAoAKY/sGmEJsHB5sbsYU9ADwoCAuEH7F9AAAAAElFTkSuQmCC
    ) repeat;
+   background-attachment: fixed;
 }
 
 html {

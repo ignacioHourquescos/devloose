@@ -20,7 +20,7 @@ const dash = keyframes`
 
 const animationPropulsion = (props) =>
 	css`
-		${dash} 2.5s ease-in backwards
+		${dash} 2s ease-in backwards
 	`;
 
 export const StyledHeader = {
@@ -57,13 +57,12 @@ export const StyledHeader = {
 		z-index: 200;
 	`,
 	Propulsion: styled.path`
-    animation-delay: 2s;
-		display:${(props) => (props.animate ? "block" : "none")};
-    animation: ${(props) => (props.animate ? animationPropulsion : "")};
+		animation-delay: 2s;
+		display: ${(props) => (props.animate ? "block" : "none")};
+		animation: ${(props) => (props.animate ? animationPropulsion : "")};
 		stroke-dasharray: ${dasharray};
-		-webkit-animation-fill-mode: forwards
+		-webkit-animation-fill-mode: forwards;
 		z-index: 200;
-		${"" /* animation-delay: 2s; */}
 	`,
 	Launch: styled.div`
 		position: absolute;

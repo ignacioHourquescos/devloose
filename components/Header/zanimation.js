@@ -5,7 +5,7 @@ export const zanimation1 = (dataRef) => {
 		delay: 0,
 		transform: `scale(1)`,
 		config: {
-			duration: 1500,
+			duration: 1800,
 			tension: 120,
 			tension: 400,
 			mass: 2,
