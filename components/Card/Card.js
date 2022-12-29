@@ -1,48 +1,47 @@
 import { StyledCard } from "./styles.js";
 import { FaReact } from "react-icons/fa";
 import { SiStyledcomponents } from "react-icons/si";
-import { useInView } from "react-intersection-observer";
-import { InView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { animated } from "@react-spring/web";
+import { useRef, useEffect, useState } from "react";
+import onViewPort from "../../hooks/onViewPort.js";
 import {
-	motion,
-	useMotionValue,
-	useAnimation,
-	useTransform,
-} from "framer-motion";
+	headerStyle,
+	BriefAnimation,
+	ImageContainerAnimation,
+} from "./Animations.js";
 
 const Card = () => {
-	const controls = useAnimation();
-	const [ref, inView] = useInView();
-
-	console.log("aca esta si se ve o no:", inView);
-	useEffect(() => {
-		if (inView) {
-			controls.start("visible");
-		}
-	}, [controls, inView]);
+	const triggerRef = useRef();
+	const dataRef = onViewPort(triggerRef, { freezeOnceVisible: true });
 
 	return (
-		<InView>
+		<>
 			<StyledCard.Inner>
 				<StyledCard.DataContainer />
-				<StyledCard.ImageContainer animate={inView} />
+				<StyledCard.ImageContainer
+					as={animated.div}
+					style={ImageContainerAnimation(dataRef)}
+				/>
 				<StyledCard.Data>
 					<StyledCard.Title>Rebuilding software</StyledCard.Title>
-					<StyledCard.Brief>
+					<StyledCard.Brief as={animated.div} style={BriefAnimation(dataRef)}>
 						UI developemnt on a microfront end architecutre. Minimalist and
 						differetn flow sin order to mantainr high quality usability
 					</StyledCard.Brief>
-					<StyledCard.Technologies>
+					<StyledCard.Technologies
+						as={animated.div}
+						style={headerStyle(dataRef)}
+					>
 						<FaReact />
 						<SiStyledcomponents />
 					</StyledCard.Technologies>
 					<StyledCard.Visit>VISIT</StyledCard.Visit>
+					<div ref={triggerRef} />
 				</StyledCard.Data>
 
 				<StyledCard.Image>image</StyledCard.Image>
 			</StyledCard.Inner>
-		</InView>
+		</>
 	);
 };
 
