@@ -3,7 +3,7 @@ import { FaReact } from "react-icons/fa";
 import { SiStyledcomponents } from "react-icons/si";
 import { animated } from "@react-spring/web";
 import { useRef, useEffect, useState } from "react";
-import onViewPort from "../../hooks/onViewPort.js";
+import useViewPort from "../../hooks/useViewPort.js";
 import {
 	headerStyle,
 	BriefAnimation,
@@ -13,7 +13,7 @@ import Button from "../../UI/Button/Button.js";
 
 const Card = () => {
 	const triggerRef = useRef();
-	const dataRef = onViewPort(triggerRef, { freezeOnceVisible: true });
+	const dataRef = useViewPort(triggerRef, { freezeOnceVisible: true });
 
 	return (
 		<>

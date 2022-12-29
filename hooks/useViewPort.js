@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const onViewPort = (
+const useViewPort = (
 	elementRef,
 	{ threshold = 0, root = null, rootMargin = "0%", freezeOnceVisible = false }
 ) => {
@@ -27,4 +27,4 @@ const onViewPort = (
 	return entry;
 };
 
-export default onViewPort;
+export default useViewPort;

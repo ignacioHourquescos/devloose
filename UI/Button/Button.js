@@ -13,7 +13,7 @@ const Button = ({ children }) => {
 			ref={hoverRef}
 			style={headerStyle(isHovered)}
 		>
-			{children}
+			{children.toUpperCase()}
 		</StyledButton.Primary>
 	);
 };
