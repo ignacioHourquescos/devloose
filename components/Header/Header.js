@@ -2,7 +2,7 @@ import React from "react";
 import useViewPort from "../../hooks/useViewPort.js";
 import { StyledHeader } from "./styles.js";
 import { useRef, useEffect, useState } from "react";
-import { zanimation1, zanimation2 } from "./zanimation.js";
+import { Zanimation1, Zanimation2 } from "./zanimation.js";
 import { AiFillRocket } from "react-icons/ai";
 import Button from "../../UI/Button/Button.js";
 

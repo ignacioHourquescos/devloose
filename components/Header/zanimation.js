@@ -1,6 +1,6 @@
 import { useSpring } from "@react-spring/web";
 
-export const zanimation1 = (dataRef) => {
+export const Zanimation1 = (dataRef) => {
 	return useSpring({
 		delay: 0,
 		transform: `scale(1)`,
@@ -24,7 +24,7 @@ export const zanimation1 = (dataRef) => {
 	});
 };
 
-export const zanimation2 = (dataRef) => {
+export const Zanimation2 = (dataRef) => {
 	return useSpring({
 		delay: 200,
 		config: {

@@ -5,7 +5,7 @@ import { animated } from "@react-spring/web";
 import { useRef, useEffect, useState } from "react";
 import useViewPort from "../../hooks/useViewPort.js";
 import {
-	headerStyle,
+	HeaderStyle,
 	BriefAnimation,
 	ImageContainerAnimation,
 } from "./zanimations.js";
@@ -29,7 +29,7 @@ const Card = () => {
 						UI developemnt on a microfront end architecutre. Minimalist and
 						differetn flow sin order to mantainr high quality usability
 					</StyledCard.Brief>
-					<StyledCard.Technologies style={headerStyle(dataRef)}>
+					<StyledCard.Technologies style={HeaderStyle(dataRef)}>
 						<FaReact />
 						<SiStyledcomponents />
 					</StyledCard.Technologies>
