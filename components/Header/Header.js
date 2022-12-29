@@ -9,6 +9,7 @@ const Header = () => {
 				<Hero.Title>Devloose</Hero.Title>
 				<LogoAnimationContainer>
 					<Hero.Logo />
+					<Hero.LogoLeft />
 					<Hero.Rocket />
 					<Hero.OuterRocket />
 					<Hero.Propulsion />

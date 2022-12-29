@@ -7,6 +7,7 @@ import {
 	PropulsionAnimationContainer,
 	RocketAnimationContainer,
 	OuterRocketAnimationContainer,
+	LogoAnimationContainerLeft,
 } from "./styles";
 import Image from "next/image";
 import { AiFillRocket, AiOutlineRocket } from "react-icons/ai";
@@ -27,6 +28,19 @@ Hero.Logo = ({ children, ...restProps }) => {
 				height="300px"
 			/> */}
 		</LogoAnimationContainer>
+	);
+};
+
+Hero.LogoLeft = ({ children, ...restProps }) => {
+	return (
+		<LogoAnimationContainerLeft>
+			{/* <Image
+				src="/logoBackground.svg"
+				alt="Picture of the author"
+				width="300px"
+				height="300px"
+			/> */}
+		</LogoAnimationContainerLeft>
 	);
 };
 

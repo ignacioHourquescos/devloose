@@ -5,9 +5,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@react-spring/web": "^9.6.1",
     "next": "12.0.7",
     "next-images": "^1.8.4",
     "node": "^17.3.0",
@@ -15,14 +18,25 @@
     "react-device-detect": "^2.1.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.7.1",
+    "react-intersection-observer": "^9.4.1",
     "sass": "^1.45.1",
-    "storybook": "^6.5.15",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
     "@svgr/webpack": "^6.5.1",
+    "babel-loader": "^8.3.0",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.5.0",
-    "eslint-config-next": "12.0.7"
+    "eslint-config-next": "12.0.7",
+    "eslint-plugin-storybook": "^0.6.8"
   }
 }
