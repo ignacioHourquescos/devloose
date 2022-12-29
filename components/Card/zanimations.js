@@ -1,6 +1,6 @@
 import { useSpring } from "@react-spring/web";
 
-export const headerStyle = (dataRef) => {
+export const HeaderStyle = (dataRef) => {
 	return useSpring({
 		config: {
 			duration: 1500,
