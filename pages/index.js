@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "../components/Header/Header";
 import Card from "../components/Card/Card";
 import CardService from "../components/CardServices/CardServices";
-import { Container } from "./styles.js";
+import Container from "../styles/styles.js";
 import Profile from "../components/Profile/Profile";
 import Technologies from "../components/Technologies/Technologies";
 import Intro from "../components/Intro/Intro";

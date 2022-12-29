@@ -18,8 +18,8 @@ const Header = (props) => {
 
 	return (
 		<StyledHeader.Inner>
-			<StyledHeader.Ball style={zanimation1(launch)}></StyledHeader.Ball>
-			<StyledHeader.Rocket style={zanimation2(launch)}>
+			<StyledHeader.Ball style={Zanimation1(launch)}></StyledHeader.Ball>
+			<StyledHeader.Rocket style={Zanimation2(launch)}>
 				<AiFillRocket fill="white" size={70} />
 			</StyledHeader.Rocket>
 			<StyledHeader.PropulsionContainer>
