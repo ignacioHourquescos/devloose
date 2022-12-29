@@ -22,20 +22,15 @@ export const StyledCard = {
 		border: ${UTILS.DRAFT};
 		display: flex;
 		flex-direction: row;
-		width: 90%;
-		margin: 5%;
+		width: 80%;
+		margin: 10%;
 		position: relative;
 		margin-bottom: 20%;
 		height: 60vh;
 	`,
 
 	//LEFT SIDE OF CARD
-
-	// background-image: url(${(props) => props.imageUrl});
-
-	DataContainer: styled.svg.attrs((props) => ({
-		dataRef: props.dataRef,
-	}))`
+	DataContainer: styled.svg`
 		clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 		background-color: ${UTILS.COLORS.WHITE};
 		height: 100%;
@@ -44,7 +39,7 @@ export const StyledCard = {
 		z-index: 100;
 		border-top-left-radius: 60px;
 		border-bottom-left-radius: 60px;
-		animation: ${animationRocket};
+		${"" /* animation: ${animationRocket}; */}
 	`,
 
 	ImageContainer: styled.svg`
@@ -66,18 +61,9 @@ export const StyledCard = {
 		flex-direction: column;
 		border: ${UTILS.DRAFT};
 		width: 50%;
-
 		padding: 5%;
 		z-index: 101;
 	`,
-
-	// const Divider = styled.svg`
-	// background: ${props => props.bg};
-	// svg {
-	//   fill: ${props => props.fill};
-	// }
-
-	// `;
 
 	Title: styled.div`
 		border: ${UTILS.DRAFT};

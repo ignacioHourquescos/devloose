@@ -1,5 +1,5 @@
 const Utils = {
-	DRAFT: "1px dashed red",
+	DRAFT: "",
 	COLORS: {
 		WHITE: "#F7F9FB",
 		GREY: "#ECECEC",
