@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
+import UTILS from "../../../utils/utils";
 
 export const Inner = styled.div`
 	display: flex;
@@ -32,7 +33,7 @@ const animationDurationRocketDelay = 4;
 const opacity = keyframes`
   0%{
     width:30vw;
-    height:60vh;
+    height:200px;
     border-bottom-left-radius:0px;
     border-top-left-radius:0px;
     border-top-right-radius:0px;
@@ -65,7 +66,7 @@ animation: ${animationLogo}; */
 	${"" /* transform: translate(-50%, -50%); */}
 
 	z-index: 1;
-	background-color: black;
+	background-color: ${UTILS.COLORS.BLACK};
 	border-radius: 400px;
 	-webkit-animation-fill-mode: forwards;
 	height: 200px;
@@ -76,7 +77,7 @@ animation: ${animationLogo}; */
 const logoAnimationLeft = keyframes`
   0%{
     width:30vw;
-    height:60vh;
+    height:200px;
     border-bottom-right-radius:0px;
     border-top-right-radius:0px;
     border-top-left-radius:0px;
@@ -110,7 +111,7 @@ export const LogoAnimationContainerLeft = styled.div`
 	${"" /* transform: translate(-50%, -50%); */}
 
 	z-index: 1;
-	background-color: black;
+	background-color: ${UTILS.COLORS.BLACK};
 	border-radius: 400px;
 	-webkit-animation-fill-mode: forwards;
 	height: 200px;

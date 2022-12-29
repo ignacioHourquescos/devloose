@@ -1,11 +1,4 @@
-import { StyledCard } from "./styles.js";
-import { FaReact } from "react-icons/fa";
-import { SiStyledcomponents } from "react-icons/si";
-import { animated, useSpring } from "@react-spring/web";
-import { useRef, useEffect, useState } from "react";
-import onViewPort from "../../hooks/onViewPort.js";
-import { useInView } from "react-intersection-observer";
-import { easings } from "@react-spring/web";
+import { useSpring } from "@react-spring/web";
 
 export const headerStyle = (dataRef) => {
 	return useSpring({

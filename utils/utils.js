@@ -1,12 +1,13 @@
-const Utils = {
-	DRAFT: "",
+const UTILS = {
+	DRAFT: "1px dashed red",
 	COLORS: {
 		WHITE: "#F7F9FB",
 		GREY: "#ECECEC",
+		BLACK: "#232C3E",
 	},
 };
 
-export default Utils;
+export default UTILS;
 
 // const COLORS = {
 //   PRIMARY: "#E7450F",

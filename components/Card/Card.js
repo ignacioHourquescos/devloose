@@ -8,7 +8,8 @@ import {
 	headerStyle,
 	BriefAnimation,
 	ImageContainerAnimation,
-} from "./Animations.js";
+} from "./zanimations.js";
+import Button from "../../UI/Button/Button.js";
 
 const Card = () => {
 	const triggerRef = useRef();
@@ -35,7 +36,9 @@ const Card = () => {
 						<FaReact />
 						<SiStyledcomponents />
 					</StyledCard.Technologies>
-					<StyledCard.Visit>VISIT</StyledCard.Visit>
+					<StyledCard.Visit>
+						<Button>VISIT</Button>
+					</StyledCard.Visit>
 					<div ref={triggerRef} />
 				</StyledCard.Data>
 

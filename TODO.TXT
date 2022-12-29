@@ -1,9 +1,10 @@
-⚪HEader ANIMACION
-⚪HEader Nombre
-⚪Card desktop y mobile
-⚪Servicios
+50⚪HEader ANIMACION
+00⚪HEader Nombre
+50⚪Card desktop y mobile
+50⚪Servicios
 ⚪About us
-⚪quienes somos
+50⚪quienes somos + (react scramble)
+50⚪Tools
 ⚪footer
 ⚪Menu
 ⚪Idioma
