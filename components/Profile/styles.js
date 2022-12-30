@@ -9,6 +9,9 @@ export const StyledProfile = {
 		flex-direction: column;
 		align-content: center;
 		align-items: center;
+		@media ${UTILS.SCREEN.MOBILE} {
+			width: 50%;
+		}
 	`,
 	Icon: styled.div`
 		border: ${UTILS.DRAFT};

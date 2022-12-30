@@ -5,6 +5,7 @@ import { useRef, useEffect, useState } from "react";
 import { Zanimation1, Zanimation2 } from "./zanimation.js";
 import { AiFillRocket } from "react-icons/ai";
 import Button from "../../UI/Button/Button.js";
+import Logo from "../../UI/Logo/Logo.js";
 
 const Header = (props) => {
 	const triggerRef = useRef();
@@ -29,13 +30,13 @@ const Header = (props) => {
 						d={svgDrawings.chaosClarity}
 						fill="none"
 						stroke="white"
-						strokeWidth={8}
+						strokeWidth={6}
 					></StyledHeader.Propulsion>
 				</svg>
 			</StyledHeader.PropulsionContainer>
-			<div ref={triggerRef} />
+
 			<StyledHeader.Launch onClick={() => launchHandler()}>
-				<Button>Launch</Button>
+				{!launch ? <Button>Launch</Button> : <Logo />}
 			</StyledHeader.Launch>
 		</StyledHeader.Inner>
 	);

@@ -13,6 +13,10 @@ export const StyledCard = {
 		margin-bottom: 20%;
 		height: 60vh;
 		padding-bottom: 2rem;
+		@media ${UTILS.SCREEN.MOBILE} {
+			flex-direction: column-reverse;
+			height: 70vh;
+		}
 	`,
 
 	//LEFT SIDE OF CARD
@@ -27,6 +31,13 @@ export const StyledCard = {
 		border-top-left-radius: 60px;
 		border-bottom-left-radius: 60px;
 		filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
+		@media ${UTILS.SCREEN.MOBILE} {
+			clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+			width: 100%;
+			height: 50%;
+			border-top-left-radius: 0px;
+			border-bottom-right-radius: 50px;
+		}
 	`,
 
 	ImageContainer: styled.svg`
@@ -43,6 +54,16 @@ export const StyledCard = {
 		border-top-right-radius: 150px;
 		border-bottom-right-radius: 60px;
 		filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
+		@media ${UTILS.SCREEN.MOBILE} {
+			clip-path: polygon(0 0, 100% 9%, 100% 100%, 0% 100%);
+			border-top-right-radius: 50px;
+			border-bottom-right-radius: 0px;
+			border-top-left-radius: 50px;
+			width: 100%;
+			height: 50%;
+			top: 0;
+			left: 0;
+		}
 	`,
 
 	Data: styled.div`
@@ -52,6 +73,10 @@ export const StyledCard = {
 		width: 50%;
 		padding: 5%;
 		z-index: 101;
+		@media ${UTILS.SCREEN.MOBILE} {
+			width: 100%;
+			height: 50%;
+		}
 	`,
 
 	Title: styled.div`
@@ -64,6 +89,9 @@ export const StyledCard = {
 	Brief: styled(animated.div)`
 		border: ${UTILS.DRAFT};
 		margin-bottom: 3rem;
+		@media ${UTILS.SCREEN.MOBILE} {
+			margin-bottom: 1rem;
+		}
 	`,
 
 	Technologies: styled(animated.div)`
@@ -72,10 +100,18 @@ export const StyledCard = {
 		flex-direction: row;
 		font-size: 2rem;
 		margin-bottom: 1rem;
+		@media ${UTILS.SCREEN.MOBILE} {
+			width: 40%;
+		}
 	`,
 
 	Visit: styled.div`
 		border: ${UTILS.DRAFT};
+		@media ${UTILS.SCREEN.MOBILE} {
+			display: inline-block;
+
+			margin-left: auto;
+		}
 	`,
 
 	// RIGHT SIDE OF CARD

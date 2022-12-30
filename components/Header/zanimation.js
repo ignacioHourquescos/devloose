@@ -1,8 +1,9 @@
 import { useSpring } from "@react-spring/web";
+import { easings } from "@react-spring/web";
 
 export const Zanimation1 = (dataRef) => {
 	return useSpring({
-		delay: 0,
+		delay: 700,
 		transform: `scale(1)`,
 		config: {
 			duration: 1800,
@@ -26,8 +27,9 @@ export const Zanimation1 = (dataRef) => {
 
 export const Zanimation2 = (dataRef) => {
 	return useSpring({
-		delay: 200,
+		delay: 50,
 		config: {
+			easing: easings.easeInCubic,
 			delay: 1000,
 			duration: 2500,
 			tension: 120,

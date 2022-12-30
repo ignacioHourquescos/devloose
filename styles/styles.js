@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import UTILS from "../utils/utils";
 
 const Container = {
 	Master: styled.div`
@@ -22,6 +23,9 @@ const Container = {
 		flex-wrap: wrap;
 		height: 100%;
 		padding: 15%;
+		@media ${UTILS.SCREEN.MOBILE} {
+			margin: 40% 10%;
+		}
 	`,
 	Technologies: styled.div`
 		width: 80%;
@@ -38,6 +42,12 @@ const Container = {
 		display: flex;
 		justify-content: center;
 		justify-items: center;
+		@media ${UTILS.SCREEN.MOBILE} {
+			width: 100%;
+			padding: 0% 5%;
+			margin: 40% 0%;
+			height: 70vh;
+		}
 	`,
 	Footer: styled.div`
 		width: 100%;

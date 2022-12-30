@@ -8,6 +8,13 @@ export const StyledCard = {
 		padding: 10%;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		justify-items: center;
+		justify-content: center;
+		@media ${UTILS.SCREEN.MOBILE} {
+			width: 100%;
+		}
 	`,
 	Title: styled.div`
 		border: ${UTILS.DRAFT};

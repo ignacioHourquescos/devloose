@@ -15,6 +15,7 @@ const dash = keyframes`
   }
   100%{
     stroke-dashoffset: 0;
+    opacity:1;
   }
 `;
 
@@ -49,6 +50,10 @@ export const StyledHeader = {
 		-webkit-animation-fill-mode: forwards;
 		z-index: 201;
 		margin-bottom: 2rem;
+		@media ${UTILS.SCREEN.MOBILE} {
+			top: 50%;
+			left: 42%;
+		}
 	`,
 	PropulsionContainer: styled.div`
 		position: absolute;
@@ -58,8 +63,10 @@ export const StyledHeader = {
 	`,
 	Propulsion: styled.path`
 		animation-delay: 2s;
-		display: ${(props) => (props.animate ? "block" : "none")};
+		opacity: 0;
+		${"" /* display: ${(props) => (props.animate ? "block" : "none")}; */}
 		animation: ${(props) => (props.animate ? animationPropulsion : "")};
+		animation-delay: ${(props) => (props.animate ? "2s" : "2s")};
 		stroke-dasharray: ${dasharray};
 		-webkit-animation-fill-mode: forwards;
 		z-index: 200;

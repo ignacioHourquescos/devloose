@@ -1,4 +1,5 @@
 import { useSpring } from "@react-spring/web";
+import UTILS from "../../utils/utils";
 
 export const HeaderStyle = (dataRef) => {
 	return useSpring({
@@ -27,7 +28,7 @@ export const BriefAnimation = (dataRef) => {
 	});
 };
 
-export const ImageContainerAnimation = (dataRef) => {
+export const Zanimation1 = (dataRef) => {
 	return useSpring({
 		config: {
 			duration: 1500,
@@ -37,10 +38,12 @@ export const ImageContainerAnimation = (dataRef) => {
 		},
 		from: {
 			x: 0,
+			y: 0,
 			opacity: 0,
 		},
 		to: {
-			x: dataRef?.isIntersecting ? 0 : -100,
+			x: dataRef?.isIntersecting || !UTILS.SCREEN.MOBILE ? 0 : -100,
+			y: dataRef?.isIntersecting || UTILS.SCREEN.MOBILE ? 0 : 0,
 			opacity: dataRef?.isIntersecting ? 1 : 0,
 		},
 	});

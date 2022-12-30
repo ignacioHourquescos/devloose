@@ -11,8 +11,11 @@ const Intro = () => {
 			</StyledIntro.Title>
 			<Icon></Icon>
 			<StyledIntro.Brief>
-				We combine 4 ingredients in order to obtain the specific recipe each
-				project requires.
+				We partner up from ideation phase to launch time.
+				<br />
+				We like to innovate.
+				<br />
+				We keep it simple.
 			</StyledIntro.Brief>
 		</StyledIntro.Inner>
 	);

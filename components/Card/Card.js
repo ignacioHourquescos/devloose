@@ -4,11 +4,7 @@ import { SiStyledcomponents } from "react-icons/si";
 import { animated } from "@react-spring/web";
 import { useRef, useEffect, useState } from "react";
 import useViewPort from "../../hooks/useViewPort.js";
-import {
-	HeaderStyle,
-	BriefAnimation,
-	ImageContainerAnimation,
-} from "./zanimations.js";
+import { HeaderStyle, BriefAnimation, Zanimation1 } from "./zanimations.js";
 import Button from "../../UI/Button/Button.js";
 
 const Card = () => {
@@ -21,7 +17,7 @@ const Card = () => {
 				<StyledCard.DataContainer />
 				<StyledCard.ImageContainer
 					as={animated.div}
-					style={ImageContainerAnimation(dataRef)}
+					style={Zanimation1(dataRef)}
 				/>
 				<StyledCard.Data>
 					<StyledCard.Title>Rebuilding software</StyledCard.Title>
