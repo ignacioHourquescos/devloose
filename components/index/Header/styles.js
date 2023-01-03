@@ -1,6 +1,7 @@
 import styled, { keyframes, css } from "styled-components";
-import UTILS from "../../utils/utils";
+import UTILS from "../../../utils/utils";
 import { animated } from "@react-spring/web";
+import { motion } from "framer-motion";
 
 const dasharray = 1000;
 
@@ -15,12 +16,13 @@ const dash = keyframes`
   }
   100%{
     stroke-dashoffset: 0;
+    opacity:1;
   }
 `;
 
 const animationPropulsion = (props) =>
 	css`
-		${dash} 2.5s ease-in backwards
+		${dash} 2s ease-in backwards
 	`;
 
 export const StyledHeader = {
@@ -49,6 +51,10 @@ export const StyledHeader = {
 		-webkit-animation-fill-mode: forwards;
 		z-index: 201;
 		margin-bottom: 2rem;
+		@media ${UTILS.SCREEN.MOBILE} {
+			top: 50%;
+			left: 42%;
+		}
 	`,
 	PropulsionContainer: styled.div`
 		position: absolute;
@@ -57,13 +63,14 @@ export const StyledHeader = {
 		z-index: 200;
 	`,
 	Propulsion: styled.path`
-    animation-delay: 2s;
-		display:${(props) => (props.animate ? "block" : "none")};
-    animation: ${(props) => (props.animate ? animationPropulsion : "")};
+		animation-delay: 2s;
+		opacity: 0;
+		${"" /* display: ${(props) => (props.animate ? "block" : "none")}; */}
+		animation: ${(props) => (props.animate ? animationPropulsion : "")};
+		animation-delay: ${(props) => (props.animate ? "2s" : "2s")};
 		stroke-dasharray: ${dasharray};
-		-webkit-animation-fill-mode: forwards
+		-webkit-animation-fill-mode: forwards;
 		z-index: 200;
-		${"" /* animation-delay: 2s; */}
 	`,
 	Launch: styled.div`
 		position: absolute;

@@ -3,9 +3,11 @@ import useViewPort from "../../hooks/useViewPort.js";
 import { StyledHeader } from "./styles.js";
 import { useRef, useEffect, useState } from "react";
 import { animated } from "@react-spring/web";
+
 import { zanimation1, zanimation2 } from "./zanimation.js";
 import { AiFillRocket } from "react-icons/ai";
 import Button from "../../UI/Button/Button.js";
+import { useAnimationFrame } from "framer-motion";
 
 const Header = (props) => {
 	const triggerRef = useRef();
@@ -19,7 +21,7 @@ const Header = (props) => {
 
 	return (
 		<StyledHeader.Inner>
-			<StyledHeader.Ball style={zanimation1(launch)}></StyledHeader.Ball>
+			<StyledHeader.Ball animate={{ scale: 3 }}></StyledHeader.Ball>
 			<StyledHeader.Rocket style={zanimation2(launch)}>
 				<AiFillRocket fill="white" size={70} />
 			</StyledHeader.Rocket>
