@@ -2,10 +2,10 @@ import React from "react";
 import useViewPort from "../../../hooks/useViewPort.js";
 import { StyledHeader } from "./styles.js";
 import { useRef, useEffect, useState } from "react";
-import { Zanimation1, Zanimation2 } from "./zanimation.js";
 import { AiFillRocket } from "react-icons/ai";
 import Button from "../../common/Button/Button.js";
 import Logo from "../../common/Logo/Logo.js";
+import { motion, useAnimation, useScroll } from "framer-motion";
 
 const Header = (props) => {
 	const triggerRef = useRef();
@@ -18,14 +18,17 @@ const Header = (props) => {
 
 	return (
 		<StyledHeader.Inner>
-			<StyledHeader.Ball animate="visible"></StyledHeader.Ball>
-			<StyledHeader.Rocket style={Zanimation2(launch)}>
+			<StyledHeader.Ball
+				initial="hidden"
+				animate={launch ? "visible" : ""}
+			></StyledHeader.Ball>
+			<StyledHeader.Rocket animate={launch ? "translate" : ""}>
 				<AiFillRocket fill="white" size={70} />
 			</StyledHeader.Rocket>
 			<StyledHeader.PropulsionContainer>
 				<svg viewBox="-60 -35 300 300" width="270px" height="270px">
 					<StyledHeader.Propulsion
-						animate={launch}
+						animate={true}
 						d={svgDrawings.chaosClarity}
 						fill="none"
 						stroke="white"

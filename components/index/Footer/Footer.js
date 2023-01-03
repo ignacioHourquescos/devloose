@@ -14,23 +14,12 @@ const Footer = (props) => {
 	return (
 		<StyledHeader.Inner>
 			<StyledHeader.Ball
-				style={backgroundAnimation(dataRef)}
+				initial="visible"
+				animate={true ? "hidden" : ""}
 			></StyledHeader.Ball>
-			<StyledHeader.Rocket style={rocketAnimation(dataRef)}>
+			<StyledHeader.Rocket animate={true ? "translate" : ""}>
 				<RiRocketLine fill="white" size={70} />
 			</StyledHeader.Rocket>
-			{/* <StyledHeader.PropulsionContainer>
-				<svg viewBox="-60 -35 300 300" width="270px" height="270px">
-					<StyledHeader.Propulsion
-						animate={dataRef}
-						d={svgDrawings.chaosClarity}
-						fill="none"
-						stroke="white"
-						strokeWidth={6}
-					></StyledHeader.Propulsion>
-				</svg>
-			</StyledHeader.PropulsionContainer> */}
-			<div ref={triggerRef} />
 		</StyledHeader.Inner>
 	);
 };

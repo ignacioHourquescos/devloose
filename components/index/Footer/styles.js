@@ -1,6 +1,8 @@
 import styled, { keyframes, css } from "styled-components";
 import UTILS from "../../../utils/utils";
 import { animated } from "@react-spring/web";
+import { motion } from "framer-motion";
+import variants from "./animation";
 
 const dasharray = 1000;
 
@@ -36,21 +38,25 @@ export const StyledHeader = {
 		overflow-x: hidden;
 		overflow-y: hidden;
 	`,
-	Ball: styled(animated.div)`
+	Ball: styled(motion.div).attrs(() => ({
+		variants,
+	}))`
 		position: absolute;
-		background-color: ${UTILS.COLORS.CARMINE};
 		height: 200px;
 		width: 200px;
 		z-index: 100;
-		border-radius: 200px;
+		background-color: ${UTILS.COLORS.CARMINE};
 	`,
-	Rocket: styled(animated.div)`
+	Rocket: styled(motion.div).attrs(() => ({
+		variants,
+	}))`
 		position: absolute;
-		top: 50%;
+		top: 0%;
 		left: 47.8%;
 		-webkit-animation-fill-mode: forwards;
 		z-index: 201;
 		margin-bottom: 2rem;
+		transform: translateY("-500px");
 		@media ${UTILS.SCREEN.MOBILE} {
 			top: 50%;
 			left: 42%;

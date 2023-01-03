@@ -2,7 +2,7 @@ import styled, { keyframes, css } from "styled-components";
 import UTILS from "../../../utils/utils";
 import { animated } from "@react-spring/web";
 import { motion } from "framer-motion";
-import variants from "./animationFramer";
+import variants from "./animation";
 
 const dasharray = 1000;
 
@@ -42,12 +42,14 @@ export const StyledHeader = {
 		variants,
 	}))`
 		position: absolute;
-		background-color: ${UTILS.COLORS.BLACK};
 		height: 200px;
 		width: 200px;
 		z-index: 100;
+		background-color: ${UTILS.COLORS.BLACK};
 	`,
-	Rocket: styled(animated.div)`
+	Rocket: styled(motion.div).attrs(() => ({
+		variants,
+	}))`
 		position: absolute;
 		top: 50%;
 		left: 47.8%;
@@ -68,7 +70,6 @@ export const StyledHeader = {
 	Propulsion: styled.path`
 		animation-delay: 2s;
 		opacity: 0;
-		${"" /* display: ${(props) => (props.animate ? "block" : "none")}; */}
 		animation: ${(props) => (props.animate ? animationPropulsion : "")};
 		animation-delay: ${(props) => (props.animate ? "2s" : "2s")};
 		stroke-dasharray: ${dasharray};
