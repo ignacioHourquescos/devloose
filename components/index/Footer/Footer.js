@@ -1,48 +1,41 @@
 import React from "react";
-import useViewPort from "../../hooks/useViewPort.js";
+import useViewPort from "../../../hooks/useViewPort.js";
 import { StyledHeader } from "./styles.js";
 import { useRef, useEffect, useState } from "react";
-import { Zanimation1, Zanimation2 } from "./zanimation.js";
-import { AiFillRocket } from "react-icons/ai";
-import Button from "../../UI/Button/Button.js";
-import Logo from "../../UI/Logo/Logo.js";
+import { rocketAnimation, backgroundAnimation } from "./animation.js";
+import { RiRocketLine } from "react-icons/ri";
+import Button from "../../common/Button/Button.js";
+import Logo from "../../common/Logo/Logo.js";
 
-const Header = (props) => {
+const Footer = (props) => {
 	const triggerRef = useRef();
-	const ref = useViewPort(triggerRef, { freezeOnceVisible: true });
-	const [launch, setLaunch] = useState(false);
-
-	const launchHandler = () => {
-		setLaunch(true);
-		console.log("LAUNCH STATE", launch);
-	};
+	const dataRef = useViewPort(triggerRef, { freezeOnceVisible: true });
 
 	return (
 		<StyledHeader.Inner>
-			<StyledHeader.Ball style={Zanimation1(launch)}></StyledHeader.Ball>
-			<StyledHeader.Rocket style={Zanimation2(launch)}>
-				<AiFillRocket fill="white" size={70} />
+			<StyledHeader.Ball
+				style={backgroundAnimation(dataRef)}
+			></StyledHeader.Ball>
+			<StyledHeader.Rocket style={rocketAnimation(dataRef)}>
+				<RiRocketLine fill="white" size={70} />
 			</StyledHeader.Rocket>
-			<StyledHeader.PropulsionContainer>
+			{/* <StyledHeader.PropulsionContainer>
 				<svg viewBox="-60 -35 300 300" width="270px" height="270px">
 					<StyledHeader.Propulsion
-						animate={launch}
+						animate={dataRef}
 						d={svgDrawings.chaosClarity}
 						fill="none"
 						stroke="white"
 						strokeWidth={6}
 					></StyledHeader.Propulsion>
 				</svg>
-			</StyledHeader.PropulsionContainer>
-
-			<StyledHeader.Launch onClick={() => launchHandler()}>
-				{!launch ? <Button>Launch</Button> : <Logo />}
-			</StyledHeader.Launch>
+			</StyledHeader.PropulsionContainer> */}
+			<div ref={triggerRef} />
 		</StyledHeader.Inner>
 	);
 };
 
-export default Header;
+export default Footer;
 
 const svgDrawings = {
 	chaosClarity:

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import UTILS from "../../utils/utils";
+import UTILS from "../../../utils/utils";
 
 export const StyledIntro = {
 	Inner: styled.div`

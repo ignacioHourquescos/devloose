@@ -1,5 +1,5 @@
 import { animated, useSpring } from "@react-spring/web";
-import UTILS from "../../utils/utils";
+import UTILS from "../../../utils/utils";
 
 export const headerStyle = (hoverRef) => {
 	return useSpring({

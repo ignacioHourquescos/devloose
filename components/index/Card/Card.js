@@ -3,9 +3,9 @@ import { FaReact } from "react-icons/fa";
 import { SiStyledcomponents } from "react-icons/si";
 import { animated } from "@react-spring/web";
 import { useRef, useEffect, useState } from "react";
-import useViewPort from "../../hooks/useViewPort.js";
+import useViewPort from "../../../hooks/useViewPort.js";
 import { HeaderStyle, BriefAnimation, Zanimation1 } from "./zanimations.js";
-import Button from "../../UI/Button/Button.js";
+import Button from "../../common/Button/Button.js";
 
 const Card = () => {
 	const triggerRef = useRef();

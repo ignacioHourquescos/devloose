@@ -1,6 +1,6 @@
 import { TagCloud } from "react-tagcloud";
 import react from "react";
-import UTILS from "../../utils/utils";
+import UTILS from "../../../utils/utils";
 
 const data = [
 	{ value: "jQuery", count: Math.random() * 30 },

@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-import UTILS from "../../utils/utils";
+import UTILS from "../../../utils/utils";
 import { animated } from "@react-spring/web";
 
 export const StyledCard = {

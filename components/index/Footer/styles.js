@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
-import UTILS from "../../utils/utils";
+import UTILS from "../../../utils/utils";
 import { animated } from "@react-spring/web";
 
 const dasharray = 1000;
@@ -38,10 +38,11 @@ export const StyledHeader = {
 	`,
 	Ball: styled(animated.div)`
 		position: absolute;
-		background-color: ${UTILS.COLORS.BLACK};
+		background-color: ${UTILS.COLORS.CARMINE};
 		height: 200px;
 		width: 200px;
 		z-index: 100;
+		border-radius: 200px;
 	`,
 	Rocket: styled(animated.div)`
 		position: absolute;

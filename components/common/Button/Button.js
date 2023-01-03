@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledButton } from "./styles";
-import useHover from "../../hooks/useHover";
+import useHover from "../../../hooks/useHover";
 import { animated } from "@react-spring/web";
 import { headerStyle } from "./zanimation";
 

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Header from "../components/Header/Header";
-import Card from "../components/Card/Card";
-import CardService from "../components/CardServices/CardServices";
+import Header from "../components/index/Header/Header";
+import Card from "../components/index/Card/Card";
+import CardService from "../components/index/CardServices/CardServices";
 import Container from "../styles/styles.js";
-import Profile from "../components/Profile/Profile";
-import Technologies from "../components/Technologies/Technologies";
-import Intro from "../components/Intro/Intro";
-import Footer from "../components/Footer/Footer";
+import Profile from "../components/index/Profile/Profile";
+import Technologies from "../components/index/Technologies/Technologies";
+import Intro from "../components/index/Intro/Intro";
+import Footer from "../components/index/Footer/Footer";
 
 const Home = () => {
 	return (
