@@ -2,10 +2,8 @@ import React from "react";
 import useViewPort from "../../../hooks/useViewPort.js";
 import { StyledHeader } from "./styles.js";
 import { useRef, useEffect, useState } from "react";
-import { rocketAnimation, backgroundAnimation } from "./animation.js";
 import { RiRocketLine } from "react-icons/ri";
-import Button from "../../common/Button/Button.js";
-import Logo from "../../common/Logo/Logo.js";
+
 
 const Footer = (props) => {
 	const triggerRef = useRef();

@@ -1,6 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
 import UTILS from "../../../utils/utils";
-import { animated } from "@react-spring/web";
 import { motion } from "framer-motion";
 import variants from "./animation";
 

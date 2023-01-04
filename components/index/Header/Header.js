@@ -5,7 +5,6 @@ import { useRef, useEffect, useState } from "react";
 import { AiFillRocket } from "react-icons/ai";
 import Button from "../../common/Button/Button.js";
 import Logo from "../../common/Logo/Logo.js";
-import { motion, useAnimation, useScroll } from "framer-motion";
 
 const Header = (props) => {
 	const triggerRef = useRef();
