@@ -1,8 +1,8 @@
 import React from "react";
 import { StyledButton } from "./styles";
 import useHover from "../../../hooks/useHover";
-import { animated } from "@react-spring/web";
-import { headerStyle } from "./zanimation";
+// import { animated } from "@react-spring/web";
+// import { headerStyle } from "./zanimation";
 
 const Button = ({ children }) => {
 	const [hoverRef, isHovered] = useHover();
@@ -11,7 +11,7 @@ const Button = ({ children }) => {
 		<StyledButton.Primary
 			as={animated.span}
 			ref={hoverRef}
-			style={headerStyle(isHovered)}
+			// style={headerStyle(isHovered)}
 		>
 			{children.toUpperCase()}
 		</StyledButton.Primary>
