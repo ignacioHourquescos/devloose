@@ -6,7 +6,8 @@ const UTILS = {
 		BLACK: "#232C3E",
 		VIOLET: "#6F73D2",
 		GREEN: "#BAFF29",
-		CARMINE: "#CA054D",
+		// CARMINE: "#CA054D",
+		CARMINE: "#B11750",
 	},
 	SCREEN: {
 		MOBILE: "(max-width: 425px)",

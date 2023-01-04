@@ -5,7 +5,7 @@ const variants = {
 		opacity: 1,
 		scale: 1,
 		borderRadius: "200px",
-		transition: { duration: 2.5 },
+		transition: { duration: 2 },
 		backgroundColor: UTILS.COLORS.CARMINE,
 	},
 	hidden: { opacity: 1, scale: 10 },

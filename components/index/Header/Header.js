@@ -20,9 +20,9 @@ const Header = (props) => {
 		<StyledHeader.Inner>
 			<StyledHeader.Ball
 				initial="hidden"
-				animate={launch ? "visible" : ""}
+				animate={launch && "visible"}
 			></StyledHeader.Ball>
-			<StyledHeader.Rocket animate={launch ? "translate" : ""}>
+			<StyledHeader.Rocket animate={launch && "translate"}>
 				<AiFillRocket fill="white" size={70} />
 			</StyledHeader.Rocket>
 			<StyledHeader.PropulsionContainer>

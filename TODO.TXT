@@ -10,6 +10,8 @@
 ⚪Idioma
 
 
+
+// Contenido de cards
 Proyectos
 sysone
 Renovapp
@@ -17,5 +19,11 @@ hsrabogados
 HIDROPONIA
 
 
+03/01
+- Pase animaciones de header y footer a Framer porque va mas rapido.
+  - Queda pulir el tema del boton que doispara el header. 
+  - Hcaer que la animacion del footer se dispare cuando entre en useViewPort
 
+BUGS
+- El firuelte se ve mal en pantalla grande
 
