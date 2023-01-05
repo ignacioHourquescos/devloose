@@ -9,33 +9,43 @@ import Intro from "../components/index/Intro/Intro";
 import Footer from "../components/index/Footer/Footer";
 
 const Home = () => {
+	const [displayHome, setDisplayHome] = useState(false);
+
+	const displayHomeHandler = () => {
+		setDisplayHome(true);
+	};
+
 	return (
 		<Container.Master>
-			<Header />
-			<Container.Intro>
-				<Intro />
-			</Container.Intro>
-			<Card />
-			<Card />
-			<Card />
-			<Container.CardService>
-				<CardService />
-				<CardService />
-				<CardService />
-				<CardService />
-			</Container.CardService>
-			<Container.Profile>
-				<Profile />
-				<Profile />
-				<Profile />
-				<Profile />
-			</Container.Profile>
-			<Container.Technologies>
-				<Technologies />
-			</Container.Technologies>
-			<Container.Footer>
-				<Footer />
-			</Container.Footer>
+			<Header displayHomeHandler={displayHomeHandler} />
+			{displayHome && (
+				<>
+					<Container.Intro>
+						<Intro />
+					</Container.Intro>
+					<Card />
+					<Card />
+					<Card />
+					<Container.CardService>
+						<CardService />
+						<CardService />
+						<CardService />
+						<CardService />
+					</Container.CardService>
+					<Container.Profile>
+						<Profile />
+						<Profile />
+						<Profile />
+						<Profile />
+					</Container.Profile>
+					<Container.Technologies>
+						<Technologies />
+					</Container.Technologies>
+					<Container.Footer>
+						<Footer />
+					</Container.Footer>
+				</>
+			)}
 		</Container.Master>
 	);
 };

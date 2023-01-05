@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
 import UTILS from "../../../utils/utils";
-import { animated } from "@react-spring/web";
+import { motion } from "framer-motion";
+import variants from "./animation";
 
 export const StyledCard = {
 	Inner: styled.div`
@@ -40,7 +41,7 @@ export const StyledCard = {
 		}
 	`,
 
-	ImageContainer: styled.svg`
+	ImageContainer: styled(motion.div).attrs(() => ({ variants }))`
 		clip-path: polygon(10% 0, 89% 0, 100% 100%, 0% 100%);
 		opacity: 0.6;
 		background-color: ${UTILS.COLORS.GREY};
@@ -49,11 +50,12 @@ export const StyledCard = {
 		padding: 15%;
 		width: 60%;
 		position: absolute;
-		right: 0;
+		left: 0;
 		z-index: 99;
 		border-top-right-radius: 150px;
 		border-bottom-right-radius: 60px;
 		filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
+
 		@media ${UTILS.SCREEN.MOBILE} {
 			clip-path: polygon(0 0, 100% 9%, 100% 100%, 0% 100%);
 			border-top-right-radius: 50px;
@@ -86,7 +88,7 @@ export const StyledCard = {
 		margin-bottom: 1rem;
 	`,
 
-	Brief: styled(animated.div)`
+	Brief: styled(motion.div).attrs(() => ({ variants }))`
 		border: ${UTILS.DRAFT};
 		margin-bottom: 3rem;
 		@media ${UTILS.SCREEN.MOBILE} {
@@ -94,7 +96,7 @@ export const StyledCard = {
 		}
 	`,
 
-	Technologies: styled(animated.div)`
+	Technologies: styled(motion.div).attrs(() => ({ variants }))`
 		border: ${UTILS.DRAFT};
 		display: flex;
 		flex-direction: row;
@@ -120,4 +122,7 @@ export const StyledCard = {
 		width: 50%;
 		padding: 2%;
 	`,
+
+	LogoContainer: styled(motion.ol).attrs(() => ({ variants }))``,
+	Logo: styled(motion.li).attrs(() => ({ variants }))``,
 };

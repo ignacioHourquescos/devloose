@@ -9,7 +9,7 @@ const Button = ({ children }) => {
 
 	return (
 		<StyledButton.Primary
-			as={animated.span}
+			// as={animated.span}
 			ref={hoverRef}
 			// style={headerStyle(isHovered)}
 		>

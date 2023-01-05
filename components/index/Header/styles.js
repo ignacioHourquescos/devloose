@@ -6,18 +6,9 @@ import variants from "./animation";
 const dasharray = 1000;
 
 const dash = keyframes`
-  0%{
-    stroke-dashoffset: 1000;
-    opacity:0
-  }
-  99%{
-    stroke-dashoffset: 0;
-    opacity:1;
-  }
-  100%{
-    stroke-dashoffset: 0;
-    opacity:1;
-  }
+  0%  {stroke-dashoffset: 1000; opacity:0}
+  99% {stroke-dashoffset: 0;    opacity:1;}
+  100%{stroke-dashoffset: 0;    opacity:1;}
 `;
 
 const animationPropulsion = (props) =>
@@ -37,18 +28,18 @@ export const StyledHeader = {
 		overflow-x: hidden;
 		overflow-y: hidden;
 	`,
-	Ball: styled(motion.div).attrs(() => ({
-		variants,
-	}))`
+
+	// prettier-ignore
+	Ball: styled(motion.div).attrs(() => ({variants}))`
 		position: absolute;
 		height: 200px;
 		width: 200px;
 		z-index: 100;
 		background-color: ${UTILS.COLORS.BLACK};
 	`,
-	Rocket: styled(motion.div).attrs(() => ({
-		variants,
-	}))`
+
+	// prettier-ignore
+	Rocket: styled(motion.div).attrs(() => ({variants}))`
 		position: absolute;
 		top: 50%;
 		left: 47.8%;
@@ -60,21 +51,41 @@ export const StyledHeader = {
 			left: 42%;
 		}
 	`,
+
+	Earth: styled(motion.div).attrs(() => ({ variants }))`
+		position: absolute;
+		top: 63%;
+		left: 30%;
+		-webkit-animation-fill-mode: forwards;
+		z-index: 201;
+		margin-bottom: 2rem;
+		@media ${UTILS.SCREEN.MOBILE} {
+			top: 50%;
+			left: 42%;
+		}
+	`,
+
+	Land: styled.div`
+		border-bottom: 5px solid white;
+		width: 600px;
+	`,
 	PropulsionContainer: styled.div`
 		position: absolute;
 		top: 33%;
 		left: 30;
 		z-index: 200;
 	`,
+
 	Propulsion: styled.path`
-		animation-delay: 2s;
+		animation-delay: 1s;
 		opacity: 0;
 		animation: ${(props) => (props.animate ? animationPropulsion : "")};
-		animation-delay: ${(props) => (props.animate ? "2s" : "2s")};
+		animation-delay: ${(props) => (props.animate ? "1s" : "1s")};
 		stroke-dasharray: ${dasharray};
 		-webkit-animation-fill-mode: forwards;
 		z-index: 200;
 	`,
+
 	Launch: styled.div`
 		position: absolute;
 		top: 80%;

@@ -5,14 +5,16 @@ import { useRef, useEffect, useState } from "react";
 import { AiFillRocket } from "react-icons/ai";
 import Button from "../../common/Button/Button.js";
 import Logo from "../../common/Logo/Logo.js";
+import Image from "next/image.js";
 
-const Header = (props) => {
+const Header = ({ displayHomeHandler }) => {
 	const triggerRef = useRef();
 	const ref = useViewPort(triggerRef, { freezeOnceVisible: true });
 	const [launch, setLaunch] = useState(false);
 
 	const launchHandler = () => {
 		setLaunch(true);
+		displayHomeHandler();
 	};
 
 	return (
@@ -22,12 +24,29 @@ const Header = (props) => {
 				animate={launch && "visible"}
 			></StyledHeader.Ball>
 			<StyledHeader.Rocket animate={launch && "translate"}>
-				<AiFillRocket fill="white" size={70} />
+				<Image
+					src="/rocketUnlaunched.svg"
+					alt="Picture of the author"
+					width="100px"
+					height="100px"
+				/>
+				{/* <AiFillRocket fill="white" size={70} /> */}
 			</StyledHeader.Rocket>
+			<StyledHeader.Earth animate={launch && "displayNone"}>
+				<StyledHeader.Land />
+
+				{/* <Image
+					src="/earth.svg"
+					alt="Picture of the author"
+					width="2000px"
+					height="300px"
+				/> */}
+				{/* <AiFillRocket fill="white" size={70} /> */}
+			</StyledHeader.Earth>
 			<StyledHeader.PropulsionContainer>
 				<svg viewBox="-60 -35 300 300" width="270px" height="270px">
 					<StyledHeader.Propulsion
-						animate={true}
+						animate={launch}
 						d={svgDrawings.chaosClarity}
 						fill="none"
 						stroke="white"

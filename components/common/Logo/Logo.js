@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button/Button.js";
 import { StyledLogo } from "./styles.js";
 
 const Logo = () => {
