@@ -3,19 +3,19 @@ import useViewPort from "../../../hooks/useViewPort.js";
 import { StyledHeader } from "./styles.js";
 import { useRef, useEffect, useState } from "react";
 import { RiRocketLine } from "react-icons/ri";
-
+import { useInView } from "react-intersection-observer";
 
 const Footer = (props) => {
-	const triggerRef = useRef();
-	const dataRef = useViewPort(triggerRef, { freezeOnceVisible: true });
+	const [ref, inView] = useInView();
 
 	return (
 		<StyledHeader.Inner>
+			<div ref={ref} />
 			<StyledHeader.Ball
-				initial="visible"
-				animate={true ? "hidden" : ""}
+				initial="intial"
+				animate={inView ? "visible" : ""}
 			></StyledHeader.Ball>
-			<StyledHeader.Rocket animate={true ? "translate" : ""}>
+			<StyledHeader.Rocket animate={inView ? "translate" : ""}>
 				<RiRocketLine fill="white" size={70} />
 			</StyledHeader.Rocket>
 		</StyledHeader.Inner>

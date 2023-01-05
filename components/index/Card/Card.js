@@ -6,21 +6,27 @@ import useViewPort from "../../../hooks/useViewPort.js";
 import Button from "../../common/Button/Button.js";
 import { useInView } from "react-intersection-observer";
 
-const Card = () => {
+const Card = (props) => {
 	const [ref, inView] = useInView();
 
 	return (
+		// prettier-ignore
 		<>
 			<StyledCard.Inner>
 				<div ref={ref} />
 				<StyledCard.DataContainer />
-				<StyledCard.ImageContainer animate={inView && "translateLeftToRight"} />
+				<StyledCard.ImageContainer 
+          animate={inView && "fadeIn"} 
+            
+          />
 				<StyledCard.Data>
-					<StyledCard.Title>Rebuilding software</StyledCard.Title>
-					<StyledCard.Brief initial="hidden" animate={inView && "fadeIn"}>
-						UI developemnt on a microfront end architecutre. Minimalist and
-						differetn flow sin order to mantainr high quality usability
-					</StyledCard.Brief>
+					<StyledCard.Title 
+            content={props.title} />
+					<StyledCard.Brief 
+            initial="hidden" 
+            animate={inView && "fadeIn"}
+             content={props.brief} />
+			
 					<StyledCard.Technologies
 						initial="hidden"
 						animate={inView && "fadeIn"}
@@ -32,7 +38,7 @@ const Card = () => {
 						<Button>VISIT</Button>
 					</StyledCard.Visit>
 				</StyledCard.Data>
-
+        <Button>VISIT</Button>
 				<StyledCard.Image>image</StyledCard.Image>
 			</StyledCard.Inner>
 		</>

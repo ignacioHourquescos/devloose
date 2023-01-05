@@ -8,8 +8,8 @@ export const StyledCard = {
 		border: ${UTILS.DRAFT};
 		display: flex;
 		flex-direction: row;
-		width: 80%;
-		margin: 10%;
+		width: 70%;
+		margin: 10% 15%;
 		position: relative;
 		margin-bottom: 20%;
 		height: 60vh;
@@ -50,7 +50,7 @@ export const StyledCard = {
 		padding: 15%;
 		width: 60%;
 		position: absolute;
-		left: 0;
+		right: 0;
 		z-index: 99;
 		border-top-right-radius: 150px;
 		border-bottom-right-radius: 60px;
@@ -86,6 +86,9 @@ export const StyledCard = {
 		font-weight: 800;
 		font-size: 2rem;
 		margin-bottom: 1rem;
+		:before {
+			content: "${(p) => p.content}";
+		}
 	`,
 
 	Brief: styled(motion.div).attrs(() => ({ variants }))`
@@ -93,6 +96,9 @@ export const StyledCard = {
 		margin-bottom: 3rem;
 		@media ${UTILS.SCREEN.MOBILE} {
 			margin-bottom: 1rem;
+		}
+		:before {
+			content: "${(p) => p.content}";
 		}
 	`,
 

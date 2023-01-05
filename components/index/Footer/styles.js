@@ -4,28 +4,6 @@ import { animated } from "@react-spring/web";
 import { motion } from "framer-motion";
 import variants from "./animation";
 
-const dasharray = 1000;
-
-const dash = keyframes`
-  0%{
-    stroke-dashoffset: 1000;
-    opacity:0
-  }
-  99%{
-    stroke-dashoffset: 0;
-    opacity:1;
-  }
-  100%{
-    stroke-dashoffset: 0;
-    opacity:1;
-  }
-`;
-
-const animationPropulsion = (props) =>
-	css`
-		${dash} 2s ease-in backwards
-	`;
-
 export const StyledHeader = {
 	Inner: styled.div`
 		height: 100vh;
@@ -46,6 +24,7 @@ export const StyledHeader = {
 		width: 200px;
 		z-index: 100;
 		background-color: ${UTILS.COLORS.CARMINE};
+		border-radius: 200px;
 	`,
 	Rocket: styled(motion.div).attrs(() => ({
 		variants,
@@ -68,16 +47,7 @@ export const StyledHeader = {
 		left: 30;
 		z-index: 200;
 	`,
-	Propulsion: styled.path`
-		animation-delay: 2s;
-		opacity: 0;
-		${"" /* display: ${(props) => (props.animate ? "block" : "none")}; */}
-		animation: ${(props) => (props.animate ? animationPropulsion : "")};
-		animation-delay: ${(props) => (props.animate ? "2s" : "2s")};
-		stroke-dasharray: ${dasharray};
-		-webkit-animation-fill-mode: forwards;
-		z-index: 200;
-	`,
+
 	Launch: styled.div`
 		position: absolute;
 		top: 80%;

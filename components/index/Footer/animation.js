@@ -5,9 +5,12 @@ const variants = {
 	visible: {
 		opacity: 1,
 		scale: 1,
-		borderRadius: "200px",
+
 		transition: { duration: 2.5 },
 		backgroundColor: UTILS.COLORS.BLACK,
+    opacity: 1, 
+    scale: 10,
+    transition: { duration: 3 }, 
 	},
 	hidden: { 
     opacity: 1, 
