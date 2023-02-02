@@ -16,7 +16,7 @@ export const StyledCard = {
 		padding-bottom: 2rem;
 		@media ${UTILS.SCREEN.MOBILE} {
 			flex-direction: column-reverse;
-			height: 50vh;
+			height: 60vh;
 			width: 80%;
 			margin: 10%;
 			margin-bottom: 50%;
@@ -142,10 +142,12 @@ export const StyledCard = {
 
 	Visit: styled.div`
 		border: ${UTILS.DRAFT};
+		font-size: 1.5rem;
+		color: ${UTILS.COLORS.CARMINE};
 		@media ${UTILS.SCREEN.MOBILE} {
 			display: inline-block;
 
-			margin-left: auto;
+			${"" /* margin-left: auto; */}
 		}
 	`,
 

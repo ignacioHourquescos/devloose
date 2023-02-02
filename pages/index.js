@@ -43,7 +43,7 @@ const Home = () => {
 							}}
 							color
 						>
-							Hi!
+							ABOUT
 						</h1>
 						<Container.Intro>
 							<Intro />
