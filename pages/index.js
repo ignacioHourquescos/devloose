@@ -286,7 +286,7 @@ const portfolioArray = [
 		type: "E-Commerce",
 		name: "Taylored price list for food wholesaler",
 		color: "#FFDAC1",
-		image: "/elFuerte.png",
+		image: "/ElFuerte.png",
 		brief:
 			"Starting off from an ERP, we created an intetgration in order to show a web view of vital information",
 		icons: {

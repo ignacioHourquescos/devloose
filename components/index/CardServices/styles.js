@@ -15,6 +15,7 @@ export const StyledCard = {
 
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
+			padding: 10%;
 		}
 	`,
 	Title: styled.div`

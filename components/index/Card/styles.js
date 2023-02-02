@@ -16,7 +16,7 @@ export const StyledCard = {
 		padding-bottom: 2rem;
 		@media ${UTILS.SCREEN.MOBILE} {
 			flex-direction: column-reverse;
-			height: 60vh;
+			height: 65vh;
 			width: 80%;
 			margin: 10%;
 			margin-bottom: 50%;
@@ -111,7 +111,7 @@ export const StyledCard = {
 	Title: styled.div`
 		border: ${UTILS.DRAFT};
 		font-weight: 800;
-		font-size: 2rem;
+		font-size: 1.7rem;
 		margin-bottom: 1rem;
 		:before {
 			content: "${(p) => p.content}";
@@ -144,6 +144,9 @@ export const StyledCard = {
 		border: ${UTILS.DRAFT};
 		font-size: 1.5rem;
 		color: ${UTILS.COLORS.CARMINE};
+		border: 1px solid ${UTILS.COLORS.CARMINE};
+		padding: 0.5rem 1.5rem;
+		border-radius: 200px;
 		@media ${UTILS.SCREEN.MOBILE} {
 			display: inline-block;
 
