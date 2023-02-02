@@ -8,6 +8,7 @@ import Technologies from "../components/index/Technologies/Technologies";
 import Intro from "../components/index/Intro/Intro";
 import Footer from "../components/index/Footer/Footer";
 import Ingredients from "../components/index/Ingredients/Ingredients";
+import Head from "next/head";
 
 const Home = () => {
 	const [displayHome, setDisplayHome] = useState(false);
@@ -17,50 +18,21 @@ const Home = () => {
 	};
 
 	return (
-		<Container.Master>
-			<Header displayHomeHandler={displayHomeHandler} />
-			{displayHome && (
-				<>
-					<Container.Intro>
-						<Intro />
-					</Container.Intro>
-					<h1
-						style={{
-							marginLeft: "15%",
-							padding: "0 5%",
-							backgroundColor: "black",
-							color: "white",
-							display: "inline-block",
-						}}
-						color
-					>
-						PROJECTS
-					</h1>
-					{portfolioArray.map((element) => (
-						<Card
-							key={element.name}
-							title={element.name}
-							brief={element.brief}
-							image={element.image}
-						/>
-					))}
-					<Container.Ingredients>
-						<h1
-							style={{
-								marginLeft: "10%",
-								padding: "0 5%",
-								backgroundColor: "black",
-								color: "white",
-								display: "inline-block",
-							}}
-							color
-						>
-							INGREDIENTS
-						</h1>
-						<Ingredients />
-					</Container.Ingredients>
+		<>
+			<Head>
+				<title>Devloose</title>
+				<meta
+					name="description"
+					content="Devloose - Design and development partner"
+				/>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-					<Container.CardService>
+				<meta name="theme-color" content="#0B1115"></meta>
+			</Head>
+			<Container.Master>
+				<Header displayHomeHandler={displayHomeHandler} />
+				{displayHome && (
+					<>
 						<h1
 							style={{
 								marginLeft: "10%",
@@ -71,52 +43,102 @@ const Home = () => {
 							}}
 							color
 						>
-							SERVICES
+							Hi!
 						</h1>
-						<CardService />
-						<CardService />
-						<CardService />
-						<CardService />
-					</Container.CardService>
-					<h1
-						style={{
-							marginLeft: "10%",
-							padding: "0 5%",
-							backgroundColor: "black",
-							color: "white",
-							display: "inline-block",
-						}}
-						color
-					>
-						WHO WE ARE
-					</h1>
-					<Container.Profile>
-						<Profile />
-						<Profile />
-						<Profile />
-						<Profile />
-					</Container.Profile>
-					<h1
-						style={{
-							marginLeft: "10%",
-							padding: "0 5%",
-							backgroundColor: "black",
-							color: "white",
-							display: "inline-block",
-						}}
-						color
-					>
-						TECHNOLOGIES
-					</h1>
-					<Container.Technologies>
-						<Technologies />
-					</Container.Technologies>
-					<Container.Footer>
-						<Footer />
-					</Container.Footer>
-				</>
-			)}
-		</Container.Master>
+						<Container.Intro>
+							<Intro />
+						</Container.Intro>
+						<h1
+							style={{
+								marginLeft: "15%",
+								padding: "0 5%",
+								backgroundColor: "black",
+								color: "white",
+								display: "inline-block",
+							}}
+							color
+						>
+							PROJECTS
+						</h1>
+						{portfolioArray.map((element) => (
+							<Card
+								key={element.name}
+								title={element.name}
+								brief={element.brief}
+								image={element.image}
+							/>
+						))}
+						<Container.Ingredients>
+							<h1
+								style={{
+									marginLeft: "10%",
+									padding: "0 5%",
+									backgroundColor: "black",
+									color: "white",
+									display: "inline-block",
+								}}
+								color
+							>
+								INGREDIENTS
+							</h1>
+							<Ingredients />
+						</Container.Ingredients>
+
+						<Container.CardService>
+							<h1
+								style={{
+									marginLeft: "10%",
+									padding: "0 5%",
+									backgroundColor: "black",
+									color: "white",
+									display: "inline-block",
+								}}
+								color
+							>
+								SERVICES
+							</h1>
+							<CardService />
+						</Container.CardService>
+						<h1
+							style={{
+								marginLeft: "10%",
+								padding: "0 5%",
+								backgroundColor: "black",
+								color: "white",
+								display: "inline-block",
+							}}
+							color
+						>
+							WHO WE ARE
+						</h1>
+						<Container.Profile>
+							<Profile />
+							<Profile />
+							<Profile />
+							<Profile />
+						</Container.Profile>
+						<h1
+							style={{
+								marginLeft: "10%",
+								padding: "0 5%",
+								backgroundColor: "black",
+								color: "white",
+								display: "inline-block",
+							}}
+							color
+						>
+							TECHNOLOGIES
+						</h1>
+						<Container.Technologies>
+							<Technologies />
+						</Container.Technologies>
+						<Container.Footer>
+							<Footer />
+						</Container.Footer>
+					</>
+				)}
+			</Container.Master>
+		</>
 	);
 };
 
@@ -192,7 +214,7 @@ const portfolioArray = [
 		type: "Institucional",
 		name: "Institutional Web page for law firm",
 		color: "#c7dbda",
-		image: "/hsrabogados.png",
+		image: "/hsrAbogados.png",
 		brief: "Custom made web site with CMS",
 		icons: {
 			html: 1,
@@ -264,7 +286,7 @@ const portfolioArray = [
 		type: "E-Commerce",
 		name: "Taylored price list for food wholesaler",
 		color: "#FFDAC1",
-		image: "/elfuerte.png",
+		image: "/elFuerte.png",
 		brief:
 			"Starting off from an ERP, we created an intetgration in order to show a web view of vital information",
 		icons: {

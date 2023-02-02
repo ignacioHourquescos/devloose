@@ -25,6 +25,7 @@ const Container = {
 		padding: 0%;
 		@media ${UTILS.SCREEN.MOBILE} {
 			margin: 20% 10%;
+			margin-bottom: 50%;
 		}
 	`,
 	Technologies: styled.div`
@@ -34,6 +35,9 @@ const Container = {
 		display: flex;
 		justify-content: center;
 		justify-items: center;
+		@media ${UTILS.SCREEN.MOBILE} {
+			margin-bottom: 50%;
+		}
 	`,
 	Intro: styled.div`
 		width: 80%;
@@ -45,7 +49,8 @@ const Container = {
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			padding: 0% 5%;
-			margin: 40% 0%;
+			margin: 20% 0%;
+			margin-bottom: 10%;
 			${"" /* height: 70vh; */}
 		}
 	`,

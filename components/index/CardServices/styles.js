@@ -8,10 +8,11 @@ export const StyledCard = {
 		padding: 10%;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		align-content: center;
 		justify-items: center;
 		justify-content: center;
+
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 		}
@@ -23,5 +24,6 @@ export const StyledCard = {
 	Description: styled.div`
 		border: ${UTILS.DRAFT};
 		font-size: 1rem;
+		margin-bottom: 2rem;
 	`,
 };

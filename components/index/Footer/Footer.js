@@ -11,10 +11,20 @@ const Footer = (props) => {
 	return (
 		<StyledHeader.Inner>
 			<div ref={ref} />
+			hola
 			<StyledHeader.Ball
 				initial="intial"
 				animate={inView ? "visible" : ""}
 			></StyledHeader.Ball>
+			<StyledHeader.PropulsionContainer>
+				<StyledHeader.Propulsion
+					animate={true}
+					d={svgDrawings.chaosClarity}
+					fill="none"
+					stroke="white"
+					strokeWidth={6}
+				></StyledHeader.Propulsion>
+			</StyledHeader.PropulsionContainer>
 			<StyledHeader.Rocket animate={inView ? "translate" : ""}>
 				<RiRocketLine fill="white" size={70} />
 			</StyledHeader.Rocket>

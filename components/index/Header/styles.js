@@ -27,6 +27,7 @@ export const StyledHeader = {
 		position: relative;
 		overflow-x: hidden;
 		overflow-y: hidden;
+		margin-bottom: 4rem;
 	`,
 
 	// prettier-ignore
@@ -34,6 +35,7 @@ export const StyledHeader = {
 		position: absolute;
 		height: 200px;
 		width: 200px;
+
 		z-index: 100;
 		background-color: ${UTILS.COLORS.BLACK};
 	`,

@@ -3,7 +3,18 @@ import UTILS from "../../../utils/utils";
 import { animated } from "@react-spring/web";
 import { motion } from "framer-motion";
 import variants from "./animation";
+const dasharray = 1000;
 
+const dash = keyframes`
+  0%  {stroke-dashoffset: 1000; opacity:0}
+  99% {stroke-dashoffset: 0;    opacity:1;}
+  100%{stroke-dashoffset: 0;    opacity:1;}
+`;
+
+const animationPropulsion = (props) =>
+	css`
+		${dash} 2s ease-in backwards
+	`;
 export const StyledHeader = {
 	Inner: styled.div`
 		height: 100vh;
@@ -37,15 +48,25 @@ export const StyledHeader = {
 		margin-bottom: 2rem;
 		transform: translateY("-500px");
 		@media ${UTILS.SCREEN.MOBILE} {
-			top: 50%;
+			top: 20%;
 			left: 42%;
 		}
 	`,
 	PropulsionContainer: styled.div`
 		position: absolute;
 		top: 33%;
-		left: 30;
-		z-index: 200;
+		left: 30%;
+		z-index: 201;
+	`,
+
+	Propulsion: styled.path`
+		animation-delay: 1s;
+		opacity: 0;
+		animation: ${(props) => (props.animate ? animationPropulsion : "")};
+		animation-delay: ${(props) => (props.animate ? "1s" : "1s")};
+		stroke-dasharray: ${dasharray};
+		-webkit-animation-fill-mode: forwards;
+		z-index: 201;
 	`,
 
 	Launch: styled.div`

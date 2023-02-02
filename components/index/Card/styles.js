@@ -16,7 +16,7 @@ export const StyledCard = {
 		padding-bottom: 2rem;
 		@media ${UTILS.SCREEN.MOBILE} {
 			flex-direction: column-reverse;
-			height: 70vh;
+			height: 50vh;
 			width: 80%;
 			margin: 10%;
 			margin-bottom: 50%;
