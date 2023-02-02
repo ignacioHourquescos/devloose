@@ -10,23 +10,25 @@ const Card = (props) => {
 	const [ref, inView] = useInView();
 
 	return (
-		// prettier-ignore
 		<>
 			<StyledCard.Inner>
 				<div ref={ref} />
-				<StyledCard.DataContainer />
-				<StyledCard.ImageContainer 
-          animate={inView && "fadeIn"} 
-            
-          />
+				{/* <StyledCard.DataContainer /> */}
+
 				<StyledCard.Data>
-					<StyledCard.Title 
-            content={props.title} />
-					<StyledCard.Brief 
-            initial="hidden" 
-            animate={inView && "fadeIn"}
-             content={props.brief} />
-			
+					<StyledCard.ImageContainer
+						animate={inView && "fadeIn"}
+						// image={props.image}
+					>
+						<StyledCard.Image src={props.image}></StyledCard.Image>
+					</StyledCard.ImageContainer>
+					<StyledCard.Title content={props.title} />
+					<StyledCard.Brief
+						initial="hidden"
+						animate={inView && "fadeIn"}
+						content={props.brief}
+					/>
+
 					<StyledCard.Technologies
 						initial="hidden"
 						animate={inView && "fadeIn"}
@@ -38,8 +40,6 @@ const Card = (props) => {
 						<Button>VISIT</Button>
 					</StyledCard.Visit>
 				</StyledCard.Data>
-        <Button>VISIT</Button>
-				<StyledCard.Image>image</StyledCard.Image>
 			</StyledCard.Inner>
 		</>
 	);

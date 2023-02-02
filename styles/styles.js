@@ -11,7 +11,7 @@ const Container = {
 	`,
 	CardService: styled.div`
 		width: 80%;
-		margin: 0 10%;
+		margin: 20% 5%;
 		display: flex;
 		flex-wrap: wrap;
 	`,
@@ -19,18 +19,18 @@ const Container = {
 		width: 80%;
 		margin: 0 10%;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 		height: 100%;
-		padding: 15%;
+		padding: 0%;
 		@media ${UTILS.SCREEN.MOBILE} {
-			margin: 40% 10%;
+			margin: 20% 10%;
 		}
 	`,
 	Technologies: styled.div`
 		width: 80%;
 		margin: 0 10%;
-		padding: 10% 20%;
+		padding: 10% 0%;
 		display: flex;
 		justify-content: center;
 		justify-items: center;
@@ -46,8 +46,11 @@ const Container = {
 			width: 100%;
 			padding: 0% 5%;
 			margin: 40% 0%;
-			height: 70vh;
+			${"" /* height: 70vh; */}
 		}
+	`,
+	Ingredients: styled.div`
+		width: 100%;
 	`,
 	Footer: styled.div`
 		width: 100%;

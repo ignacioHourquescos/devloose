@@ -13,7 +13,7 @@ const Profile = () => {
 					height="300px"
 				/>
 			</StyledProfile.Icon>
-			<StyledProfile.Name>Juan gomez</StyledProfile.Name>
+			<StyledProfile.Name>Juan Gomez</StyledProfile.Name>
 		</StyledProfile.Inner>
 	);
 };

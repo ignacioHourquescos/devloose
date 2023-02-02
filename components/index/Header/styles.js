@@ -48,7 +48,7 @@ export const StyledHeader = {
 		margin-bottom: 2rem;
 		@media ${UTILS.SCREEN.MOBILE} {
 			top: 50%;
-			left: 42%;
+			left: 37%;
 		}
 	`,
 

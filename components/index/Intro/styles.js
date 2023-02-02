@@ -9,28 +9,17 @@ export const StyledIntro = {
 		flex-direction: column;
 		align-content: center;
 		align-items: center;
+		height: 100%;
 		@media ${UTILS.SCREEN.MOBILE} {
-			width: 100%;
+			width: 90%;
 		}
 	`,
 	Title: styled.div`
 		font-size: 2rem;
 		text-align: center;
 		@media ${UTILS.SCREEN.MOBILE} {
-			font-size: 1.5rem;
-		}
-	`,
-	Icons: styled.div`
-		display: flex;
-		@media ${UTILS.SCREEN.MOBILE} {
-			font-size: 1.5rem;
-		}
-	`,
-	Brief: styled.div`
-		font-size: 1rem;
-		text-align: center;
-		@media ${UTILS.SCREEN.MOBILE} {
-			font-size: 1rem;
+			font-size: 1.7rem;
+			margin-bottom: 100%;
 		}
 	`,
 };

@@ -10,7 +10,7 @@ export const StyledProfile = {
 		align-content: center;
 		align-items: center;
 		@media ${UTILS.SCREEN.MOBILE} {
-			width: 50%;
+			width: 30%;
 		}
 	`,
 	Icon: styled.div`

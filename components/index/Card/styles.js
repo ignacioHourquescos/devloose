@@ -17,52 +17,79 @@ export const StyledCard = {
 		@media ${UTILS.SCREEN.MOBILE} {
 			flex-direction: column-reverse;
 			height: 70vh;
+			width: 80%;
+			margin: 10%;
+			margin-bottom: 50%;
 		}
 	`,
 
 	//LEFT SIDE OF CARD
 	DataContainer: styled.svg`
-		clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+		${"" /* clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%); */}
 		background-color: ${UTILS.COLORS.WHITE};
 		height: 99%;
 		width: 50%;
 		padding: 15%;
-		position: absolute;
+		${"" /* position: absolute; */}
 		z-index: 100;
-		border-top-left-radius: 60px;
-		border-bottom-left-radius: 60px;
+		${
+			"" /* border-top-left-radius: 60px;
+		border-bottom-left-radius: 60px; */
+		}
 		filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
 		@media ${UTILS.SCREEN.MOBILE} {
-			clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+			${"" /* clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); */}
 			width: 100%;
-			height: 50%;
-			border-top-left-radius: 0px;
-			border-bottom-right-radius: 50px;
+			height: 40%;
+			${
+				"" /* border-top-left-radius: 0px;
+			border-bottom-right-radius: 50px; */
+			}
 		}
 	`,
+	// Image: styled.div.attrs((props) => ({
+	// 	type: "text",
+	// 	image: props.image,
+	// }))`
 
-	ImageContainer: styled(motion.div).attrs(() => ({ variants }))`
-		clip-path: polygon(10% 0, 89% 0, 100% 100%, 0% 100%);
+	ImageContainer: styled(motion.div).attrs((props) => ({
+		variants,
+		type: "text",
+		image: props.image,
+	}))`
+		${"" /* clip-path: polygon(10% 0, 89% 0, 100% 100%, 0% 100%); */}
+		${"" /* background-image: url(${(props) => props.image}); */}
+		background-size: 70%
 		opacity: 0.6;
-		background-color: ${UTILS.COLORS.GREY};
+		${"" /* background-color: ${UTILS.COLORS.WHITE}; */}
+		${"" /* background-color: ${UTILS.COLORS.GREY}; */}
 		transparency: 40%;
-		height: 99%;
-		padding: 15%;
+		${"" /* height: 99%; */}
+		padding: 5%;
 		width: 60%;
 		position: absolute;
+		padding-top: 15%;
+		${
+			"" /* display: flex;
+		align-content: center; */
+		}
 		right: 0;
 		z-index: 99;
-		border-top-right-radius: 150px;
-		border-bottom-right-radius: 60px;
-		filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
+		${
+			"" /* border-top-right-radius: 150px;
+		border-bottom-right-radius: 60px; */
+		}
+		${"" /* filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4)); */}
 
 		@media ${UTILS.SCREEN.MOBILE} {
-			clip-path: polygon(0 0, 100% 9%, 100% 100%, 0% 100%);
+			${
+				"" /* clip-path: polygon(0 0, 100% 9%, 100% 100%, 0% 100%);
 			border-top-right-radius: 50px;
 			border-bottom-right-radius: 0px;
-			border-top-left-radius: 50px;
+			border-top-left-radius: 50px; */
+			}
 			width: 100%;
-			height: 50%;
+			${"" /* height: 50%; */}
 			top: 0;
 			left: 0;
 		}
@@ -123,10 +150,30 @@ export const StyledCard = {
 	`,
 
 	// RIGHT SIDE OF CARD
-	Image: styled.div`
-		border: ${UTILS.DRAFT};
-		width: 50%;
-		padding: 2%;
+	// Image: styled.img.attrs((props) => ({
+	// 	type: "text",
+	// 	image: props.image,
+	// }))`
+	// 	background-image: url(${(props) => props.image});
+	// 	border: ${UTILS.DRAFT};
+	// 	width: 50%;
+	// 	padding: 2%;
+	// `,
+
+	Image: styled.img.attrs((props) => ({
+		type: "text",
+		image: props.image,
+	}))`
+		${"" /* clip-path: polygon(10% 0, 89% 0, 100% 100%, 0% 100%); */}
+		${
+			"" /* background-image: url(${(props) => props.image});
+		background-size: contain;
+    background */
+		}
+    border:10px solid black;
+		border-radius: 5px;
+		width: 100%;
+		${"" /* height: 100%; */}
 	`,
 
 	LogoContainer: styled(motion.ol).attrs(() => ({ variants }))``,
