@@ -18,10 +18,7 @@ const Card = (props) => {
 				{/* <StyledCard.DataContainer /> */}
 
 				<StyledCard.Data>
-					<StyledCard.ImageContainer
-						animate={inView && "fadeIn"}
-						// image={props.image}
-					>
+					<StyledCard.ImageContainer animate={inView && "fadeIn"}>
 						<StyledCard.Image src={props.image}></StyledCard.Image>
 					</StyledCard.ImageContainer>
 					<StyledCard.Title content={props.title} />
@@ -34,17 +31,8 @@ const Card = (props) => {
 						initial="hidden"
 						animate={inView && "fadeIn"}
 					>
-						<StyledCard.Visit>
-							Visit
-							{/* <BsArrowRightCircle /> */}
-						</StyledCard.Visit>
-						{/* <FaReact />
-						<SiStyledcomponents /> */}
+						<StyledCard.Visit>Visit</StyledCard.Visit>
 					</StyledCard.Technologies>
-
-					{/* <StyledCard.Visit>
-						Visit <BsArrowRightCircle />
-					</StyledCard.Visit> */}
 				</StyledCard.Data>
 			</StyledCard.Inner>
 		</>

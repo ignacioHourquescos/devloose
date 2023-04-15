@@ -6,7 +6,7 @@ const Logo = () => {
 	return (
 		<StyledLogo.Inner>
 			<StyledLogo.Title>DEVLOOSE</StyledLogo.Title>
-			<StyledLogo.Subtitle>DIGITAL FACTORY</StyledLogo.Subtitle>
+			<StyledLogo.Subtitle>YOUR DIGITAL PARTNER</StyledLogo.Subtitle>
 		</StyledLogo.Inner>
 	);
 };

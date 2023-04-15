@@ -57,39 +57,21 @@ export const StyledCard = {
 		type: "text",
 		image: props.image,
 	}))`
-		${"" /* clip-path: polygon(10% 0, 89% 0, 100% 100%, 0% 100%); */}
-		${"" /* background-image: url(${(props) => props.image}); */}
+
 		background-size: 70%
 		opacity: 0.6;
-		${"" /* background-color: ${UTILS.COLORS.WHITE}; */}
-		${"" /* background-color: ${UTILS.COLORS.GREY}; */}
 		transparency: 40%;
-		${"" /* height: 99%; */}
 		padding: 5%;
 		width: 60%;
 		position: absolute;
 		padding-top: 15%;
-		${
-			"" /* display: flex;
-		align-content: center; */
-		}
 		right: 0;
 		z-index: 99;
-		${
-			"" /* border-top-right-radius: 150px;
-		border-bottom-right-radius: 60px; */
-		}
-		${"" /* filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4)); */}
+
 
 		@media ${UTILS.SCREEN.MOBILE} {
-			${
-				"" /* clip-path: polygon(0 0, 100% 9%, 100% 100%, 0% 100%);
-			border-top-right-radius: 50px;
-			border-bottom-right-radius: 0px;
-			border-top-left-radius: 50px; */
-			}
 			width: 100%;
-			${"" /* height: 50%; */}
+			height: 50%;
 			top: 0;
 			left: 0;
 		}
