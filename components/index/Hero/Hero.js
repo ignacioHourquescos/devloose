@@ -7,7 +7,7 @@ import Button from "../../common/Button/Button.js";
 import Logo from "../../common/Logo/Logo.js";
 import Image from "next/image.js";
 
-const Header = ({ displayHomeHandler }) => {
+const Hero = ({ displayHomeHandler, rendererHandler }) => {
 	const triggerRef = useRef();
 	const ref = useViewPort(triggerRef, { freezeOnceVisible: true });
 	const [launch, setLaunch] = useState(false);
@@ -31,7 +31,9 @@ const Header = ({ displayHomeHandler }) => {
 					height="100px"
 				/>
 			</StyledHeader.Rocket>
-			<StyledHeader.PropulsionContainer>
+			<StyledHeader.PropulsionContainer
+				onClick={(element) => rendererHandler("About")}
+			>
 				<svg viewBox="-60 -35 300 300" width="270px" height="270px">
 					<StyledHeader.Propulsion
 						animate={launch}
@@ -50,7 +52,7 @@ const Header = ({ displayHomeHandler }) => {
 	);
 };
 
-export default Header;
+export default Hero;
 
 const svgDrawings = {
 	chaosClarity:

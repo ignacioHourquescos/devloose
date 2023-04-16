@@ -8,11 +8,13 @@ body {
   /* font-family: 'Oswald', sans-serif; */
   font-family: 'Maven Pro', sans-serif;
 
-    background-color: rgb(229, 232, 241);
+    /* background-color: rgb(229, 232, 241);
+    background-color: white; */
    color: #232C3E;
    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAACNJREFUKFNj3LFjx38PDw9GBgKAoAKY/sGmEJsHB5sbsYU9ADwoCAuEH7F9AAAAAElFTkSuQmCC
    ) repeat;
    background-attachment: fixed;
+   /* background-color:#321A54; */
 }
 
 html {
@@ -28,6 +30,9 @@ a {
 
 * {
   box-sizing: border-box;
+  box-sizing: content-box;
+  margin:0;
+  padding:0;
 }
 
 

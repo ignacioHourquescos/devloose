@@ -3,8 +3,8 @@ const UTILS = {
 	COLORS: {
 		WHITE: "#F7F9FB",
 		GREY: "#ECECEC",
-		BLACK: "#232C3E",
-		VIOLET: "#6F73D2",
+		BLACK: "#190D2A",
+		VIOLET: "#321A54",
 		GREEN: "#BAFF29",
 		// CARMINE: "#CA054D",
 		CARMINE: "#B11750",

@@ -43,7 +43,7 @@ export const StyledHeader = {
 	Rocket: styled(motion.div).attrs(() => ({variants}))`
 		position: absolute;
 		top: 50%;
-		left: 47.8%;
+		left: 46.8%;
 		-webkit-animation-fill-mode: forwards;
 		z-index: 201;
 		margin-bottom: 2rem;

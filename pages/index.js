@@ -1,21 +1,21 @@
 import { useState } from "react";
-import Header from "../components/index/Hero/Header";
-import Container from "../styles/styles.js";
-import Intro from "../components/index/Intro/Intro";
-import Footer from "../components/Navegation/Footer/Footer";
-import Ingredients from "../components/index/Ingredients/Ingredients";
+import Styled from "../styles/styles.js";
+import Intro from "../components/index/About/About.js";
 import Head from "next/head";
-import SectionTitle from "../components/common/SectionTitle/SectionTitle";
 import ServiceCatalog from "../components/ServiceCatalog/ServiceCatalog";
 import Capabilities from "../components/Capabilities/Capabilities";
 import OurWork from "../components/index/OurWorkCard/OurWork";
 import Menu from "../components/Navegation/Menu/Menu";
-import Contact from "../components/common/Contact/Contact";
-const { Client } = require("@notionhq/client");
+import Contact from "../components/index/Contact/Contact.js";
+import Hero from "../components/index/Hero/Hero";
+import ContactForm from "../components/index/Contact/components/ContactForm.js";
+import HeroStatic from "../components/index/HeroStatic/HeroStatic.js";
 
 const Home = () => {
 	const [displayHome, setDisplayHome] = useState(false);
 	const [rendererReference, setRendererReference] = useState(false);
+	const [initialValueMenuItem, setInitialValueMenuItem] = useState(false);
+	const [displayContactForm, setDisplayContactForm] = useState(false);
 
 	const displayHomeHandler = () => {
 		setDisplayHome(true);
@@ -25,10 +25,14 @@ const Home = () => {
 		setRendererReference(selectedMenuItem);
 	};
 
+	const displayContactFormHandler = (value) => {
+		setDisplayContactForm(value);
+	};
+
 	const SwitchRenderer = (reference) => {
 		switch (reference) {
 			case "Home":
-				return <>Logo</>;
+				return <HeroStatic />;
 			case "About":
 				return <Intro />;
 			case "Intro":
@@ -44,6 +48,8 @@ const Home = () => {
 
 	return (
 		<>
+			{/* prettier-ignore */}
+
 			<Head>
 				<title>Devloose</title>
 				<meta
@@ -56,26 +62,35 @@ const Home = () => {
 				/>
 				<meta name="theme-color" content="#0B1115"></meta>
 			</Head>
-			<Container.Master>
-				{rendererReference ? (
-					""
-				) : (
-					<Header displayHomeHandler={displayHomeHandler} />
-				)}
-				{displayHome && (
-					<>
-						<Menu
-							rendererHandler={(element) =>
-								rendererHandler(element)
-							}
-						/>
-						<Container.CardService>
-							{SwitchRenderer(rendererReference)}
-						</Container.CardService>
-					</>
-				)}
-			</Container.Master>
-			<Contact />
+			{rendererReference ? (
+				""
+			) : (
+				<Hero
+					rendererHandler={(element) => rendererHandler(element)}
+					displayHomeHandler={displayHomeHandler}
+				/>
+			)}
+			<Menu
+				rendererHandler={(element) => rendererHandler(element)}
+				initalValueMenuItem={initialValueMenuItem}
+			/>
+			{displayContactForm ? (
+				<ContactForm
+					displayContactFormHandler={(element) =>
+						displayContactFormHandler(element)
+					}
+				/>
+			) : (
+				""
+			)}
+			<Styled.Container>
+				{displayHome && <>{SwitchRenderer(rendererReference)}</>}
+				<Contact
+					displayContactFormHandler={(element) =>
+						displayContactFormHandler(element)
+					}
+				/>
+			</Styled.Container>
 		</>
 	);
 };

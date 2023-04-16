@@ -7,7 +7,7 @@ export const Styled = {
 		flex-direction: row;
 		flex-wrap: no-wrap;
 		width: 100%;
-		padding: 5% 10%;
+		padding: 10% 10%;
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			padding: 0%;

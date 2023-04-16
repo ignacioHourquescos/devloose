@@ -4,7 +4,7 @@ import UTILS from "../../../../utils/utils";
 export const Styled = {
 	Inner: styled.div`
 		height: 70vh;
-		margin: 0 10%;
+		${"" /* margin: 0 10%; */}
 		margin-bottom: 15vh;
 		position: relative;
 
@@ -12,8 +12,8 @@ export const Styled = {
 			position: static;
 			flex-direction: column-reverse;
 			height: 65vh;
-			margin: 10%;
-			width: 80%;
+			margin: 0%;
+			width: 100%;
 		}
 	`,
 	Title: styled.div`
@@ -27,7 +27,7 @@ export const Styled = {
 		}
 	`,
 	DetailedContainer: styled.div`
-		background-color: rgba(229, 232, 241, 0.256);
+		background-color: rgba(71, 71, 71, 0.03);
 		display: flex;
 		padding: 0 5%;
 		@media ${UTILS.SCREEN.MOBILE} {

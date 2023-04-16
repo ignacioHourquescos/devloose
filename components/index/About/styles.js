@@ -10,17 +10,18 @@ export const StyledIntro = {
 		flex-direction: column;
 		align-content: center;
 		align-items: center;
-		justify-content: center;
-		height: 80vh;
+		justify-content: flex-start;
+
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
+			padding-top: 20%;
 		}
 	`,
 	Title: styled.div`
 		font-size: 2.5rem;
 		text-align: center;
 		@media ${UTILS.SCREEN.MOBILE} {
-			font-size: 1.7rem;
+			font-size: 2rem;
 			margin-bottom: 20%;
 		}
 	`,
