@@ -5,9 +5,10 @@ import CardService from "./CardService/CardService.js";
 const ServiceCatalog = (props) => {
 	return (
 		<Styled.Inner>
-			{services.map((element) => (
+			{services.map((element, idx) => (
 				<>
 					<CardService
+						key={idx}
 						title={element.title}
 						description={element.description}
 						doodle={element.doodle}

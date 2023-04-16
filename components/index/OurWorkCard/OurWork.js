@@ -5,9 +5,10 @@ import Card from "./Card/Card.js";
 const OurWork = ({ title, description, image }) => {
 	return (
 		<Styled.Inner>
-			{portfolio.map((element) => (
+			{portfolio.map((element, idx) => (
 				<>
 					<Card
+						key={idx}
 						title={element.title}
 						image={element.image}
 						description={element.description}

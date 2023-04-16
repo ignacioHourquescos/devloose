@@ -13,8 +13,8 @@ const Capability = ({ title, capabilityList }) => {
 				expandIcon={({ isActive }) => (isActive ? "+" : "-")}
 			>
 				<Panel header={<h1>{title}</h1>} key="1">
-					{capabilityList.map((element) => (
-						<Styled.CapabilityContainer>
+					{capabilityList.map((element, idx) => (
+						<Styled.CapabilityContainer key={idx}>
 							<Styled.Title>{element.title}</Styled.Title>
 							<Styled.Description>
 								{element.description}
