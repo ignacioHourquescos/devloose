@@ -27,7 +27,6 @@ export const StyledHeader = {
 		position: relative;
 		overflow-x: hidden;
 		overflow-y: hidden;
-		margin-bottom: 4rem;
 	`,
 
 	// prettier-ignore

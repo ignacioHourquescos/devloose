@@ -17,20 +17,24 @@ export const Styled = {
 	`,
 	Title: styled.div`
 		font-size: 2rem;
-		padding: 0 2.5%;
+		padding: 1% 2.5%;
+		background-color: black;
+		color: white;
 	`,
 	UnderlineBlock: styled.div`
-		background-color: black;
-		width: 80%;
+		${
+			"" /* background-color: black;
+		width: 100%;
 		margin-top: 1rem;
-		height: 1rem;
+		height: 0.3rem;
 		border-radius: 100px;
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 80%;
 			margin-top: 0.5rem;
 			height: 0.7rem;
 
-			${"" /* margin-left: auto; */}
+			${"" /* margin-left: auto; */
 		}
+		} */}
 	`,
 };

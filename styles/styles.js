@@ -11,12 +11,12 @@ const Container = {
 	`,
 	CardService: styled.div`
 		width: 80%;
-		margin: 20% 10%;
+		margin: 10% 10%;
 		display: flex;
 		flex-wrap: wrap;
 		@media ${UTILS.SCREEN.MOBILE} {
-			margin: 20% 5%;
-			width: 90%;
+			margin: 20% 0%;
+			width: 100%;
 			${"" /* margin-bottom: 50%; */}
 		}
 	`,

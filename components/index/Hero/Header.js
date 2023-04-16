@@ -30,19 +30,7 @@ const Header = ({ displayHomeHandler }) => {
 					width="100px"
 					height="100px"
 				/>
-				{/* <AiFillRocket fill="white" size={70} /> */}
 			</StyledHeader.Rocket>
-			{/* <StyledHeader.Earth animate={launch && "displayNone"}> */}
-			{/* <StyledHeader.Land /> */}
-
-			{/* <Image
-					src="/earth.svg"
-					alt="Picture of the author"
-					width="2000px"
-					height="300px"
-				/> */}
-			{/* <AiFillRocket fill="white" size={70} /> */}
-			{/* </StyledHeader.Earth> */}
 			<StyledHeader.PropulsionContainer>
 				<svg viewBox="-60 -35 300 300" width="270px" height="270px">
 					<StyledHeader.Propulsion

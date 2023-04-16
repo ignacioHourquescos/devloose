@@ -7,10 +7,10 @@ const Ingredients = (props) => {
 		<Styled.Inner>
 			<br />
 			<Styled.Brief>
-				We combine 4 ingredients in order to obtain the specific recipe each
-				project requires.
+				We combine 4 ingredients in order to obtain the specific recipe
+				each project requires.
 			</Styled.Brief>
-			<Icon />
+			{/* <Icon /> */}
 			<Styled.Brief>
 				From ideation phase to launch time.
 				<br />

@@ -4,22 +4,34 @@ import UTILS from "../../../utils/utils";
 export const StyledIntro = {
 	Inner: styled.div`
 		border: ${UTILS.DRAFT};
-		width: 80%;
+		width: 100%;
+		padding: 10%;
 		display: flex;
 		flex-direction: column;
 		align-content: center;
 		align-items: center;
-		height: 100%;
+		justify-content: center;
+		height: 80vh;
 		@media ${UTILS.SCREEN.MOBILE} {
-			width: 90%;
+			width: 100%;
 		}
 	`,
 	Title: styled.div`
-		font-size: 2rem;
+		font-size: 2.5rem;
 		text-align: center;
 		@media ${UTILS.SCREEN.MOBILE} {
 			font-size: 1.7rem;
-			margin-bottom: 100%;
+			margin-bottom: 20%;
+		}
+	`,
+	Brief: styled.div`
+		font-size: 1rem;
+		text-align: center;
+		@media ${UTILS.SCREEN.MOBILE} {
+			font-size: 1.4rem;
+			margin-bottom: 10%;
+
+			font-weight: 400;
 		}
 	`,
 };

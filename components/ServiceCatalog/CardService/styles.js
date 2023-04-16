@@ -4,7 +4,7 @@ import UTILS from "../../../utils/utils";
 export const StyledCard = {
 	Inner: styled.div`
 		border: ${UTILS.DRAFT};
-		width: 25%;
+		width: 33%;
 		padding: 0 2.5%;
 		display: flex;
 		flex-direction: column;
