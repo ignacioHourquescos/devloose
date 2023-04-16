@@ -27,6 +27,10 @@ export const StyledHeader = {
 		position: relative;
 		overflow-x: hidden;
 		overflow-y: hidden;
+		@media ${UTILS.SCREEN.MOBILE} {
+			overflow-x: hidden;
+			overflow-y: hidden;
+		}
 	`,
 
 	// prettier-ignore
@@ -53,23 +57,6 @@ export const StyledHeader = {
 		}
 	`,
 
-	Earth: styled(motion.div).attrs(() => ({ variants }))`
-		position: absolute;
-		top: 63%;
-		left: 30%;
-		-webkit-animation-fill-mode: forwards;
-		z-index: 201;
-		margin-bottom: 2rem;
-		@media ${UTILS.SCREEN.MOBILE} {
-			top: 50%;
-			left: 42%;
-		}
-	`,
-
-	Land: styled.div`
-		border-bottom: 5px solid white;
-		width: 600px;
-	`,
 	PropulsionContainer: styled.div`
 		position: absolute;
 		top: 33%;

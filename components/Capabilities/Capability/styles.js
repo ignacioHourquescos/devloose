@@ -5,7 +5,7 @@ export const Styled = {
 	Inner: styled.div`
 		border: ${UTILS.DRAFT};
 		width: 100%;
-		padding: 0 2.5%;
+		${"" /* padding: 0 2.5%; */}
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -19,7 +19,7 @@ export const Styled = {
 		}
 	`,
 	CapabilityContainer: styled.div`
-		margin-left: 2rem;
+		${"" /* margin-left: 2rem; */}
 	`,
 	Title: styled.div`
 		border: ${UTILS.DRAFT};

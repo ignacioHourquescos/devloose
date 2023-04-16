@@ -8,11 +8,11 @@ const Capability = ({ title, capabilityList }) => {
 	return (
 		<Styled.Inner>
 			<Collapse
-				defaultActiveKey={["1"]}
+				// defaultActiveKey={["1"]}
 				ghost
-				expandIcon={({ isActive }) => (isActive ? "+" : "-")}
+				// expandIcon={({ isActive }) => (isActive ? "<" : "-")}
 			>
-				<Panel header={<h1>{title}</h1>} key="1">
+				<Panel header={<h3>{title}</h3>} key="1">
 					{capabilityList.map((element, idx) => (
 						<Styled.CapabilityContainer key={idx}>
 							<Styled.Title>{element.title}</Styled.Title>

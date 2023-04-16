@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import UTILS from "../../../utils/utils";
 
-export const StyledIntro = {
+export const Styled = {
 	Inner: styled.div`
 		border: ${UTILS.DRAFT};
 		width: 100%;
@@ -11,10 +11,11 @@ export const StyledIntro = {
 		align-content: center;
 		align-items: center;
 		justify-content: flex-start;
+		padding-top: 20%;
 
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
-			padding-top: 20%;
+			padding-top: 70%;
 		}
 	`,
 	Title: styled.div`
@@ -23,16 +24,16 @@ export const StyledIntro = {
 		@media ${UTILS.SCREEN.MOBILE} {
 			font-size: 2rem;
 			margin-bottom: 20%;
+			text-align: left;
 		}
 	`,
-	Brief: styled.div`
-		font-size: 1rem;
+	Highlight: styled.span`
+		font-size: 2.5rem;
 		text-align: center;
+		font-weight: bold;
 		@media ${UTILS.SCREEN.MOBILE} {
-			font-size: 1.4rem;
-			margin-bottom: 10%;
-
-			font-weight: 400;
+			font-size: 2rem;
+			margin-bottom: 20%;
 		}
 	`,
 };

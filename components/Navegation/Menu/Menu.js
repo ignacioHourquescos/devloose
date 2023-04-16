@@ -52,7 +52,7 @@ const Menu = ({ rendererHandler, initialValueMenuItem }) => {
 					onClickHandler("Capabilities");
 				}}
 			>
-				Capabilities
+				More
 			</Styled.MenuItem>
 		</Styled.Inner>
 	);

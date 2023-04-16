@@ -1,39 +1,51 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import UTILS from "../../../utils/utils";
 
-export const Styled = {
+const dasharray = 1000;
+
+export const StyledHeader = {
 	Inner: styled.div`
+		height: 100vh;
 		width: 100vw;
-
-		top: 0;
-		left: 0;
-		background-color: #190d2ae3;
-		backdrop-filter: blur(10px);
 		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		justify-items: center;
-		align-items: center;
-		align-content: center;
-
-		@media ${UTILS.SCREEN.MOBILE} {
-			width: 100%;
-			padding-top: 20%;
-		}
-	`,
-	Text: styled.div`
-		color: white;
-		margin-bottom: 2rem;
+		justify-content: center;
+		align-content: flex-start;
+		align-items: flex-start;
+		postition: relative;
 	`,
 
-	Image: styled.img.attrs((props) => ({
-		type: "text",
-		image: props.image,
-	}))`
-		width: 15%;
-		margin-bottom: 2rem;
-		@media ${UTILS.SCREEN.MOBILE} {
-			width: 60%;
-		}
+	// prettier-ignore
+	Ball: styled.div`
+		position: absolute;
+		height: 200px;
+		width: 200px;
+		z-index: 100;
+    top:37.5%;
+		background-color: ${UTILS.COLORS.CARMINE};
+    border-radius:200px;
+	`,
+
+	Land: styled.div`
+		border-bottom: 5px solid white;
+		width: 600px;
+	`,
+	PropulsionContainer: styled.div`
+		position: absolute;
+		top: 33%;
+		left: 30;
+		z-index: 200;
+	`,
+
+	Propulsion: styled.path`
+		animation-delay: 1s;
+		opacity: 1;
+		stroke-dasharray: ${dasharray};
+		z-index: 200;
+	`,
+	Launch: styled.div`
+		position: absolute;
+		top: 80%;
+		left: 30;
+		z-index: 200;
 	`,
 };

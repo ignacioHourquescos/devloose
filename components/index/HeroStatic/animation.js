@@ -8,7 +8,7 @@ const variants = {
 		scale: 1,
 		borderRadius: "200px",
 		transition: { duration: 2 },
-		 backgroundColor: UTILS.COLORS.CARMINE,
+		// backgroundColor: UTILS.COLORS.CARMINE,
 	},
 	hidden: {
      opacity: 1, 

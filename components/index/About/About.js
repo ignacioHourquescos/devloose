@@ -1,16 +1,22 @@
 import react from "react";
-import { StyledIntro } from "./styles.js";
+import { Styled } from "./styles.js";
 
 // import Icon from "./components/Icon/Icon.js";
 
 const About = () => {
 	return (
-		<StyledIntro.Inner>
-			<StyledIntro.Title>
-				We are <u>creatives, designers & developers </u>, seeking to
-				help startups and organizations succced in the digital era.
-			</StyledIntro.Title>
-		</StyledIntro.Inner>
+		<Styled.Inner>
+			<Styled.Title>
+				We are <br />
+				<Styled.Highlight>
+					creatives, designers & developers
+				</Styled.Highlight>
+				<br />
+				helping startups and organizations
+				<br />
+				succed in the digital era.
+			</Styled.Title>
+		</Styled.Inner>
 	);
 };
 

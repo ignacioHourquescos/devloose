@@ -7,10 +7,11 @@ export const Styled = {
 		flex-direction: row;
 		flex-wrap: no-wrap;
 		width: 100%;
-		padding: 10% 10%;
+		padding: 20% 10%;
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			padding: 0%;
+			padding-top: 30%;
 			flex-wrap: wrap;
 		}
 	`,

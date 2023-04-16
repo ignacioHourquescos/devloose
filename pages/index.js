@@ -70,26 +70,30 @@ const Home = () => {
 					displayHomeHandler={displayHomeHandler}
 				/>
 			)}
-			<Menu
-				rendererHandler={(element) => rendererHandler(element)}
-				initalValueMenuItem={initialValueMenuItem}
-			/>
-			{displayContactForm ? (
+			{displayHome && (
+				<Menu
+					rendererHandler={(element) => rendererHandler(element)}
+					initalValueMenuItem={initialValueMenuItem}
+				/>
+			)}
+			{displayContactForm && (
 				<ContactForm
 					displayContactFormHandler={(element) =>
 						displayContactFormHandler(element)
 					}
 				/>
-			) : (
-				""
 			)}
 			<Styled.Container>
-				{displayHome && <>{SwitchRenderer(rendererReference)}</>}
-				<Contact
-					displayContactFormHandler={(element) =>
-						displayContactFormHandler(element)
-					}
-				/>
+				{displayHome && (
+					<>
+						{SwitchRenderer(rendererReference)}{" "}
+						<Contact
+							displayContactFormHandler={(element) =>
+								displayContactFormHandler(element)
+							}
+						/>
+					</>
+				)}
 			</Styled.Container>
 		</>
 	);

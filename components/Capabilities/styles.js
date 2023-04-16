@@ -8,9 +8,22 @@ export const Styled = {
 		flex-wrap: wrap;
 		width: 100%;
 		padding: 0% 0%;
+		padding: 10%;
+		padding-top: 20%;
+
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
-			padding: 0%;
+			padding: 5%;
+			padding-top: 20%;
+		}
+	`,
+	BlockTitle: styled.div`
+		font-size: 2rem;
+		font-weight: bold;
+		padding-left: 0%;
+		margin-top: 10%;
+		@media ${UTILS.SCREEN.MOBILE} {
+			padding-left: 5%;
 		}
 	`,
 };

@@ -18,7 +18,7 @@ const Hero = ({ displayHomeHandler, rendererHandler }) => {
 	};
 
 	return (
-		<StyledHeader.Inner>
+		<StyledHeader.Inner onClick={() => launchHandler()}>
 			<StyledHeader.Ball
 				initial="hidden"
 				animate={launch && "visible"}
@@ -32,7 +32,7 @@ const Hero = ({ displayHomeHandler, rendererHandler }) => {
 				/>
 			</StyledHeader.Rocket>
 			<StyledHeader.PropulsionContainer
-				onClick={(element) => rendererHandler("About")}
+			// onClick={(element) => rendererHandler("About")}
 			>
 				<svg viewBox="-60 -35 300 300" width="270px" height="270px">
 					<StyledHeader.Propulsion
@@ -45,9 +45,7 @@ const Hero = ({ displayHomeHandler, rendererHandler }) => {
 				</svg>
 			</StyledHeader.PropulsionContainer>
 
-			<StyledHeader.Launch onClick={() => launchHandler()}>
-				{!launch ? <Button>Launch</Button> : <Logo />}
-			</StyledHeader.Launch>
+			<StyledHeader.Launch>{!launch ? "" : <Logo />}</StyledHeader.Launch>
 		</StyledHeader.Inner>
 	);
 };
