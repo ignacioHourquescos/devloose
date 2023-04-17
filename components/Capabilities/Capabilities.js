@@ -16,8 +16,8 @@ const Capabilities = (props) => {
 
 			<Styled.BlockTitle>Technologies</Styled.BlockTitle>
 			<Capability title="Tech Stack" capabilityList={techStack} />
-			<Styled.BlockTitle>who we are</Styled.BlockTitle>
-			<Capability title="Us" capabilityList={us} />
+			{/* <Styled.BlockTitle>who we are</Styled.BlockTitle>
+			<Capability title="Us" capabilityList={us} /> */}
 		</Styled.Inner>
 	);
 };

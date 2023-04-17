@@ -13,23 +13,26 @@ export const Styled = {
 			flex-direction: column-reverse;
 			height: 65vh;
 			margin: 0%;
+			margin-bottom: 20%;
 			width: 100%;
 		}
 	`,
 	Title: styled.div`
-		font-size: 2rem;
-		padding: 0 5%;
+		font-size: 1.5rem;
+
 		font-weight: bold;
-		margin-bottom: 2%;
+		margin-bottom: 10%;
 		@media ${UTILS.SCREEN.MOBILE} {
 			font-size: 1.5rem;
 			font-weight: bold;
 		}
 	`,
 	DetailedContainer: styled.div`
-		background-color: rgba(71, 71, 71, 0.03);
+		background: linear-gradient(rgba(71, 71, 71, 0.05), transparent);
+
 		display: flex;
-		padding: 0 5%;
+		padding: 2% 5%;
+
 		@media ${UTILS.SCREEN.MOBILE} {
 			flex-direction: column-reverse;
 			padding: 0;
@@ -38,6 +41,8 @@ export const Styled = {
 	Description: styled.div`
 		width: 50%;
 		padding: 5% 0%;
+		padding-right: 5%;
+		font-size: 1.2rem;
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			padding: 5%;
@@ -48,9 +53,9 @@ export const Styled = {
 		type: "text",
 		image: props.image,
 	}))`
-		width: 40%;
-		position: absolute;
-		bottom: 50;
+		width: 50%;
+		${"" /* position: absolute; */}
+		bottom: 0;
 		right: 5%;
 		@media ${UTILS.SCREEN.MOBILE} {
 			position: static;
