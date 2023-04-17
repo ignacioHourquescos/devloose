@@ -20,39 +20,39 @@ const Menu = ({ rendererHandler, initialValueMenuItem }) => {
 					onClickHandler("Home");
 				}}
 			>
-				Home
+				HOME
 			</Styled.MenuItem>
-			<Styled.MenuItem
+			{/* <Styled.MenuItem
 				active={isActive == "About"}
 				onClick={() => {
 					onClickHandler("About");
 				}}
 			>
-				About
-			</Styled.MenuItem>
+				ABOUT
+			</Styled.MenuItem> */}
 			<Styled.MenuItem
 				active={isActive == "OurWork"}
 				onClick={() => {
 					onClickHandler("OurWork");
 				}}
 			>
-				OurWork
+				OURWORK
 			</Styled.MenuItem>
-			<Styled.MenuItem
+			{/* <Styled.MenuItem
 				active={isActive == "Services"}
 				onClick={() => {
 					onClickHandler("Services");
 				}}
 			>
-				Services
-			</Styled.MenuItem>
+				SERVICES
+			</Styled.MenuItem> */}
 			<Styled.MenuItem
 				active={isActive == "Capabilities"}
 				onClick={() => {
 					onClickHandler("Capabilities");
 				}}
 			>
-				More
+				MORE
 			</Styled.MenuItem>
 		</Styled.Inner>
 	);

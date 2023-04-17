@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Styled } from "./styles.js";
-import { IoChatboxOutline } from "react-icons/io5";
+import { TbBrandTelegram } from "react-icons/tb";
 import ContactForm from "./components/ContactForm.js";
 
 const Contact = ({ displayContactFormHandler }) => {
 	return (
 		<Styled.Inner>
 			<Styled.Container onClick={() => displayContactFormHandler(true)}>
-				<IoChatboxOutline color="white" />
+				<TbBrandTelegram color="white" />
 			</Styled.Container>
 		</Styled.Inner>
 	);

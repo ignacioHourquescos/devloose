@@ -10,6 +10,7 @@ import Contact from "../components/index/Contact/Contact.js";
 import Hero from "../components/index/Hero/Hero";
 import ContactForm from "../components/index/Contact/components/ContactForm.js";
 import HeroStatic from "../components/index/HeroStatic/HeroStatic.js";
+import Footer from "../components/Navegation/Footer/Footer.js";
 
 const Home = () => {
 	const [displayHome, setDisplayHome] = useState(false);
@@ -32,9 +33,16 @@ const Home = () => {
 	const SwitchRenderer = (reference) => {
 		switch (reference) {
 			case "Home":
-				return <HeroStatic />;
+				return (
+					<>
+						<HeroStatic />
+						<Intro />
+						<ServiceCatalog />
+						<Footer />
+					</>
+				);
 			case "About":
-				return <Intro />;
+				return;
 			case "Intro":
 				return <Intro />;
 			case "OurWork":

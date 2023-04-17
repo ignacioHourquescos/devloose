@@ -25,13 +25,17 @@ export const Styled = {
 		type: "text",
 		isActive: props.active,
 	}))`
-box-sizing: content-box;
+    box-sizing: content-box;
 		margin: 0 2.5%;
-		font-weight: bold;
+		font-weight: 400;
 		font-size: 1.2rem;
 		padding: 2%;
     ${"" /* border:4px solid; */}
-		color: ${(props) => (props.active ? UTILS.COLORS.GREEN : "white")}};
+    text-decoration:  ${(props) => (props.active ? "underline" : "none")}} 8px;
+		text-decoration-color: ${(props) =>
+			props.active ? UTILS.COLORS.GREEN : "white"}};
+      text-decoration-thickness: 5px;
+      text-decoration-skip-ink: none;
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			margin: 0% 0%;
@@ -39,6 +43,10 @@ box-sizing: content-box;
 			font-size: 0.8rem;
       text-align:center;
 		}
+    :hover{
+      cursor: pointer;
+    }
+
 	`,
 };
 

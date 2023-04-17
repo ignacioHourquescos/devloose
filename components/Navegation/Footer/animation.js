@@ -9,7 +9,7 @@ const variants = {
 		transition: { duration: 2.5 },
 		backgroundColor: UTILS.COLORS.BLACK,
     opacity: 1, 
-    scale: 10,
+    scale: 3,
     transition: { duration: 3 }, 
 	},
 	hidden: { 

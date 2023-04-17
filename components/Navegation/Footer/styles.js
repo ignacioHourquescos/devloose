@@ -15,17 +15,19 @@ const animationPropulsion = (props) =>
 	css`
 		${dash} 2s ease-in backwards
 	`;
-export const StyledHeader = {
+export const Styled = {
 	Inner: styled.div`
-		height: 100vh;
-		widht: 100vw;
+		height: 50vh;
+		width: 100vw;
 		display: flex;
 		justify-content: center;
-		align-content: center;
-		align-items: center;
+		align-content: flex-start;
+		align-items: flex-start;
 		position: relative;
-		overflow-x: hidden;
-		overflow-y: hidden;
+
+		@media ${UTILS.SCREEN.MOBILE} {
+			margin-top: 50%;
+		}
 	`,
 	Ball: styled(motion.div).attrs(() => ({
 		variants,
@@ -36,43 +38,22 @@ export const StyledHeader = {
 		z-index: 100;
 		background-color: ${UTILS.COLORS.CARMINE};
 		border-radius: 200px;
+		display: flex;
+		top: 30%;
+		justify-content: center;
 	`,
-	Rocket: styled(motion.div).attrs(() => ({
-		variants,
-	}))`
-		position: absolute;
-		top: 0%;
-		left: 47.8%;
-		-webkit-animation-fill-mode: forwards;
-		z-index: 201;
-		margin-bottom: 2rem;
-		transform: translateY("-500px");
-		@media ${UTILS.SCREEN.MOBILE} {
-			top: 20%;
-			left: 42%;
+
+	Orbiting: styled.div`
+		width: 40px;
+		height: 40px;
+		postion: relative;
+		top: 0px;
+		left: 200px;
+		animation: spin-right 40.5s linear infinite;
+		@keyframes spin-right {
+			100% {
+				transform: translateY(-400px);
+			}
 		}
-	`,
-	PropulsionContainer: styled.div`
-		position: absolute;
-		top: 33%;
-		left: 30%;
-		z-index: 201;
-	`,
-
-	Propulsion: styled.path`
-		animation-delay: 1s;
-		opacity: 0;
-		animation: ${(props) => (props.animate ? animationPropulsion : "")};
-		animation-delay: ${(props) => (props.animate ? "1s" : "1s")};
-		stroke-dasharray: ${dasharray};
-		-webkit-animation-fill-mode: forwards;
-		z-index: 201;
-	`,
-
-	Launch: styled.div`
-		position: absolute;
-		top: 80%;
-		left: 30;
-		z-index: 200;
 	`,
 };

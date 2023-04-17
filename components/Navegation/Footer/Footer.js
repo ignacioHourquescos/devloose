@@ -1,6 +1,6 @@
 import React from "react";
 import useViewPort from "../../../hooks/useViewPort.js";
-import { StyledHeader } from "./styles.js";
+import { Styled } from "./styles.js";
 import { useRef, useEffect, useState } from "react";
 import { RiRocketLine } from "react-icons/ri";
 import { useInView } from "react-intersection-observer";
@@ -9,26 +9,15 @@ const Footer = (props) => {
 	const [ref, inView] = useInView();
 
 	return (
-		<StyledHeader.Inner>
+		<Styled.Inner>
 			<div ref={ref} />
-			hola
-			<StyledHeader.Ball
-				initial="intial"
-				animate={inView ? "visible" : ""}
-			></StyledHeader.Ball>
-			<StyledHeader.PropulsionContainer>
-				<StyledHeader.Propulsion
-					animate={true}
-					d={svgDrawings.chaosClarity}
-					fill="none"
-					stroke="white"
-					strokeWidth={6}
-				></StyledHeader.Propulsion>
-			</StyledHeader.PropulsionContainer>
-			<StyledHeader.Rocket animate={inView ? "translate" : ""}>
-				<RiRocketLine fill="white" size={70} />
-			</StyledHeader.Rocket>
-		</StyledHeader.Inner>
+
+			<Styled.Ball initial="intial" animate={inView ? "visible" : ""}>
+				<Styled.Orbiting>
+					<RiRocketLine fill="black" size={15} />
+				</Styled.Orbiting>
+			</Styled.Ball>
+		</Styled.Inner>
 	);
 };
 
