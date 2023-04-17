@@ -22,14 +22,7 @@ const Menu = ({ rendererHandler, initialValueMenuItem }) => {
 			>
 				HOME
 			</Styled.MenuItem>
-			{/* <Styled.MenuItem
-				active={isActive == "About"}
-				onClick={() => {
-					onClickHandler("About");
-				}}
-			>
-				ABOUT
-			</Styled.MenuItem> */}
+
 			<Styled.MenuItem
 				active={isActive == "OurWork"}
 				onClick={() => {
@@ -38,14 +31,6 @@ const Menu = ({ rendererHandler, initialValueMenuItem }) => {
 			>
 				LAUNCHED
 			</Styled.MenuItem>
-			{/* <Styled.MenuItem
-				active={isActive == "Services"}
-				onClick={() => {
-					onClickHandler("Services");
-				}}
-			>
-				SERVICES
-			</Styled.MenuItem> */}
 			<Styled.MenuItem
 				active={isActive == "Capabilities"}
 				onClick={() => {

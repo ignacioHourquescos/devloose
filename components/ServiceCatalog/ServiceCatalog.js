@@ -32,19 +32,19 @@ const services = [
 		title: "MVP Launchpad",
 		doodle: "/service2.png",
 		description:
-			"Launch your product into orbit with a strategic value proposition visually captivating product design, and a rapid MVP launch to validate your business model and capture market share.",
+			"Launch Your Winning MVPs with Strategic Value Propositions. We Define Problems, Design Value Propositions, Create Visually Stunning Product Designs, and Develop MVPs Aligned with User Needs and Business Goals.",
 	},
 	{
-		title: "  Product Innovation",
+		title: " Software Development",
 		doodle: "/service1.png",
 		description:
-			"Catalyze Your Product's Growth with UX/UI Audits, Redesigns, Feature Development, Roadmapping, and Methodologies Training to Boost Conversion Rates and Drive Business Success.",
+			"Elevate Your Software's Development with Comprehensive UX/UI Audits, Strategic Redesigns, Agile Feature Development, Roadmapping, and Methodologies Training to Optimize Performance and Drive Business Success.",
 	},
 
 	{
 		title: " Stellar Crew",
 		doodle: "/service4.png",
 		description:
-			"Assemble your own dream team of skilled professionals with our staff augmentation services, providing you with a dedicated crew of experts to accelerate  your projects and achieve your business goals.",
+			"Unlock the Full Potential of Your Project Acceleration with Our Expert Staff Augmentation Solutions. Assemble Your Customized Crew of Highly Skilled and Experienced Professionals to Drive Your Business Goals to New Heights of Success.",
 	},
 ];

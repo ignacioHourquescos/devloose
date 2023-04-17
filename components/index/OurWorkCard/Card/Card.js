@@ -8,7 +8,6 @@ const Card = ({ title, image, description, stack }) => {
 				<Styled.Description>{description}</Styled.Description>
 				<Styled.Image src={image}></Styled.Image>
 			</Styled.DetailedContainer>
-			<Styled.Stack>{stack}</Styled.Stack>
 		</Styled.Inner>
 	);
 };
