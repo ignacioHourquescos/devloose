@@ -69,6 +69,8 @@ const Home = () => {
 					content="width=device-width, initial-scale=1"
 				/>
 				<meta name="theme-color" content="#0B1115"></meta>
+        <meta property="og:image"       content="https://www.devloose.com/firulete.png"/>
+        <meta name="twitter:image"		content="https://www.devloose.com/firulete.png"/>
 			</Head>
 			{rendererReference ? (
 				""
