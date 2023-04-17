@@ -27,8 +27,8 @@ export const Styled = {
 	}))`
     box-sizing: content-box;
 		margin: 0 2.5%;
-		font-weight: 400;
-		font-size: 1.2rem;
+		font-weight: 300;
+		font-size: 1rem;
 		padding: 2%;
     ${"" /* border:4px solid; */}
     text-decoration:  ${(props) => (props.active ? "underline" : "none")}} 8px;

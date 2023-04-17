@@ -4,6 +4,7 @@ import { Styled } from "./styles.js";
 import { useRef, useEffect, useState } from "react";
 import { RiRocketLine } from "react-icons/ri";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image.js";
 
 const Footer = (props) => {
 	const [ref, inView] = useInView();
@@ -14,7 +15,12 @@ const Footer = (props) => {
 
 			<Styled.Ball initial="intial" animate={inView ? "visible" : ""}>
 				<Styled.Orbiting>
-					<RiRocketLine fill="black" size={15} />
+					<Image
+						src="/rocketLaunched.svg"
+						alt="Picture of the author"
+						width="150px"
+						height="150px"
+					/>
 				</Styled.Orbiting>
 			</Styled.Ball>
 		</Styled.Inner>

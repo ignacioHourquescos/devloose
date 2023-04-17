@@ -73,10 +73,20 @@ const Home = () => {
 			{rendererReference ? (
 				""
 			) : (
-				<Hero
-					rendererHandler={(element) => rendererHandler(element)}
-					displayHomeHandler={displayHomeHandler}
-				/>
+				<>
+					<Hero
+						rendererHandler={(element) => rendererHandler(element)}
+						displayHomeHandler={displayHomeHandler}
+					/>
+					{displayHome && (
+						<Styled.Container>
+							<Intro />
+
+							<ServiceCatalog />
+							<Footer />
+						</Styled.Container>
+					)}
+				</>
 			)}
 			{displayHome && (
 				<Menu

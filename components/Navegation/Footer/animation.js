@@ -6,11 +6,11 @@ const variants = {
 		opacity: 1,
 		scale: 1,
 
-		transition: { duration: 2.5 },
+		transition: { duration: 0 },
 		backgroundColor: UTILS.COLORS.BLACK,
     opacity: 1, 
-    scale: 3,
-    transition: { duration: 3 }, 
+    scale: 1,
+    transition: { duration: 0 }, 
 	},
 	hidden: { 
     opacity: 1, 

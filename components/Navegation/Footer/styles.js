@@ -39,7 +39,8 @@ export const Styled = {
 		background-color: ${UTILS.COLORS.CARMINE};
 		border-radius: 200px;
 		display: flex;
-		top: 30%;
+		bootm: 50%;
+		y-overflow: hidden;
 		justify-content: center;
 	`,
 
@@ -49,10 +50,10 @@ export const Styled = {
 		postion: relative;
 		top: 0px;
 		left: 200px;
-		animation: spin-right 40.5s linear infinite;
+		animation: spin-right 200.5s linear;
 		@keyframes spin-right {
 			100% {
-				transform: translateY(-400px);
+				transform: translateY(-4000px);
 			}
 		}
 	`,

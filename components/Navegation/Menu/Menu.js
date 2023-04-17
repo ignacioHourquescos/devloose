@@ -36,7 +36,7 @@ const Menu = ({ rendererHandler, initialValueMenuItem }) => {
 					onClickHandler("OurWork");
 				}}
 			>
-				OURWORK
+				LAUNCHED
 			</Styled.MenuItem>
 			{/* <Styled.MenuItem
 				active={isActive == "Services"}
