@@ -11,7 +11,7 @@ export const StyledHeader = {
 		justify-content: center;
 		align-content: flex-start;
 		align-items: flex-start;
-		postition: relative;
+		position: relative;
 	`,
 
 	// prettier-ignore
@@ -44,11 +44,10 @@ export const StyledHeader = {
 	`,
 	Launch: styled.div`
 		position: absolute;
-		top: 80%;
-		left: 30;
+		top: 90%;
 		z-index: 200;
 		@media ${UTILS.SCREEN.MOBILE} {
-			top: 100%;
+			top: 80%;
 		}
 	`,
 };

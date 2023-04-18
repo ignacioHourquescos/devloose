@@ -9,7 +9,7 @@ const About = () => {
 			<Styled.Title>
 				We are <br />
 				<Styled.Highlight>
-					creatives, designers & developers
+					designers, developers & creators
 				</Styled.Highlight>
 				<br />
 				helping startups and organizations

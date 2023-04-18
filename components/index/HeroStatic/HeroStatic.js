@@ -19,9 +19,7 @@ const Hero = ({ displayHomeHandler, rendererHandler }) => {
 
 	return (
 		<StyledHeader.Inner>
-			<StyledHeader.Ball
-			// initial="hidden"
-			></StyledHeader.Ball>
+			<StyledHeader.Ball></StyledHeader.Ball>
 
 			<StyledHeader.PropulsionContainer
 			// onClick={(element) => rendererHandler("About")}
@@ -36,7 +34,6 @@ const Hero = ({ displayHomeHandler, rendererHandler }) => {
 				</svg>
 			</StyledHeader.PropulsionContainer>
 			<StyledHeader.Launch>
-				{" "}
 				<Logo />
 			</StyledHeader.Launch>
 		</StyledHeader.Inner>

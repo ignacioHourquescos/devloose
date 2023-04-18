@@ -11,6 +11,7 @@ const Menu = ({ rendererHandler, initialValueMenuItem }) => {
 	const onClickHandler = (value) => {
 		rendererHandler(value);
 		setIsActiveHandler(value);
+		window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 	};
 	return (
 		<Styled.Inner>
@@ -29,7 +30,7 @@ const Menu = ({ rendererHandler, initialValueMenuItem }) => {
 					onClickHandler("OurWork");
 				}}
 			>
-				LAUNCHED
+				PROJECTS
 			</Styled.MenuItem>
 			<Styled.MenuItem
 				active={isActive == "Capabilities"}

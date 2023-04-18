@@ -11,12 +11,18 @@ export const StyledCard = {
 		align-items: flex-start;
 		align-content: center;
 		justify-items: center;
-		justify-content: center;
+		justify-content: flex-start;
 
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			padding: 5% 10%;
 		}
+	`,
+	ServiceNumber: styled.div`
+		color: grey;
+		opacity: 0.5;
+		font-size: 1.5rem;
+		font-weight: bold;
 	`,
 	Title: styled.div`
 		border: ${UTILS.DRAFT};

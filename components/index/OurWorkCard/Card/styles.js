@@ -13,7 +13,7 @@ export const Styled = {
 			flex-direction: column-reverse;
 			height: 65vh;
 			margin: 0%;
-			margin-bottom: 20%;
+			margin-bottom: 40%;
 			width: 100%;
 		}
 	`,

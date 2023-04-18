@@ -6,15 +6,18 @@ export const Styled = {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		height: 100%;
 		width: 100%;
 		padding: 0% 0%;
 		padding: 10%;
-		padding-top: 20%;
+		padding-bottom: 20%;
+		${"" /* padding-top: 20%; */}
 
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			padding: 5%;
 			padding-top: 20%;
+			padding-bottom: 20%;
 		}
 	`,
 	BlockTitle: styled.div`
