@@ -17,4 +17,7 @@ export const StyledLogo = {
 		font-weight: 50;
 		letter-spacing: 0px;
 	`,
+	LogoContainer: styled.div`
+		width: 100%;
+	`,
 };
