@@ -44,8 +44,9 @@ const Hero = ({ displayHomeHandler, rendererHandler }) => {
 					></StyledHeader.Propulsion>
 				</svg>
 			</StyledHeader.PropulsionContainer>
-
-			<StyledHeader.Launch>{!launch ? "" : <Logo />}</StyledHeader.Launch>
+			<StyledHeader.Launch onClick={() => launchHandler()}>
+				{!launch ? <Button>Launch</Button> : <Logo />}
+			</StyledHeader.Launch>{" "}
 		</StyledHeader.Inner>
 	);
 };

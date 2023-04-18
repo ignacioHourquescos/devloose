@@ -80,7 +80,7 @@ const Home = () => {
 			<Styled.Container>
 				{displayHome && <>{SwitchRenderer(rendererReference)} </>}
 			</Styled.Container>
-			<Footer />
+			{displayHome && <Footer />}
 		</>
 	);
 };

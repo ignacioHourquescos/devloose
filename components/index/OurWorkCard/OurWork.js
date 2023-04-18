@@ -36,18 +36,19 @@ const portfolio = [
 			"The project was about rebuilding User Interface (UI) for Sysone Insurance Tech Software Application. The application had recently migrated to the cloud, and we ensured that the UI was modern, user-friendly, and aligned with industry standards.",
 		stack: "js css html",
 	},
-	{
-		title: "Tailored Logistics for autopart wholesaler",
-		image: "/portfolio2.png",
-		description:
-			"The Logistics App is a web application designed to manage the state of client orders for an autoparts wholesaler. It allows clients to track the status of their orders, view order history, and receive notifications about updates to their orders.",
-		stack: "js css html",
-	},
+
 	{
 		title: "MVP for Hydroponic farming",
 		image: "/portfolio3.png",
 		description:
 			"Greenhab is a web application for handling plant orders from clients. It allows users to browse available vegetables and place orders. Greenhab's goal is to provide a seamless and enjoyable experience for clients to plant their own food.",
+		stack: "js css html",
+	},
+	{
+		title: "Tailored Logistics for autopart wholesaler",
+		image: "/portfolio2.png",
+		description:
+			"The Logistics App is a web application designed to manage the state of client orders for an autoparts wholesaler. It allows clients to track the status of their orders, view order history, and receive notifications about updates to their orders.",
 		stack: "js css html",
 	},
 ];
