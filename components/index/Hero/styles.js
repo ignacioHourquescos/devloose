@@ -12,29 +12,29 @@ const dash = keyframes`
 `;
 
 const animationPropulsion = (props) =>
-	css`
-		${dash} 2s ease-in backwards
-	`;
+  css`
+    ${dash} 2s ease-in backwards
+  `;
 
 export const StyledHeader = {
-	Inner: styled.div`
-		height: 100vh;
-		widht: 100vw;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		align-items: center;
-		position: relative;
-		overflow-x: hidden;
-		overflow-y: hidden;
-		@media ${UTILS.SCREEN.MOBILE} {
-			overflow-x: hidden;
-			overflow-y: hidden;
-		}
-	`,
+  Inner: styled.div`
+    height: 100vh;
+    widht: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    @media ${UTILS.SCREEN.MOBILE} {
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+  `,
 
-	// prettier-ignore
-	Ball: styled(motion.div).attrs(() => ({variants}))`
+  // prettier-ignore
+  Ball: styled(motion.div).attrs(() => ({variants}))`
 		position: absolute;
 		height: 200px;
 		width: 200px;
@@ -43,8 +43,8 @@ export const StyledHeader = {
 		background-color: ${UTILS.COLORS.BLACK};
 	`,
 
-	// prettier-ignore
-	Rocket: styled(motion.div).attrs(() => ({variants}))`
+  // prettier-ignore
+  Rocket: styled(motion.div).attrs(() => ({variants}))`
 		position: absolute;
 		top: 50%;
 		left: 46.8%;
@@ -57,27 +57,27 @@ export const StyledHeader = {
 		}
 	`,
 
-	PropulsionContainer: styled.div`
-		position: absolute;
-		top: 33%;
-		left: 30;
-		z-index: 200;
-	`,
+  PropulsionContainer: styled.div`
+    position: absolute;
+    top: 33%;
+    left: 30;
+    z-index: 200;
+  `,
 
-	Propulsion: styled.path`
-		animation-delay: 1s;
-		opacity: 0;
-		animation: ${(props) => (props.animate ? animationPropulsion : "")};
-		animation-delay: ${(props) => (props.animate ? "1s" : "1s")};
-		stroke-dasharray: ${dasharray};
-		-webkit-animation-fill-mode: forwards;
-		z-index: 200;
-	`,
+  Propulsion: styled.path`
+    animation-delay: 1s;
+    opacity: 0;
+    animation: ${(props) => (props.animate ? animationPropulsion : "")};
+    animation-delay: ${(props) => (props.animate ? "1s" : "1s")};
+    stroke-dasharray: ${dasharray};
+    -webkit-animation-fill-mode: forwards;
+    z-index: 200;
+  `,
 
-	Launch: styled.div`
-		position: absolute;
-		top: 80%;
-		left: 30;
-		z-index: 200;
-	`,
+  Launch: styled.div`
+    position: absolute;
+    top: 80%;
+    left: 30;
+    z-index: 200;
+  `,
 };
