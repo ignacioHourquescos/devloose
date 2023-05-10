@@ -6,14 +6,14 @@ import variants from "./animation";
 const dasharray = 1000;
 
 const dash = keyframes`
-  0%  {stroke-dashoffset: 1000; opacity:0}
+  0%  {stroke-dashoffset: -800; opacity:0, }
   99% {stroke-dashoffset: 0;    opacity:1;}
   100%{stroke-dashoffset: 0;    opacity:1;}
 `;
 
 const animationPropulsion = (props) =>
   css`
-    ${dash} 2s ease-in backwards
+    ${dash} 1.75s ease-out forwards
   `;
 
 export const StyledHeader = {
@@ -65,7 +65,7 @@ export const StyledHeader = {
   `,
 
   Propulsion: styled.path`
-    animation-delay: 1s;
+    animation-delay: 4s;
     opacity: 0;
     animation: ${(props) => (props.animate ? animationPropulsion : "")};
     animation-delay: ${(props) => (props.animate ? "1s" : "1s")};
