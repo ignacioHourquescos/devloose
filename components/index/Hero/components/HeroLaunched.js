@@ -1,21 +1,26 @@
 import React from "react";
-import { StyledLogo } from "./styles.js";
+import { Styled } from "./styles.js";
 import Image from "next/image.js";
+
+import { TbTriangleInverted } from "react-icons/tb";
 
 const HeroLaunched = () => {
   return (
-    <StyledLogo.Inner>
-      <StyledLogo.LogoContainer>
+    <Styled.Inner>
+      <Styled.LogoContainer>
         <Image
           alt="Picture of the author"
           width={300}
           height={50}
           src="/logoFirstVersion.png"
         />
-      </StyledLogo.LogoContainer>
+      </Styled.LogoContainer>
 
-      <StyledLogo.Subtitle>YOUR DIGITAL PARTNER</StyledLogo.Subtitle>
-    </StyledLogo.Inner>
+      <Styled.Subtitle>YOUR DIGITAL PARTNER</Styled.Subtitle>
+      <Styled.Bounce>
+        <TbTriangleInverted size={35} />
+      </Styled.Bounce>
+    </Styled.Inner>
   );
 };
 

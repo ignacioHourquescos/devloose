@@ -13,7 +13,7 @@ const dash = keyframes`
 
 const animationPropulsion = (props) =>
   css`
-    ${dash} 1.75s ease-out forwards
+    ${dash} 1.5s ease-in forwards
   `;
 
 export const StyledHeader = {

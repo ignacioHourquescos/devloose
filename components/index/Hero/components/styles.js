@@ -1,23 +1,46 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
+import UTILS from "../../../../utils/utils";
 
-export const StyledLogo = {
-	Inner: styled.div`
-		display: flex;
-		flex-direction: column;
-		transform: translateY(-100px);
-		align-items: center;
-	`,
-	Title: styled.div`
-		font-size: 2.5rem;
-		font-weight: 900;
-		letter-spacing: 3px;
-	`,
-	Subtitle: styled.div`
-		font-size: 1rem;
-		font-weight: 50;
-		letter-spacing: 0px;
-	`,
-	LogoContainer: styled.div`
-		width: 100%;
-	`,
+const bounce = keyframes`
+0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+
+  }
+  40% {
+    transform: translateY(-30px);
+	opacity:0
+  }
+  60% {
+    transform: translateY(-15px);
+	opcity:1
+  }
+`;
+
+export const Styled = {
+  Inner: styled.div`
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100px);
+    align-items: center;
+  `,
+  Title: styled.div`
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+  `,
+  Subtitle: styled.div`
+    font-size: 1rem;
+    font-weight: 50;
+    letter-spacing: 0px;
+  `,
+  LogoContainer: styled.div`
+    width: 100%;
+  `,
+  Bounce: styled.div`
+    color: #b11750;
+    margin-top: 3rem;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: ${bounce} 2s infinite;
+  `,
 };
