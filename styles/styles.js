@@ -3,8 +3,8 @@ import UTILS from "../utils/utils";
 
 const Styled = {
   Container: styled.div`
-    width: 80%;
-    margin: 0% 10%;
+    width: 100%;
+    margin: 0% 0%;
     margin-bottom: 0%;
     display: flex;
     flex-wrap: wrap;

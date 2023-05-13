@@ -5,8 +5,14 @@ import Image from "next/image.js";
 import { TbTriangleInverted } from "react-icons/tb";
 
 const HeroLaunched = () => {
+  const goToTop = () => {
+    window.scrollTo({
+      top: 200,
+      behavior: "smooth",
+    });
+  };
   return (
-    <Styled.Inner>
+    <Styled.Inner onClick={goToTop}>
       <Styled.LogoContainer>
         <Image
           alt="Picture of the author"

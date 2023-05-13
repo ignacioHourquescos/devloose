@@ -37,10 +37,10 @@ export const Styled = {
     width: 100%;
   `,
   Bounce: styled.div`
-    color: #b11750;
+    color: #190d2a;
     margin-top: 3rem;
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
-    animation: ${bounce} 2s infinite;
+    animation: ${bounce} 2s 2;
   `,
 };
