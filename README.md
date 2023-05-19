@@ -2,6 +2,6 @@ pasos para levantar
 - clonar
 - npm run dev
 
-Lineamiento
+Lineamiento para todo cambio
 - menos es mas
 
