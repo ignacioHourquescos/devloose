@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledLogo = {
+export const Styled = {
 	Inner: styled.div`
 		display: flex;
 		flex-direction: column;

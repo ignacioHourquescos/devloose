@@ -1,7 +1,5 @@
 import React from "react";
-import Button from "../Button/Button.js";
-import { StyledLogo } from "./styles.js";
-import { Styled } from "../../index/OurWorkCard/styles.js";
+import { Styled } from "./styles.js";
 import Image from "next/image.js";
 
 const Logo = () => {
@@ -15,7 +13,6 @@ const Logo = () => {
 					src="/logoFirstVersion.png"
 				/>
 			</StyledLogo.LogoContainer>
-
 			<StyledLogo.Subtitle>YOUR DIGITAL PARTNER</StyledLogo.Subtitle>
 		</StyledLogo.Inner>
 	);
