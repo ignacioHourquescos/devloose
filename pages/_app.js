@@ -1,12 +1,10 @@
-import '../styles/globals.css'
-import { AppProvider }  from '../Context/UseAppContext'
+import "../styles/globals.css";
+import Layout from "../components/layout/Layout";
 
-function MyApp({ Component, pageProps }) {
-  return ( <AppProvider>
-
-  <Component {...pageProps} />
-  </AppProvider>)
-  
+export default function MyApp({ Component, pageProps }) {
+	return (
+		<Layout>
+			<Component {...pageProps} />
+		</Layout>
+	);
 }
-
-export default MyApp

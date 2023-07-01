@@ -3,10 +3,7 @@ import Styled from "../styles/styles.js";
 import Intro from "../components/index/About/About.js";
 import Head from "next/head";
 import ServiceCatalog from "../components/ServiceCatalog/ServiceCatalog";
-import Capabilities from "../components/Capabilities/Capabilities";
 import OurWork from "../components/index/OurWorkCard/OurWork";
-import Menu from "../components/Navegation/Menu/Menu";
-
 import Hero from "../components/index/Hero/Hero";
 
 import HeroStatic from "../components/index/HeroStatic/HeroStatic.js";
@@ -15,7 +12,6 @@ import Footer from "../components/Navegation/Footer/Footer.js";
 const Home = () => {
 	const [displayHome, setDisplayHome] = useState(false);
 	const [rendererReference, setRendererReference] = useState(false);
-	const [initialValueMenuItem, setInitialValueMenuItem] = useState(false);
 
 	const displayHomeHandler = () => {
 		setDisplayHome(true);
@@ -70,17 +66,10 @@ const Home = () => {
 					)}
 				</>
 			)}
-			{displayHome && (
-				<Menu
-					rendererHandler={(element) => rendererHandler(element)}
-					initalValueMenuItem={initialValueMenuItem}
-				/>
-			)}
 
 			<Styled.Container>
 				{displayHome && <>{SwitchRenderer(rendererReference)} </>}
 			</Styled.Container>
-			{displayHome && <Footer />}
 		</>
 	);
 };
@@ -96,10 +85,7 @@ const metaData = (
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#0B1115"></meta>
-		<meta
-			property="og:image"
-			content="https://www.devloose.com/firulete.png"
-		/>
+		<meta property="og:image" content="https://www.devloose.com/firulete.png" />
 		<meta
 			name="twitter:image"
 			content="https://www.devloose.com/firulete.png"
