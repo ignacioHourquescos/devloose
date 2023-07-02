@@ -1,5 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+const { Client } = require("@notionhq/client");
 
-export default function handler(req, res) {
-	res.status(200).json({ name: "John Doe" });
-}
+const notion = new Client({ auth: process.env.NOTION_API_KEY });
+
+(async () => {
+	const response = await notion.pages.create();
+	console.log(response);
+})();
