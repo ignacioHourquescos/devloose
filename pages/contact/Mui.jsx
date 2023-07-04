@@ -1,4 +1,4 @@
-'use client'
+const { createNotionPage, notion } = require('./register_schema.jsx');
 
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
@@ -7,9 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { useTheme, ThemeProvider } from "@mui/material/styles";
-import { Boton, Container, Formulario, Presentacion,} from "./styles";
-
-
+import { Boton, Container, Formulario, Presentacion } from "./styles";
 import row from "../../public/row.png";
 import Image from "next/image";
 
@@ -40,13 +38,70 @@ export const Mui = () => {
     setStatus(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Contenido:", content);
-    console.log("Nombre:", name);
-    console.log("Contacto:", contact);
-    console.log("Soy:", type);
-    console.log("Estadio:", status);
+
+    const notionData = {
+      parent: {
+        database_id: "821ee12ae6bc48f2b061d0e3037f32ca"
+      },
+      properties: {
+        name: {
+          title: [
+            {
+              text: {
+                content: name
+              }
+            }
+          ]
+        },
+        profile: {
+          select: {
+            name: "Emprendedor"
+          }
+        },
+        status: {
+          select: {
+            name: "ideation"
+          }
+        },
+        mail: {
+          rich_text: [
+            {
+              text: {
+                content: contact === "Mail" ? "Email" : "Teléfono"
+              }
+            }
+          ]
+        },
+        phone: {
+          rich_text: [
+            {
+              text: {
+                content: contact === "Mail" ? "Teléfono" : "Email"
+              }
+            }
+          ]
+        },
+        message: {
+          rich_text: [
+            {
+              text: {
+                content: content
+              }
+            }
+          ]
+        }
+      }
+    };
+
+    try {
+      const response = await createNotionPage(notionData);
+      console.log('Página de Notion creada:', response);
+    } catch (error) {
+      console.error('Error al crear la página en Notion:', error);
+
+    }
   };
 
   const theme = useTheme();
@@ -83,8 +138,9 @@ export const Mui = () => {
                 },
                 [theme.breakpoints.down("sm")]: {
                   marginLeft: "15%",
-                  paddingRight:"4rem"
-                },[theme.breakpoints.down("xs")]: {
+                  paddingRight: "4rem"
+                },
+                [theme.breakpoints.down("xs")]: {
                   background: "blue",
                 },
               }}
@@ -98,6 +154,8 @@ export const Mui = () => {
                     id="filled-hidden-label-normal"
                     defaultValue="Nombre"
                     variant="filled"
+                    value={name}
+                    onChange={handleNameChange}
                   />
 
                   {contact ? (
@@ -163,10 +221,14 @@ export const Mui = () => {
                   <Button
                     type="submit"
                     variant="text"
-                    sx={{ fontSize: "20px", color: "#183163", width: "100%" ,
-                    [theme.breakpoints.down("sm")]: {
-                      marginRight: "50%",
-                    },}}
+                    sx={{
+                      fontSize: "20px",
+                      color: "#183163",
+                      width: "100%",
+                      [theme.breakpoints.down("sm")]: {
+                        marginRight: "50%",
+                      },
+                    }}
                   >
                     Enviar
                     <Image src={row} alt="arrow" height={35} width={45} />
