@@ -1,13 +1,30 @@
-const { Client } = require('@notionhq/client');
+import { object, string } from 'zod';
 
-const notion = new Client({ auth: process.env.NOTION_API_KEY });
+//prettier-ignore
+const phoneRegex = new RegExp(
+  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
+);
 
-const createNotionPage = async (notionData) => {
-  const response = await notion.pages.create(notionData);
-  return response;
-};
+const emailRegex = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 
-module.exports = {
-  createNotionPage,
-  notion
-};
+const registerSchema = object({
+  fromName: string()
+    .nonempty('Nombre requerido')
+    .max(50, 'Maximo 50 caracteres'),
+  fromEmail: string()
+    .regex(emailRegex, 'Mail invalido')
+    .nonempty('Email requerido')
+    .email('Email es invalido'),
+  fromPhone: string()
+    .regex(phoneRegex, 'Numero Invalido')
+    .min(8, 'Numero invalido'),
+  message: string()
+    .nonempty('complete el campo por favor')
+    .max(300, 'Maximo 300 caracteres'),
+});
+
+//prettier-ignore
+export default registerSchema;
+
+
+

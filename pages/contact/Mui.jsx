@@ -1,15 +1,17 @@
-const { createNotionPage, notion } = require('./register_schema.jsx');
-
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import { useTheme, ThemeProvider } from "@mui/material/styles";
 import { Boton, Container, Formulario, Presentacion } from "./styles";
-import row from "../../public/row.png";
+import { useTheme, ThemeProvider } from "@mui/material/styles";
+import { Client } from '@notionhq/client';
+
+import row from "../../../public/row.png";
 import Image from "next/image";
+
+const notion = new Client({ auth: 'secret_8Pg2k41d8mZSieqsIB23zfEYnfsIgI1cfO8pKCRgOXT' });
 
 export const Mui = () => {
   const [content, setContent] = useState("");
@@ -38,69 +40,73 @@ export const Mui = () => {
     setStatus(event.target.value);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const notionData = {
-      parent: {
-        database_id: "821ee12ae6bc48f2b061d0e3037f32ca"
-      },
-      properties: {
-        name: {
-          title: [
-            {
-              text: {
-                content: name
-              }
-            }
-          ]
-        },
-        profile: {
-          select: {
-            name: "Emprendedor"
-          }
-        },
-        status: {
-          select: {
-            name: "ideation"
-          }
-        },
-        mail: {
-          rich_text: [
-            {
-              text: {
-                content: contact === "Mail" ? "Email" : "Teléfono"
-              }
-            }
-          ]
-        },
-        phone: {
-          rich_text: [
-            {
-              text: {
-                content: contact === "Mail" ? "Teléfono" : "Email"
-              }
-            }
-          ]
-        },
-        message: {
-          rich_text: [
-            {
-              text: {
-                content: content
-              }
-            }
-          ]
-        }
-      }
-    };
+  const handleSubmit = async () => {
+    fetch("http://localhost:3001/handleSubmit",{
+      method: 'post',
+      headers:{
+      "Authorization": "secret_8Pg2k41d8mZSieqsIB23zfEYnfsIgI1cfO8pKCRgOXT",
+      "Content-Type": "application/json",
+      "Notion-Version": "2022-06-28",},
+    })
 
     try {
-      const response = await createNotionPage(notionData);
-      console.log('Página de Notion creada:', response);
-    } catch (error) {
-      console.error('Error al crear la página en Notion:', error);
+      const response = await notion.pages.create({
+        parent: {
+          database_id: "821ee12ae6bc48f2b061d0e3037f32ca"
+        },
+        properties: {
+          name: {
+            title: [
+              {
+                text: {
+                  content: name
+                }
+              }
+            ]
+          },
+          profile: {
+            select: {
+              name: "Emprendedor"
+            }
+          },
+          status: {
+            select: {
+              name: "ideation"
+            }
+          },
+          mail: {
+            rich_text: [
+              {
+                text: {
+                  content: "santiagovaldez@gmail.com"
+                }
+              }
+            ]
+          },
+          phone: {
+            rich_text: [
+              {
+                text: {
+                  content: "11657382949"
+                }
+              }
+            ]
+          },
+          message: {
+            rich_text: [
+              {
+                text: {
+                  content
+                }
+              }
+            ]
+          }
+        }
+      });
 
+      console.log(response);
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -111,7 +117,7 @@ export const Mui = () => {
       <Presentacion>
         <div>
           <Container>
-            <h1>Cuéntanos de qué se trata el proyecto</h1>
+            <h1>***Cuéntanos de qué se trata el proyecto</h1>
             <TextField
               id="standard-helperText"
               variant="standard"
@@ -124,7 +130,7 @@ export const Mui = () => {
                 height: "240px",
                 marginLeft: "2px",
                 marginTop: "2rem",
-                width: "100%",
+                width: "100%"
               }}
             />
 
@@ -134,15 +140,15 @@ export const Mui = () => {
               sx={{
                 "& .MuiTextField-root": {
                   m: 1,
-                  width: "25ch",
+                  width: "25ch"
                 },
                 [theme.breakpoints.down("sm")]: {
                   marginLeft: "15%",
                   paddingRight: "4rem"
                 },
                 [theme.breakpoints.down("xs")]: {
-                  background: "blue",
-                },
+                  background: "blue"
+                }
               }}
               noValidate
               autoComplete="off"
@@ -152,7 +158,6 @@ export const Mui = () => {
                   <TextField
                     hiddenLabel
                     id="filled-hidden-label-normal"
-                    defaultValue="Nombre"
                     variant="filled"
                     value={name}
                     onChange={handleNameChange}
@@ -226,8 +231,8 @@ export const Mui = () => {
                       color: "#183163",
                       width: "100%",
                       [theme.breakpoints.down("sm")]: {
-                        marginRight: "50%",
-                      },
+                        marginRight: "50%"
+                      }
                     }}
                   >
                     Enviar
