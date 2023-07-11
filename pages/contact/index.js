@@ -11,13 +11,10 @@ import { Client } from "@notionhq/client";
 // import row from "../../../public/row.png";
 // import Image from "next/image";
 
-const notion = new Client({
-	auth: "secret_8Pg2k41d8mZSieqsIB23zfEYnfsIgI1cfO8pKCRgOXT",
-});
-
+const database_id = "821ee12ae6bc48f2b061d0e3037f32ca";
 const Mui = () => {
 	const [content, setContent] = useState("");
-	const [name, setName] = useState("");
+	const [name2, setName2] = useState("");
 	const [contact, setContact] = useState("");
 	const [type, setType] = useState("");
 	const [status, setStatus] = useState("");
@@ -27,7 +24,7 @@ const Mui = () => {
 	};
 
 	const handleNameChange = (event) => {
-		setName(event.target.value);
+		setName2(event.target.value);
 	};
 
 	const handleContactChange = (event) => {
@@ -42,86 +39,89 @@ const Mui = () => {
 		setStatus(event.target.value);
 	};
 
-	const handleSubmit = async (event) => {
-		event.preventDefault();
-		// fetch("https://developers.notion.com/reference/post-page", {
-		// 	method: "post",
-		// 	headers: {
-		// 		Authorization: "secret_8Pg2k41d8mZSieqsIB23zfEYnfsIgI1cfO8pKCRgOXT",
-		// 		"Content-Type": "application/json",
-		// 		"Notion-Version": "2022-06-28",
-		// 	},
-		// });
+	const handleSubmit = (e) => {
+		e.preventDefault();
 
-		try {
-			const response = await notion.pages.create({
-				parent: {
-					database_id: "821ee12ae6bc48f2b061d0e3037f32ca",
-				},
-				properties: {
-					name: {
-						id: "12",
-						title: [
-							{
-								text: {
-									content: "Facu",
-								},
-							},
-						],
-					},
-					profile: {
-						select: {
-							name: "Emprendedor",
-						},
-					},
-					status: {
-						select: {
-							name: "ideation",
-						},
-					},
-					mail: {
-						rich_text: [
-							{
-								text: {
-									content: "Jorge Diaz",
-								},
-							},
-						],
-					},
-					phone: {
-						rich_text: [
-							{
-								text: {
-									content: "",
-								},
-							},
-						],
-					},
-					message: {
-						rich_text: [
-							{
-								text: {
-									content:
-										"Trabajo en la industria vitivinicola. estmos intentando mejorar los procesos para poder obenter un mejor rendimiento. tenemos que hacer una integracion del sistema actual",
-								},
-							},
-						],
-					},
-				},
-			});
-
-			console.log(response);
-		} catch (error) {
-			console.error(error);
-		}
+		fetch(process.env.NEXT_PUBLIC_API_URL + database_id, {
+			method: "POST",
+			body: JSON.stringify({
+				name: name2,
+			}),
+			headers: { "Content-Type": "application/json" },
+		});
 	};
+
+	// const handleSubmit = async (event) => {
+	// 	event.preventDefault();
+	// 	try {
+	// 		const response = await notion.pages.create({
+	// 			parent: {
+	// 				database_id: "821ee12ae6bc48f2b061d0e3037f32ca",
+	// 			},
+	// 			properties: {
+	// 				name: {
+	// 					id: "12",
+	// 					title: [
+	// 						{
+	// 							text: {
+	// 								content: "Facu",
+	// 							},
+	// 						},
+	// 					],
+	// 				},
+	// 				profile: {
+	// 					select: {
+	// 						name: "Emprendedor",
+	// 					},
+	// 				},
+	// 				status: {
+	// 					select: {
+	// 						name: "ideation",
+	// 					},
+	// 				},
+	// 				mail: {
+	// 					rich_text: [
+	// 						{
+	// 							text: {
+	// 								content: "Jorge Diaz",
+	// 							},
+	// 						},
+	// 					],
+	// 				},
+	// 				phone: {
+	// 					rich_text: [
+	// 						{
+	// 							text: {
+	// 								content: "",
+	// 							},
+	// 						},
+	// 					],
+	// 				},
+	// 				message: {
+	// 					rich_text: [
+	// 						{
+	// 							text: {
+	// 								content:
+	// 									"Trabajo en la industria vitivinicola. estmos intentando mejorar los procesos para poder obenter un mejor rendimiento. tenemos que hacer una integracion del sistema actual",
+	// 							},
+	// 						},
+	// 					],
+	// 				},
+	// 			},
+	// 		});
+
+	// 		console.log(response);
+	// 	} catch (error) {
+	// 		console.error(error);
+	// 	}
+	// };
 	const theme = useTheme();
 	return (
 		<ThemeProvider theme={theme}>
 			<Presentacion>
 				<div>
 					<Container>
-						<h1>***Cuéntanos de qué se trata el proyecto</h1>
+						<h1>*Cuéntanos de qué se trata el proyecto</h1>
 						<TextField
 							id="standard-helperText"
 							variant="standard"
@@ -163,7 +163,7 @@ const Mui = () => {
 										hiddenLabel
 										id="filled-hidden-label-normal"
 										variant="filled"
-										value={name}
+										value={name2}
 										onChange={handleNameChange}
 									/>
 
@@ -239,7 +239,7 @@ const Mui = () => {
 											},
 										}}
 									>
-										Enviar
+										EnviarRRRR
 										{/* <Image src={row} alt="arrow" height={35} width={45} /> */}
 									</Button>
 								</Stack>
