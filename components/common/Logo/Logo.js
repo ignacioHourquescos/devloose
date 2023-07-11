@@ -4,17 +4,17 @@ import Image from "next/image.js";
 
 const Logo = () => {
 	return (
-		<StyledLogo.Inner>
-			<StyledLogo.LogoContainer>
+		<Styled.Inner>
+			<Styled.LogoContainer>
 				<Image
 					alt="Picture of the author"
 					width={300}
 					height={50}
 					src="/logoFirstVersion.png"
 				/>
-			</StyledLogo.LogoContainer>
-			<StyledLogo.Subtitle>YOUR DIGITAL PARTNER</StyledLogo.Subtitle>
-		</StyledLogo.Inner>
+			</Styled.LogoContainer>
+			<Styled.Subtitle>YOUR DIGITAL PARTNER</Styled.Subtitle>
+		</Styled.Inner>
 	);
 };
 

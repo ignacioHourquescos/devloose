@@ -39,8 +39,8 @@ const Home = () => {
 				return <OurWork />;
 			case "Services":
 				return <ServiceCatalog />;
-			case "Capabilities":
-				return <Capabilities />;
+			// case "Capabilities":
+			// 	return <Capabilities />;
 		}
 	};
 
