@@ -7,7 +7,7 @@ export const Styled = {
 		flex-direction: row;
 		flex-wrap: wrap;
 		height: 100%;
-		width: 100%;
+		width: 80%;
 		padding: 0% 0%;
 		padding: 10%;
 		padding-bottom: 20%;

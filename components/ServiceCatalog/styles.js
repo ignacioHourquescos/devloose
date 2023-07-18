@@ -6,8 +6,8 @@ export const Styled = {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: no-wrap;
-		width: 100%;
-		padding: 20% 10%;
+		width: 80%;
+		padding: 10%;
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			padding: 0%;

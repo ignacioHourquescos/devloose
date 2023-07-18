@@ -6,10 +6,6 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { Boton, Container, Formulario, Presentacion } from "./styles";
 import { useTheme, ThemeProvider } from "@mui/material/styles";
-import { Client } from "@notionhq/client";
-
-// import row from "../../../public/row.png";
-// import Image from "next/image";
 
 const database_id = "821ee12ae6bc48f2b061d0e3037f32ca";
 const Mui = () => {
@@ -46,82 +42,21 @@ const Mui = () => {
 			method: "POST",
 			body: JSON.stringify({
 				name: name2,
+				type: type,
+				status: status,
+				message: content,
 			}),
 			headers: { "Content-Type": "application/json" },
 		});
 	};
 
-	// const handleSubmit = async (event) => {
-	// 	event.preventDefault();
-	// 	try {
-	// 		const response = await notion.pages.create({
-	// 			parent: {
-	// 				database_id: "821ee12ae6bc48f2b061d0e3037f32ca",
-	// 			},
-	// 			properties: {
-	// 				name: {
-	// 					id: "12",
-	// 					title: [
-	// 						{
-	// 							text: {
-	// 								content: "Facu",
-	// 							},
-	// 						},
-	// 					],
-	// 				},
-	// 				profile: {
-	// 					select: {
-	// 						name: "Emprendedor",
-	// 					},
-	// 				},
-	// 				status: {
-	// 					select: {
-	// 						name: "ideation",
-	// 					},
-	// 				},
-	// 				mail: {
-	// 					rich_text: [
-	// 						{
-	// 							text: {
-	// 								content: "Jorge Diaz",
-	// 							},
-	// 						},
-	// 					],
-	// 				},
-	// 				phone: {
-	// 					rich_text: [
-	// 						{
-	// 							text: {
-	// 								content: "",
-	// 							},
-	// 						},
-	// 					],
-	// 				},
-	// 				message: {
-	// 					rich_text: [
-	// 						{
-	// 							text: {
-	// 								content:
-	// 									"Trabajo en la industria vitivinicola. estmos intentando mejorar los procesos para poder obenter un mejor rendimiento. tenemos que hacer una integracion del sistema actual",
-	// 							},
-	// 						},
-	// 					],
-	// 				},
-	// 			},
-	// 		});
-
-	// 		console.log(response);
-	// 	} catch (error) {
-	// 		console.error(error);
-	// 	}
-	// };
 	const theme = useTheme();
 	return (
 		<ThemeProvider theme={theme}>
 			<Presentacion>
 				<div>
 					<Container>
-						<h1>*Cuéntanos de qué se trata el proyecto</h1>
+						<h1>Contanos acerca del proyecto</h1>
 						<TextField
 							id="standard-helperText"
 							variant="standard"
@@ -239,7 +174,7 @@ const Mui = () => {
 											},
 										}}
 									>
-										EnviarRRRR
+										Enviar
 										{/* <Image src={row} alt="arrow" height={35} width={45} /> */}
 									</Button>
 								</Stack>

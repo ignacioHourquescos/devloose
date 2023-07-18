@@ -7,7 +7,6 @@ import OurWork from "../components/index/OurWorkCard/OurWork";
 import Hero from "../components/index/Hero/Hero";
 
 import HeroStatic from "../components/index/HeroStatic/HeroStatic.js";
-import Footer from "../components/Navegation/Footer/Footer.js";
 
 const Home = () => {
 	const [displayHome, setDisplayHome] = useState(false);
@@ -19,29 +18,6 @@ const Home = () => {
 
 	const rendererHandler = (selectedMenuItem) => {
 		setRendererReference(selectedMenuItem);
-	};
-
-	const SwitchRenderer = (reference) => {
-		switch (reference) {
-			case "Home":
-				return (
-					<>
-						<HeroStatic />
-						<Intro />
-						<ServiceCatalog />
-					</>
-				);
-			case "About":
-				return;
-			case "Intro":
-				return <Intro />;
-			case "OurWork":
-				return <OurWork />;
-			case "Services":
-				return <ServiceCatalog />;
-			// case "Capabilities":
-			// 	return <Capabilities />;
-		}
 	};
 
 	return (
@@ -67,9 +43,7 @@ const Home = () => {
 				</>
 			)}
 
-			<Styled.Container>
-				{displayHome && <>{SwitchRenderer(rendererReference)} </>}
-			</Styled.Container>
+			{displayHome && <>HOME</>}
 		</>
 	);
 };
