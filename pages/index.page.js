@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Styled from "../styles/styles.js";
-import Intro from "../components/index/About/About.js";
-import Head from "next/head";
-import ServiceCatalog from "../components/ServiceCatalog/ServiceCatalog";
-import OurWork from "../components/index/OurWorkCard/OurWork";
-import Hero from "../components/index/Hero/Hero";
 
-import HeroStatic from "../components/index/HeroStatic/HeroStatic.js";
+import Head from "next/head";
+
+import HeroStatic from "./components/HeroStatic/HeroStatic";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import ServiceCatalog from "./components/ServiceCatalog/ServiceCatalog";
+import Carrousel from "./components/carrousel/Carrousel.js";
 
 const Home = () => {
 	const [displayHome, setDisplayHome] = useState(false);
@@ -34,10 +35,12 @@ const Home = () => {
 						rendererHandler={(element) => rendererHandler(element)}
 						displayHomeHandler={displayHomeHandler}
 					/>
-					{displayHome && (
+					{true && (
 						<Styled.Container>
-							<Intro />
+							<About />
+							<h1>Servicios</h1>
 							<ServiceCatalog />
+							<Carrousel />
 						</Styled.Container>
 					)}
 				</>
