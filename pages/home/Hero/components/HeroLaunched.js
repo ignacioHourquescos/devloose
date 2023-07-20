@@ -14,13 +14,7 @@ const HeroLaunched = () => {
 	return (
 		<Styled.Inner onClick={goToTop}>
 			<Styled.LogoContainer>
-				<h1>DEVLOOSE</h1>
-				{/* <Image
-          alt="Picture of the author"
-          width={300}
-          height={50}
-          src="/logoFirstVersion.png"
-        /> */}
+				<Styled.Name>Devloose</Styled.Name>
 			</Styled.LogoContainer>
 
 			<Styled.Subtitle>YOUR DIGITAL PARTNER</Styled.Subtitle>

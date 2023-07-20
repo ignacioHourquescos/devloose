@@ -5,21 +5,26 @@ export const Styled = {
 	Inner: styled.div`
 		color: black;
 		font-size: 2rem;
-		width: 100%;
-		margin: 5% 10%;
-		padding: 0%;
+		width: 80%;
+		text-align: center;
+		margin: 0% 10%;
+		margin-left: 10%;
 		height: 10%;
 		@media ${UTILS.SCREEN.MOBILE} {
-			width: 80%;
+			width: 100%;
 			${"" /* margin-left: auto; */}
 			padding:0%;
+			margin: 0;
 		}
 	`,
 	Title: styled.div`
-		font-size: 2rem;
+		font-size: 2.5rem;
+		font-weight: bold;
 		padding: 1% 2.5%;
-		background-color: black;
-		color: white;
+		color: black;
+		@media ${UTILS.SCREEN.MOBILE} {
+			font-size: 2rem;
+		}
 	`,
 	UnderlineBlock: styled.div`
 		${

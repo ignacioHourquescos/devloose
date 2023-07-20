@@ -31,10 +31,14 @@ export const Styled = {
 	Subtitle: styled.div`
 		font-size: 1rem;
 		font-weight: 50;
-		letter-spacing: 0px;
+		letter-spacing: 1px;
 	`,
 	LogoContainer: styled.div`
 		width: 100%;
+	`,
+	Name: styled.div`
+		font-size: 2.9rem;
+		font-weight: bold;
 	`,
 	Bounce: styled.div`
 		color: #190d2a;

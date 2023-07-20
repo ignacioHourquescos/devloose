@@ -18,7 +18,7 @@ export const Styled = {
 		color: white;
 
 		@media ${UTILS.SCREEN.MOBILE} {
-			width: 100%;
+			width: 80%;
 			padding: 30% 10%;
 		}
 	`,

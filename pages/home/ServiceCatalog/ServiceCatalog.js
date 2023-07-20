@@ -1,21 +1,26 @@
 import React from "react";
 import { Styled } from "./styles.js";
 import CardService from "./CardService/CardService.js";
+import SectionTitle from "../../../components/common/SectionTitle/SectionTitle.js";
 
 const ServiceCatalog = (props) => {
 	return (
 		<Styled.Inner>
-			{services.map((element, idx) => (
-				<>
-					<CardService
-						key={idx}
-						title={element.title}
-						description={element.description}
-						doodle={element.doodle}
-						number={element.number}
-					></CardService>
-				</>
-			))}
+			<SectionTitle>Catalogo de Servicios</SectionTitle>
+			<Styled.CardContainer>
+				{services.map((element, idx) => (
+					<>
+						<CardService
+							key={idx}
+							title={element.title}
+							description={element.description}
+							doodle={element.doodle}
+							number={element.number}
+							slug={element.slug}
+						></CardService>
+					</>
+				))}
+			</Styled.CardContainer>
 		</Styled.Inner>
 	);
 };
@@ -33,6 +38,7 @@ const services = [
 		title: "Desarrollo web / Mobile",
 		number: "1",
 		doodle: "/service1_doodle.png",
+		slug: "blog/webapp",
 		description:
 			"Creamos aplicaciones web y moviles a medida para potenciar tu negocio y brindar una experiencia unica a tus usuarios",
 	},
@@ -40,6 +46,7 @@ const services = [
 		title: "Rapid Prototyping",
 		number: "2",
 		doodle: "/service2_doodle.png",
+		slug: "blog/prototyping",
 		description:
 			"Con nuestro enfoque de prototipado rápido, transformamos ideas en solcuiones tangibles en poco tiempo, dando lugar a la validacion de conceptos",
 	},
@@ -47,6 +54,7 @@ const services = [
 		title: "lanzamiento de MVP",
 		number: "2",
 		doodle: "/service3_doodle.png",
+		slug: "blog/mvp",
 		description:
 			"Ayudamos a lanzar tu producto minimo viable al mercado de manera agil y eficiente, permitiendo tener una retroalimentacion temprana y reducir reisgos",
 	},

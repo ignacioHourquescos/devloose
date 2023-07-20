@@ -2,28 +2,49 @@ import React from "react";
 import useViewPort from "../../../hooks/useViewPort.js";
 import { StyledHeader } from "./styles.js";
 import { useRef, useEffect, useState } from "react";
-
-import Logo from "../../../components/common/Logo/Logo";
+import { AiFillRocket } from "react-icons/ai";
+import Image from "next/image.js";
+import HeroLaunched from "./components/HeroLaunched.js";
 
 const Hero = ({ displayHomeHandler, rendererHandler }) => {
 	const triggerRef = useRef();
 	const ref = useViewPort(triggerRef, { freezeOnceVisible: true });
 	const [launch, setLaunch] = useState(false);
+	const [count, setCount] = useState(5);
 
-	const launchHandler = () => {
-		setLaunch(true);
-		displayHomeHandler();
-	};
+	useEffect(() => {
+		const interval = setInterval(() => {
+			if (count > 0) {
+				setCount(count - 1);
+			}
+		}, 1000);
+		if (count == 0) {
+			setLaunch(true);
+		}
+		return () => clearInterval(interval);
+	}, [count]);
 
 	return (
 		<StyledHeader.Inner>
-			<StyledHeader.Ball></StyledHeader.Ball>
-
-			<StyledHeader.PropulsionContainer
-			// onClick={(element) => rendererHandler("About")}
-			>
+			<StyledHeader.Ball
+				initial="hidden"
+				animate={launch && "visible"}
+			></StyledHeader.Ball>
+			<StyledHeader.Rocket animate={"translate"}>
+				<Image
+					src="/rocketUnlaunched.svg"
+					alt="Picture of the author"
+					width="100px"
+					height="100px"
+				/>
+				<StyledHeader.Counter>
+					{count === 0 ? "" : `${count}`}
+				</StyledHeader.Counter>
+			</StyledHeader.Rocket>
+			<StyledHeader.PropulsionContainer>
 				<svg viewBox="-60 -35 300 300" width="270px" height="270px">
 					<StyledHeader.Propulsion
+						animate={launch}
 						d={svgDrawings.chaosClarity}
 						fill="none"
 						stroke="white"
@@ -32,9 +53,8 @@ const Hero = ({ displayHomeHandler, rendererHandler }) => {
 				</svg>
 			</StyledHeader.PropulsionContainer>
 			<StyledHeader.Launch>
-				<h1>Devloose</h1>
-				{/* <Logo /> */}
-			</StyledHeader.Launch>
+				{!launch ? "" : <HeroLaunched />}
+			</StyledHeader.Launch>{" "}
 		</StyledHeader.Inner>
 	);
 };

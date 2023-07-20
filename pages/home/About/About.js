@@ -9,10 +9,12 @@ const About = () => {
 			<Styled.Title>
 				<Styled.Highlight>
 					<br />
-					Desarrollo, diseñao & creatividad
+					Desarrollo & Diseño
 					<br />
 				</Styled.Highlight>
-				para la construccion de soluciones digitales
+				para la creación de soluciones digitales.
+				<br />
+				Desde la idea hasta el lanzamiento.
 			</Styled.Title>
 		</Styled.Inner>
 	);

@@ -8,7 +8,7 @@ const variants = {
 		scale: 1,
 		borderRadius: "200px",
 		transition: { duration: 2 },
-		// backgroundColor: UTILS.COLORS.CARMINE,
+		 backgroundColor: UTILS.COLORS.CARMINE,
 	},
 	hidden: {
      opacity: 1, 
@@ -16,11 +16,11 @@ const variants = {
     },
 	translate: {
 		translateY: "-500px",
-		transition: { duration: 3 },
+		transition: { duration: 3, delay:5 },
 	},
   displayNone:{
     opacity:0,
-    transition: { duration: 2 }
+    transition: { duration: 2,  }
   }
 };
 
