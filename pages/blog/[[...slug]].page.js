@@ -12,11 +12,11 @@ const BlogItem = (props) => {
 			{BlogItemsArray.filter((element) => element.id == blogItem).map(
 				(element, idx) => (
 					<>
-						<SectionTitle>{element.title}</SectionTitle>
 						<Styled.ImageContainer>
 							<Styled.Image src={element.image}></Styled.Image>
-							<Styled.Content>{element.content}</Styled.Content>
 						</Styled.ImageContainer>
+						<Styled.Title>{element.title}</Styled.Title>
+						<Styled.Content>{element.content}</Styled.Content>
 					</>
 				)
 			)}
@@ -66,7 +66,7 @@ const BlogItemsArray = [
 	},
 	{
 		id: "webapp",
-		title: "El camino del desarrollo",
+		title: "Del Caos a la Claridad",
 		image: "/CaosToClarity.png",
 		content: (
 			<>

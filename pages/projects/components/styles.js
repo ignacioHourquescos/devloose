@@ -8,7 +8,7 @@ export const Styled = {
 		flex-direction: column;
 		justify-content: flex-start;
 		padding: 10%;
-		padding-top: 20%;
+		padding-top: 10%;
 
 		@media ${UTILS.SCREEN.MOBILE} {
 			padding-top: 30%;

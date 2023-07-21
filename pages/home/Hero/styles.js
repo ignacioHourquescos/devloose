@@ -60,7 +60,7 @@ export const StyledHeader = {
 
 	PropulsionContainer: styled.div`
 		position: absolute;
-		top: 33%;
+		top: 31%;
 		left: 30;
 		z-index: 200;
 	`,

@@ -48,7 +48,7 @@ const Hero = ({ displayHomeHandler, rendererHandler }) => {
 						d={svgDrawings.chaosClarity}
 						fill="none"
 						stroke="white"
-						strokeWidth={6}
+						strokeWidth={5}
 					></StyledHeader.Propulsion>
 				</svg>
 			</StyledHeader.PropulsionContainer>

@@ -1,8 +1,9 @@
 import React from "react";
 import { Styled } from "./styles.js";
 import Card from "./Card/Card.js";
+import { BiLogoReact } from "react-icons/bi";
 
-const OurWork = ({ title, description, image }) => {
+const OurWork = ({}) => {
 	return (
 		<Styled.Inner>
 			{portfolio.map((element, idx) => (
@@ -12,8 +13,9 @@ const OurWork = ({ title, description, image }) => {
 						title={element.title}
 						image={element.image}
 						description={element.description}
-						stack={element.stack}
-					></Card>
+					>
+						{element.stack}
+					</Card>
 				</>
 			))}
 		</Styled.Inner>
@@ -30,11 +32,11 @@ const portfolio = [
 	// 		"Propel your product ideas and business models to new heights with cutting-edge business experiments and design thinking methodologies,empowering your organization to soar with innovation.",
 	// },
 	{
-		title: "Rebuilding UI for Insurtech",
+		title: "Rediseño de Interfaz",
 		image: "/portfolio1.png",
 		description:
-			"The project was about rebuilding User Interface (UI) for Sysone Insurance Tech Software Application. The application had recently migrated to the cloud, and we ensured that the UI was modern, user-friendly, and aligned with industry standards.",
-		stack: "js css html",
+			"Trabajamos en diseñar y desarrolar el front end de un sistema de gestion de seguros. El mismo se construyo con Microfrontends y con un diseño minimalista",
+		stack: ["react"],
 	},
 
 	{

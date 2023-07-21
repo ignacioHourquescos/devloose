@@ -76,19 +76,6 @@ const Mui = () => {
 						<Box
 							component="form"
 							onSubmit={handleSubmit}
-							sx={{
-								"& .MuiTextField-root": {
-									m: 1,
-									width: "25ch",
-								},
-								[theme.breakpoints.down("sm")]: {
-									marginLeft: "15%",
-									paddingRight: "4rem",
-								},
-								[theme.breakpoints.down("xs")]: {
-									background: "blue",
-								},
-							}}
 							noValidate
 							autoComplete="off"
 						>
@@ -162,18 +149,7 @@ const Mui = () => {
 
 							<Boton>
 								<Stack spacing={2} direction="row">
-									<Button
-										type="submit"
-										variant="text"
-										sx={{
-											fontSize: "20px",
-											color: "#183163",
-											width: "100%",
-											[theme.breakpoints.down("sm")]: {
-												marginRight: "50%",
-											},
-										}}
-									>
+									<Button type="submit" variant="text">
 										Enviar
 										{/* <Image src={row} alt="arrow" height={35} width={45} /> */}
 									</Button>

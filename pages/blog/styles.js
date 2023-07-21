@@ -6,35 +6,39 @@ export const Styled = {
 		flex-direction: column;
 		align-content: center;
 		align-items: center;
-		padding-top: 5%;
+		padding-top: 0%;
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
-			padding: 20% 0%;
+			padding: 0%;
 			padding-bottom: 0%;
 		}
 	`,
 	ImageContainer: styled.div`
-		padding: 5% 15%;
-
+		padding: 10% 0%;
+		background-color: ${UTILS.COLORS.BLACK};
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-content: center;
 		align-items: center;
 		@media ${UTILS.SCREEN.MOBILE} {
-			padding: 0;
+			padding: 20% 0;
 		}
 	`,
 	Image: styled.img`
 		height: 40vh;
+		background-color: ${UTILS.COLORS.BLACK};
 		@media ${UTILS.SCREEN.MOBILE} {
 			height: auto;
 			width: 100vw;
 		}
 	`,
 	Content: styled.div`
-		padding: 10% 15%;
+		padding: 10% 20%;
 		padding-top: 5%;
 		font-size: 1.2rem;
+
+		background-color: none;
 		@media ${UTILS.SCREEN.MOBILE} {
 			padding: 5%;
 		}
@@ -53,5 +57,8 @@ export const Styled = {
 			padding: 5%;
 			font-size: 1.1rem;
 		}
+	`,
+	Title: styled.div`
+		transform: translateY(-100px);
 	`,
 };

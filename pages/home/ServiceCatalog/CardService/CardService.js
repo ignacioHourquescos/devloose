@@ -9,9 +9,9 @@ const CardService = ({ title, description, doodle, number, slug }) => {
 			<Box elevation={6}>
 				<StyledCard.Title>{title}</StyledCard.Title>
 				<StyledCard.Description>{description}</StyledCard.Description>
-				<StyledCard.Button>
-					<Link href={slug}>Mas detalle</Link>
-				</StyledCard.Button>
+				<Link href={slug}>
+					<StyledCard.Button>Mas detalle</StyledCard.Button>
+				</Link>
 			</Box>
 		</StyledCard.Inner>
 	);

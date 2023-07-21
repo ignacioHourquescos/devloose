@@ -14,7 +14,7 @@ const HeroLaunched = () => {
 	return (
 		<Styled.Inner onClick={goToTop}>
 			<Styled.LogoContainer>
-				<Styled.Name>Devloose</Styled.Name>
+				<Styled.Name>Propulzd</Styled.Name>
 			</Styled.LogoContainer>
 
 			<Styled.Subtitle>YOUR DIGITAL PARTNER</Styled.Subtitle>
