@@ -2,7 +2,7 @@ import styled from "styled-components";
 import UTILS from "../../../utils/utils";
 export const Styled = {
 	Inner: styled.div`
-		padding-top: 5%;
+		padding: 5% 0;
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			padding: 0%;
@@ -14,10 +14,10 @@ export const Styled = {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: no-wrap;
-		justigy-content: center;
+		justify-content: center;
 		width: 80%;
-		padding: 10%;
-		padding-top: 0;
+		padding: 5% 10%;
+
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			padding: 0%;

@@ -4,6 +4,7 @@ import UTILS from "../../../../utils/utils";
 export const Styled = {
 	Inner: styled.div`
 		margin-bottom: 15vh;
+
 		/* background: rgb(249, 249, 249);
 		background: linear-gradient(
 			90deg,
@@ -56,6 +57,7 @@ export const Styled = {
 		padding: 0.5rem 1rem;
 		margin-top: 5%;
 		display: inline-block;
+		margin-right: 1rem;
 	`,
 	Content: styled.div`
 		background: rgba(0, 0, 0, 0.05);
@@ -64,6 +66,7 @@ export const Styled = {
 		padding-right: 5%;
 		font-size: 1.2rem;
 		padding: 5%;
+
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 90%;
 			padding: 5%;
@@ -71,19 +74,42 @@ export const Styled = {
 		}
 	`,
 	Image: styled.img`
-		border-left: 4px solid rgba(0, 0, 0, 0.1);
+		border-left: 8px solid rgba(0, 0, 0, 0.3);
 		padding: 2% 5%;
 		width: 40%;
 		bottom: 0;
 		@media ${UTILS.SCREEN.MOBILE} {
 			border: 0;
 			padding: 0;
-			border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+			border-bottom: 8px solid rgba(0, 0, 0, 0.3);
 			position: static;
 			width: 100%;
 		}
 	`,
 	Stack: styled.div`
 		width: 100%;
+	`,
+	Video: styled.div`
+		position: fixed;
+		backdrop-filter: blur(10px);
+		z-index: 10000;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.9);
+	`,
+	GoBackButton: styled.div`
+		border-radius: 4rem;
+		border: 1px solid ${UTILS.COLORS.GREEN};
+		color: ${UTILS.COLORS.GREEN};
+		padding: 0.5rem 1rem;
+		margin-top: 5%;
+		display: inline-block;
 	`,
 };

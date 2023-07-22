@@ -40,10 +40,10 @@ const services = [
 		doodle: "/service1_doodle.png",
 		slug: "blog/webapp",
 		description:
-			"Creamos aplicaciones web y moviles a medida para potenciar tu negocio y brindar una experiencia unica a tus usuarios",
+			"Creamos aplicaciones web y moviles a medida para potenciar tu negocio o desarrollar tu idea y brindar una experiencia unica a tus usuarios",
 	},
 	{
-		title: "Rapid Prototyping",
+		title: "Prototipado Rápido",
 		number: "2",
 		doodle: "/service2_doodle.png",
 		slug: "blog/prototyping",
@@ -51,12 +51,12 @@ const services = [
 			"Con nuestro enfoque de prototipado rápido, transformamos ideas en solcuiones tangibles en poco tiempo, dando lugar a la validacion de conceptos",
 	},
 	{
-		title: "lanzamiento de MVP",
+		title: "lLnzamiento de MVP",
 		number: "2",
 		doodle: "/service3_doodle.png",
 		slug: "blog/mvp",
 		description:
-			"Ayudamos a lanzar tu producto minimo viable al mercado de manera agil y eficiente, permitiendo tener una retroalimentacion temprana y reducir reisgos",
+			"Ayudamos a lanzar tu producto minimo viable al mercado de manera agil y eficiente, permitiendo tener una retroalimentacion temprana y reducir riesgos",
 	},
 	//   {
 	//     title: "",

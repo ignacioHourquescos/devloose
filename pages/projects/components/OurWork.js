@@ -32,7 +32,7 @@ const portfolio = [
 	// 		"Propel your product ideas and business models to new heights with cutting-edge business experiments and design thinking methodologies,empowering your organization to soar with innovation.",
 	// },
 	{
-		title: "Rediseño de Interfaz",
+		title: "Eficiencia asegurada",
 		image: "/portfolio1.png",
 		description:
 			"Trabajamos en diseñar y desarrolar el front end de un sistema de gestion de seguros. El mismo se construyo con Microfrontends y con un diseño minimalista",
@@ -40,14 +40,14 @@ const portfolio = [
 	},
 
 	{
-		title: "MVP for Hydroponic farming",
+		title: "Plantando en Casa",
 		image: "/portfolio3.png",
 		description:
-			"Greenhab is a web application for handling plant orders from clients. It allows users to browse available vegetables and place orders. Greenhab's goal is to provide a seamless and enjoyable experience for clients to plant their own food.",
+			"La aplicación fue desarrollada para Greenhab, que ofrece dispositivos de cultivos hidropónicos para promover la autosuficiencia alimentaria. La app coordina y ayuda a los usuarios a planificar sus cultivos y obtener las verduras necesarias para su cosecha.",
 		stack: "js css html",
 	},
 	{
-		title: "Tailored Logistics for autopart wholesaler",
+		title: "Gestion Agil",
 		image: "/portfolio2.png",
 		description:
 			"The Logistics App is a web application designed to manage the state of client orders for an autoparts wholesaler. It allows clients to track the status of their orders, view order history, and receive notifications about updates to their orders.",

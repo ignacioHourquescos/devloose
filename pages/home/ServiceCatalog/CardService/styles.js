@@ -20,10 +20,12 @@ export const StyledCard = {
 			rgba(255, 255, 255, 1) 100%
 		);
 		border-radius: 0.5rem;
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
 
 		@media ${UTILS.SCREEN.MOBILE} {
-			width: 100%;
-			padding: 5% 10%;
+			width: 80%;
+			padding: 5% 5%;
+			margin: 10%;
 		}
 	`,
 	ServiceNumber: styled.div`
@@ -44,6 +46,7 @@ export const StyledCard = {
 		font-size: 1rem;
 		margin-bottom: 2rem;
 		padding: 0 10%;
+		min-height: 40%;
 	`,
 	Button: styled.button`
 		background-color: black;

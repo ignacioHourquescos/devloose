@@ -13,7 +13,7 @@ export const Styled = {
 		color: white;
 		background-color: ${UTILS.COLORS.BLACK};
 		@media ${UTILS.SCREEN.MOBILE} {
-			margin-top: 50%;
+			margin-top: 20%;
 		}
 	`,
 	Item: styled.div`
