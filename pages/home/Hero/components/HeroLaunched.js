@@ -14,10 +14,10 @@ const HeroLaunched = () => {
 	return (
 		<Styled.Inner onClick={goToTop}>
 			<Styled.LogoContainer>
-				<Styled.Name>PROPELIE</Styled.Name>
+				<Styled.Name>DEVLOOSE</Styled.Name>
 			</Styled.LogoContainer>
 
-			<Styled.Subtitle>YOUR DIGITAL PARTNER</Styled.Subtitle>
+			<Styled.Subtitle>PROPULSAMOS TUS IDEAS</Styled.Subtitle>
 			<Styled.Bounce>
 				<TbTriangleInverted size={35} />
 			</Styled.Bounce>
