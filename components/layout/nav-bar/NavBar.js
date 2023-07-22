@@ -16,11 +16,11 @@ const NavBar = ({ rendererHandler, initialValueNavBarItem }) => {
 
 			<Styled.NavBarItem>
 				{" "}
-				<Link href="/projects">PROYECTOS</Link>
+				<Link href="/projects">PORTFOLIO</Link>
 			</Styled.NavBarItem>
 			<Styled.NavBarItem>
 				{" "}
-				<Link href="/services">SERVICIOS</Link>
+				<Link href="/services">MAS</Link>
 			</Styled.NavBarItem>
 			<Styled.NavBarItem>
 				{" "}

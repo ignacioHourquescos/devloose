@@ -11,7 +11,7 @@ export const Styled = {
 		align-content: center;
 		align-items: center;
 		color: white;
-		background-color: ${UTILS.COLORS.BLACK};
+
 		@media ${UTILS.SCREEN.MOBILE} {
 			margin-top: 20%;
 		}

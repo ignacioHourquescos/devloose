@@ -1,7 +1,6 @@
 import React from "react";
 import { Styled } from "./styles.js";
 import Card from "./Card/Card.js";
-import { BiLogoReact } from "react-icons/bi";
 
 const OurWork = ({}) => {
 	return (
