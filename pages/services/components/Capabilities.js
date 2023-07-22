@@ -6,109 +6,92 @@ import Capability from "./Capability/Capability.js";
 const Capabilities = (props) => {
 	return (
 		<Styled.Inner>
-			<Styled.BlockTitle>Capabilites</Styled.BlockTitle>
-			<Capability
-				title="Development"
-				capabilityList={developmentCapabilities}
-			/>
-			<Capability title="Design" capabilityList={designCapabilities} />
-			<Capability title="Product" capabilityList={productCapabilities} />
+			<Styled.BlockTitle>Capacidades</Styled.BlockTitle>
+			<Capability title="Desarrollo" capabilityList={developmentCapabilities} />
+			<Capability title="Diseño" capabilityList={designCapabilities} />
+			<Capability title="Producto" capabilityList={productCapabilities} />
 
 			<Styled.BlockTitle>Technologies</Styled.BlockTitle>
-			<Capability title="Tech Stack" capabilityList={techStack} />
-			{/* <Styled.BlockTitle>who we are</Styled.BlockTitle>
-			<Capability title="Us" capabilityList={us} /> */}
+			<Capability title="Stack Tecnologico" capabilityList={techStack} />
 		</Styled.Inner>
 	);
 };
 
 export default Capabilities;
 
-const productCapabilities = [
+const designCapabilities = [
 	{
-		title: "Product Roadmap",
+		title: "Sprint de diseño",
 		description:
-			"Immersive discovery, brief creation, functionality prioritization, MVP design. Solutions aligned with business and client needs for impactful outcomes",
+			"Acorta el tiempo de diseño del producto con un enfoque colaborativo y con límite de tiempo. Ideación, prototipado y validación de ideas en tan solo unos días para una innovación rápida.",
 	},
 	{
-		title: "Story Mapping",
+		title: "Interfaz de usuario (UI)",
 		description:
-			"Visually organize and prioritize user stories, aligning them with your business goals and user needs. Streamline your product development with our expert assistance.",
+			"Creación de interfaces intuitivas y visualmente atractivas que mejoran la participación del usuario y generan experiencias positivas.",
 	},
 	{
-		title: "Product Discovery",
+		title: "Diseño centrado en el usuario",
 		description:
-			"A comprehensive process to uncover business and user needs, prioritize functionalities, and design a strategic MVP for successful product development.",
+			"Un enfoque que prioriza las necesidades del usuario, la investigación, la iteración y las pruebas para obtener experiencias de producto excepcionales.",
 	},
 	{
-		title: "User research",
+		title: "Experiencia del usuario (UX)",
 		description:
-			"Methodologies to gather insights and feedback from target users, informing product development decisions and enhancing use experience.",
+			"Crea interacciones sin problemas y experiencias atractivas. Investigación, diseño y pruebas para crear productos que deleiten a los usuarios y conduzcan al éxito del negocio.",
 	},
 ];
 
-const designCapabilities = [
+const productCapabilities = [
 	{
-		title: "Design sprint",
+		title: "Hoja de ruta del producto",
 		description:
-			"accelerates product design with a time-boxed, collaborative approach. Ideate, prototype, and validate ideas in just a few days for rapid innovation.",
+			"Descubrimiento inmersivo, creación de resúmenes, priorización de funcionalidades, diseño del Producto Mínimo Viable (MVP). Soluciones alineadas con las necesidades del negocio y del cliente para obtener resultados impactantes.",
 	},
 	{
-		title: "UI (User Interface)",
+		title: "Mapeo de historias",
 		description:
-			"Creation of intuitive and visually appealing interfaces that enhance user engagement and drive positive experiences.",
+			"Organización y priorización visual de historias de usuario, alineándolas con los objetivos comerciales y las necesidades del usuario. Simplifique el desarrollo de su producto con nuestra asistencia experta.",
 	},
 	{
-		title: "user-centered design",
+		title: "Descubrimiento de productos",
 		description:
-			"approach that prioritizes user needs, research, iteration, and testing for exceptional product experiences",
+			"Un proceso integral para descubrir las necesidades del negocio y del usuario, priorizar funcionalidades y diseñar un Producto Mínimo Viable (MVP) estratégico para un desarrollo de producto exitoso.",
 	},
 	{
-		title: "UX (user experience) ",
+		title: "Investigación de usuarios",
 		description:
-			" crafts seamless interactions and engaging experiences. Research, design, and test to create products that delight users and drive business success.",
+			"Metodologías para recopilar conocimientos y comentarios de los usuarios objetivos, que informan las decisiones de desarrollo del producto y mejoran la experiencia del usuario.",
 	},
 ];
 
 const developmentCapabilities = [
 	{
-		title: "Mobile/Web development",
+		title: "Desarrollo móvil/web",
 		description:
-			"Our mobile & PWA app development service builds native & web-based apps. Using popular tech stacks for seamless cross-platform experiences.",
+			"Nuestro servicio de desarrollo de aplicaciones móviles y PWA crea aplicaciones nativas y basadas en la web. Utilizando pilas tecnológicas populares para experiencias fluidas en múltiples plataformas.",
 	},
 	{
-		title: "Web scrapping",
+		title: "Extracción de datos (Web Scraping)",
 		description:
-			"Our web scraping service extracts valuable data from websites. Customized solutions using advanced techniques for data collection and analysis to drive insights and decision-making.",
+			"Nuestro servicio de extracción de datos de sitios web obtiene datos valiosos de páginas web. Soluciones personalizadas que utilizan técnicas avanzadas para la recopilación y análisis de datos con el fin de obtener información y facilitar la toma de decisiones.",
 	},
 ];
 
 const techStack = [
 	{
-		title: "Front end development",
+		title: "Desarrollo de Front-end",
 		description:
-			"HTML/CSS, JavaScript, React.js, Next.js, Vue.js, Ember.js, Backbone.js, Bootstrap, Material-UI, Foundation, Sass, Less, Redux, GraphQL, and Webpack.",
+			"HTML/CSS, JavaScript, React.js, Next.js, Vue.js, Ember.js, Backbone.js, Bootstrap, Material-UI, Foundation, Sass, Less, Redux, GraphQL y Webpack.",
 	},
 	{
-		title: "back end development",
+		title: "Desarrollo de Back-end",
 		description:
-			"Node.js, Express.js, Django, Flask, Ruby on Rails, ASP.NET, Laravel, Spring, Express.js, Flask, Ruby on Rails, ASP.NET, Laravel, and Spring.",
+			"Node.js, Express.js, Django, Flask, Ruby on Rails, ASP.NET, Laravel y Spring.",
 	},
 	{
-		title: "Design",
+		title: "Diseño",
 		description:
-			" Figma, Sketch, InVision Studio, Canva, Zeplin, SketchUp, Marvel.",
-	},
-];
-
-const us = [
-	{
-		title: "Ignacio Tata",
-		description:
-			"Software Engineering +15 years experience in both large scale projects and end to end smaller ones",
-	},
-	{
-		title: "Ignacio Hourquescos",
-		description: "Product Designer, with notion in design and development",
+			"Figma, Sketch, InVision Studio, Canva, Zeplin, SketchUp, Marvel.",
 	},
 ];

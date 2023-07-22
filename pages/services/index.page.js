@@ -2,6 +2,7 @@ import React from "react";
 import { Styled } from "./styles";
 import Capabilities from "./components/Capabilities";
 import SubHeader from "../../components/common/sub-header/SubHeader";
+import Profile from "./components/Profile/Profile";
 
 const Services = (props) => {
 	return (
@@ -10,6 +11,7 @@ const Services = (props) => {
 				title="Conocenos"
 				subtitle="Quienes somos, tencologias y metodologias utilizadas"
 			></SubHeader>
+			<Profile />
 			<Capabilities />
 		</Styled.Inner>
 	);

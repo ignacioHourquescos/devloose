@@ -14,7 +14,7 @@ export const Styled = {
 		${"" /* padding-top: 20%; */}
 
 		@media ${UTILS.SCREEN.MOBILE} {
-			width: 100%;
+			width: 90%;
 			padding: 5%;
 			padding-top: 20%;
 			padding-bottom: 20%;

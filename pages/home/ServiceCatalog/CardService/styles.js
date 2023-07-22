@@ -12,7 +12,9 @@ export const StyledCard = {
 		align-content: center;
 		justify-items: center;
 		justify-content: flex-start;
-		background: rgb(249, 249, 249);
+		background: rgba(0, 0, 0, 0.05);
+		border-left: 8px solid rgba(0, 0, 0, 0.3);
+		/* background: rgb(249, 249, 249);
 		background: linear-gradient(
 			90deg,
 			rgba(249, 249, 249, 1) 0%,
@@ -20,7 +22,7 @@ export const StyledCard = {
 			rgba(255, 255, 255, 1) 100%
 		);
 		border-radius: 0.5rem;
-		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19); */
 
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 80%;
@@ -39,13 +41,13 @@ export const StyledCard = {
 		font-size: 1.5rem;
 		font-weight: bold;
 		margin: 10% 0;
-		padding: 0 10%;
+		padding: 0 8%;
 	`,
 	Description: styled.div`
 		border: ${UTILS.DRAFT};
 		font-size: 1rem;
 		margin-bottom: 2rem;
-		padding: 0 10%;
+		padding: 0 8%;
 		min-height: 40%;
 	`,
 	Button: styled.button`
@@ -53,7 +55,7 @@ export const StyledCard = {
 		padding: 0.5rem 1rem;
 		color: white;
 		border-radius: 4rem;
-		margin-left: 10%;
+		margin-left: 8%;
 		margin-bottom: 4rem;
 	`,
 	Doodle: styled.img.attrs((props) => ({

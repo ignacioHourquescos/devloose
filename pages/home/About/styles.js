@@ -35,10 +35,17 @@ export const Styled = {
 		font-size: 2.5rem;
 		text-align: center;
 		font-weight: bold;
+
 		color: ${UTILS.COLORS.GREEN};
 		@media ${UTILS.SCREEN.MOBILE} {
 			font-size: 2rem;
-			margin-bottom: 20%;
+			/* margin-bottom: 20%; */
+		}
+	`,
+	TextLine: styled.div`
+		margin-top: 5%;
+		@media ${UTILS.SCREEN.MOBILE} {
+			margin-top: 10%;
 		}
 	`,
 };

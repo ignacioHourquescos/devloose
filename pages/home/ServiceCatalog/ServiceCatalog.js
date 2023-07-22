@@ -35,7 +35,7 @@ const services = [
 	// 		"Propel your product ideas and business models to new heights with cutting-edge business experiments and design thinking methodologies,empowering your organization to soar with innovation.",
 	// },
 	{
-		title: "Desarrollo web / Mobile",
+		title: "Desarrollo web & Mobile",
 		number: "1",
 		doodle: "/service1_doodle.png",
 		slug: "blog/webapp",
@@ -51,7 +51,7 @@ const services = [
 			"Con nuestro enfoque de prototipado rápido, transformamos ideas en solcuiones tangibles en poco tiempo, dando lugar a la validacion de conceptos",
 	},
 	{
-		title: "lLnzamiento de MVP",
+		title: "Lanzamiento de MVP",
 		number: "2",
 		doodle: "/service3_doodle.png",
 		slug: "blog/mvp",
