@@ -34,7 +34,7 @@ const us = [
 		description: "Designer",
 	},
 	{
-		name: "Marina Kuseva",
+		name: "Marina Guseva",
 		doodle: "/mari.png",
 		description: "Developer",
 	},
@@ -54,7 +54,7 @@ const us = [
 		description: "Developer",
 	},
 	{
-		name: "Alejo Digovine",
+		name: "Alejo Digiovine",
 		doodle: "/alejo.png",
 		description: "Designer",
 	},
