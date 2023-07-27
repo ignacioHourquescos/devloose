@@ -3,7 +3,7 @@ import { StyledCard } from "./styles.js";
 import { Box } from "@mui/material";
 import Link from "next/link.js";
 
-const CardService = ({ title, description, doodle, number, slug }) => {
+const CardService = ({ title, description, doodle, slug }) => {
 	return (
 		<StyledCard.Inner>
 			<Box elevation={6}>

@@ -9,7 +9,7 @@ const Services = (props) => {
 		<Styled.Inner>
 			<SubHeader
 				title="Conocenos"
-				subtitle="Quienes somos, tencologias y metodologias utilizadas"
+				subtitle="Quienes somos, tecnologías y metodologías utilizadas"
 			></SubHeader>
 			<Profile />
 			<Capabilities />

@@ -6,6 +6,7 @@ import Capability from "./Capability/Capability.js";
 const Capabilities = (props) => {
 	return (
 		<Styled.Inner>
+      
 			<Styled.BlockTitle>Capacidades</Styled.BlockTitle>
 			<Capability title="Desarrollo" capabilityList={developmentCapabilities} />
 			<Capability title="Diseño" capabilityList={designCapabilities} />

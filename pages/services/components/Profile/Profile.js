@@ -58,9 +58,4 @@ const us = [
 		doodle: "/alejo.png",
 		description: "Designer",
 	},
-	{
-		name: "Fernando Touza",
-		doodle: "/alejo.png",
-		description: "Designer",
-	},
 ];

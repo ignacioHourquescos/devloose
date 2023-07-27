@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Styled from "../styles/styles.js";
-
 import Head from "next/head";
-
 import Hero from "./home/Hero/Hero";
 import About from "./home/About/About";
 import ServiceCatalog from "./home/ServiceCatalog/ServiceCatalog";
@@ -33,7 +31,6 @@ const Home = () => {
 					{true && (
 						<Styled.Container>
 							<About />
-
 							<ServiceCatalog />
 						</Styled.Container>
 					)}

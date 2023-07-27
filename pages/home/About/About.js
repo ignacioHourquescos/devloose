@@ -12,7 +12,7 @@ const About = () => {
 					Desarrollo & Diseño
 				</Styled.Highlight>
 				<Styled.TextLine>
-					para la propulsion de soluciones digitales.
+					para la creación de soluciones digitales.
 				</Styled.TextLine>
 
 				<Styled.TextLine>Desde la idea hasta el lanzamiento.</Styled.TextLine>

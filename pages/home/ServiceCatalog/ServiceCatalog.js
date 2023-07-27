@@ -15,7 +15,6 @@ const ServiceCatalog = (props) => {
 							title={element.title}
 							description={element.description}
 							doodle={element.doodle}
-							number={element.number}
 							slug={element.slug}
 						></CardService>
 					</>
@@ -28,41 +27,22 @@ const ServiceCatalog = (props) => {
 export default ServiceCatalog;
 
 const services = [
-	// {
-	// 	title: "Innovation Booster",
-	// 	doodle: "/service1.png",
-	// 	description:
-	// 		"Propel your product ideas and business models to new heights with cutting-edge business experiments and design thinking methodologies,empowering your organization to soar with innovation.",
-	// },
 	{
-		title: "Desarrollo web & Mobile",
-		number: "1",
-		doodle: "/service1_doodle.png",
+		title: "Desarrollo web y móvil",
 		slug: "blog/webapp",
 		description:
-			"Creamos aplicaciones web y moviles a medida para potenciar tu negocio o desarrollar tu idea y brindar una experiencia unica a tus usuarios",
+			"Creamos aplicaciones web y móviles a medida para potenciar tu negocio o desarrollar tu idea y brindar una experiencia única a tus usuarios.",
 	},
 	{
 		title: "Prototipado Rápido",
-		number: "2",
-		doodle: "/service2_doodle.png",
 		slug: "blog/prototyping",
 		description:
-			"Con nuestro enfoque de prototipado rápido, transformamos ideas en solcuiones tangibles en poco tiempo, dando lugar a la validacion de conceptos",
+			"Con nuestro enfoque de prototipado rápido, transformamos ideas en soluciones tangibles en poco tiempo, dando lugar a la validación de conceptos.",
 	},
 	{
 		title: "Lanzamiento de MVP",
-		number: "2",
-		doodle: "/service3_doodle.png",
 		slug: "blog/mvp",
 		description:
-			"Ayudamos a lanzar tu producto minimo viable al mercado de manera agil y eficiente, permitiendo tener una retroalimentacion temprana y reducir riesgos",
+			"Ayudamos a lanzar tu Producto Mínimo Viable (MVP) al mercado de manera ágil y eficiente, permitiendo tener una retroalimentación temprana y reducir riesgos.",
 	},
-	//   {
-	//     title: "",
-	//     number: "3",
-	//     doodle: "/service4.png",
-	//     description:
-	//       "Unlock the Full Potential of Your Project Acceleration with Our Expert Staff Augmentation Solutions. Assemble Your Customized Crew of Highly Skilled and Experienced Professionals to Drive Your Business Goals to New Heights of Success.",
-	//   },
 ];

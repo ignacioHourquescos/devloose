@@ -22,10 +22,10 @@ const NavBar = ({ rendererHandler, initialValueNavBarItem }) => {
 				{" "}
 				<Link href="/services">MAS</Link>
 			</Styled.NavBarItem>
-			<Styled.NavBarItem>
+			{/* <Styled.NavBarItem>
 				{" "}
 				<Link href="/contact">CONTACTO</Link>
-			</Styled.NavBarItem>
+			</Styled.NavBarItem> */}
 		</Styled.Inner>
 	);
 };

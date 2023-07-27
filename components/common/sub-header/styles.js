@@ -1,5 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import UTILS from "../../../utils/utils";
+
+const moveRight = keyframes`
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100%); /* 80% is the width of the Inner component, subtract half of the circle width */
+  }
+`;
+
 export const Styled = {
 	Inner: styled.div`
 		width: 80%;
@@ -12,6 +22,7 @@ export const Styled = {
 		justify-content: center;
 		align-content: center;
 		align-items: center;
+		position: relative;
 	`,
 	Title: styled.div`
 		font-size: 3rem;
@@ -33,4 +44,5 @@ export const Styled = {
 
 		transform: translateY(25px);
 	`,
+
 };

@@ -19,7 +19,7 @@ const animationPropulsion = (props) =>
 export const StyledHeader = {
 	Inner: styled.div`
 		height: 100vh;
-		widht: 100vw;
+		width: 100vw;
 		display: flex;
 		justify-content: center;
 		align-content: center;
