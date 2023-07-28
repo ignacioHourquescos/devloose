@@ -10,7 +10,7 @@ const Hero = ({ displayHomeHandler, rendererHandler }) => {
 	const triggerRef = useRef();
 	const ref = useViewPort(triggerRef, { freezeOnceVisible: true });
 	const [launch, setLaunch] = useState(false);
-	const [count, setCount] = useState(5);
+	const [count, setCount] = useState(4);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
