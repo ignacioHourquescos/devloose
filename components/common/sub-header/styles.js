@@ -44,5 +44,4 @@ export const Styled = {
 
 		transform: translateY(25px);
 	`,
-
 };

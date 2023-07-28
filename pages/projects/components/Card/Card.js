@@ -1,20 +1,29 @@
 import { useState } from "react";
 import { Styled } from "./styles.js";
 import { BiLogoReact } from "react-icons/bi";
+import Link from "next/link.js";
 
-const Card = ({ title, image, description, stack, children }) => {
+const Card = ({
+	title,
+	image,
+	description,
+	stack,
+	children,
+	client,
+	link,
+	video,
+}) => {
 	const [showVideo, setShowVideo] = useState(false);
 	return (
 		<Styled.Inner>
 			<Styled.DetailedContainer>
 				<Styled.Content>
 					<Styled.Title>{title}</Styled.Title>
-					<Styled.SubTitle>{title}</Styled.SubTitle>
+					<Styled.SubTitle>{client}</Styled.SubTitle>
 					<Styled.Description>{description}</Styled.Description>
 					<Styled.TechStack>
 						<BiLogoReact size={35} />
 					</Styled.TechStack>
-					<Styled.VisitButton>Visitar</Styled.VisitButton>
 					<Styled.VisitButton
 						onClick={() => {
 							setShowVideo(true);
@@ -22,17 +31,20 @@ const Card = ({ title, image, description, stack, children }) => {
 					>
 						Ver
 					</Styled.VisitButton>
+					{link != null ? (
+						<Styled.VisitButton>
+							<Link href={link}>Visitar &rarr;</Link>
+						</Styled.VisitButton>
+					) : (
+						""
+					)}
 				</Styled.Content>
 				<Styled.Image src={image}></Styled.Image>
 			</Styled.DetailedContainer>
 			{showVideo ? (
 				<Styled.Video>
-					{" "}
-					<video width="60%" height="60%" controls>
-						<source
-							src="https://www.youtube.com/watch?v=L5VkdSx3h8A"
-							type="video/mp4"
-						/>
+					<video width="60%" height="60%" controls autoplay>
+						<source src={`${video}`} type="video/mp4" />
 					</video>
 					<Styled.GoBackButton
 						onClick={() => {

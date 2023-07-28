@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import Hero from "./home/Hero/Hero";
 
 class MyDocument extends Document {
 	static async getInitialProps(ctx) {
@@ -21,6 +22,7 @@ class MyDocument extends Document {
 				</Head>
 				<body>
 					<Main />
+
 					<NextScript />
 				</body>
 			</Html>

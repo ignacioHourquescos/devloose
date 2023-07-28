@@ -8,7 +8,7 @@ const Projects = (props) => {
 		<Styled.Inner>
 			<SubHeader
 				title="Proyectos realizados"
-				subtitle="Conoce algunos de nuestros trabajos realizados"
+				subtitle="Conocé alguno de nuestros trabajos realizados"
 			></SubHeader>
 			<OurWork />
 		</Styled.Inner>

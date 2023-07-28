@@ -4,6 +4,7 @@ import Head from "next/head";
 import Hero from "./home/Hero/Hero";
 import About from "./home/About/About";
 import ServiceCatalog from "./home/ServiceCatalog/ServiceCatalog";
+import Wave from "react-wavify";
 
 const Home = () => {
 	const [displayHome, setDisplayHome] = useState(false);
@@ -30,6 +31,18 @@ const Home = () => {
 					<Hero />
 					{true && (
 						<Styled.Container>
+							<div style={{ transform: "translateY(80px)" }}>
+								<Wave
+									fill="#190D2A"
+									paused={false}
+									options={{
+										height: 30,
+										amplitude: 30,
+										speed: 0.1,
+										points: 3,
+									}}
+								/>
+							</div>
 							<About />
 							<ServiceCatalog />
 						</Styled.Container>

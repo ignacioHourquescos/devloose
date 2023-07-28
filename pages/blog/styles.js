@@ -15,7 +15,7 @@ export const Styled = {
 	`,
 	ImageContainer: styled.div`
 		padding: 10% 0%;
-		background-color: ${UTILS.COLORS.BLACK};
+		background-color: grey;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -27,7 +27,7 @@ export const Styled = {
 	`,
 	Image: styled.img`
 		height: 40vh;
-		background-color: ${UTILS.COLORS.BLACK};
+		background-color: grey;
 		@media ${UTILS.SCREEN.MOBILE} {
 			height: auto;
 			width: 100vw;
@@ -60,5 +60,7 @@ export const Styled = {
 	`,
 	Title: styled.div`
 		transform: translateY(-100px);
+		font-size: 2rem;
+		color: white;
 	`,
 };

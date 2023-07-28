@@ -35,6 +35,7 @@ export const Styled = {
 	`,
 	SubTitle: styled.div`
 		font-size: 1rem;
+		font-weight: bold;
 	`,
 	DetailedContainer: styled.div`
 		display: flex;
@@ -58,6 +59,13 @@ export const Styled = {
 		margin-top: 5%;
 		display: inline-block;
 		margin-right: 1rem;
+		&:hover {
+			background-color: ${UTILS.COLORS.BLACK};
+
+			color: white;
+
+			cursor: pointer; /* Optional: Change the background color on hover */
+		}
 	`,
 	Content: styled.div`
 		background: rgba(0, 0, 0, 0.05);
