@@ -43,7 +43,7 @@ const Card = ({
 			</Styled.DetailedContainer>
 			{showVideo ? (
 				<Styled.Video>
-					<video width="60%" height="60%" controls autoplay>
+					<video width="60%" height="60%" controls autoPlay>
 						<source src={`${video}`} type="video/mp4" />
 					</video>
 					<Styled.GoBackButton
