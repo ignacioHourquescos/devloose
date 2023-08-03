@@ -18,7 +18,8 @@ const Footer = (props) => {
 	}, []);
 	return (
 		<Styled.Inner>
-			<Styled.Image src="./contactPunch.png" />
+			<Styled.Image src="./logo_blanco.png" />
+			<Styled.Punch>De la idea a la acción.</Styled.Punch>
 			<Styled.Text>Bs. As. Argentina</Styled.Text>
 			{/* <Styled.Text>hola@devloose.com</Styled.Text> */}
 

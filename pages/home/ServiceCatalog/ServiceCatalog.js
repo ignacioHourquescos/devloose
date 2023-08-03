@@ -6,7 +6,7 @@ import SectionTitle from "../../../components/common/SectionTitle/SectionTitle.j
 const ServiceCatalog = (props) => {
 	return (
 		<Styled.Inner>
-			<SectionTitle>Catalogo de Servicios</SectionTitle>
+			<SectionTitle>Servicios</SectionTitle>
 			<Styled.CardContainer>
 				{services.map((element, idx) => (
 					<>
@@ -16,6 +16,7 @@ const ServiceCatalog = (props) => {
 							description={element.description}
 							doodle={element.doodle}
 							slug={element.slug}
+							bullet={element.bullets}
 						></CardService>
 					</>
 				))}
@@ -31,18 +32,33 @@ const services = [
 		title: "Desarrollo web y móvil",
 		slug: "blog/webapp",
 		description:
-			"Creamos aplicaciones web y móviles a medida para potenciar tu negocio o desarrollar tu idea y brindar una experiencia única a tus usuarios.",
+			" Impulsamos tu negocio / proyecto, con aplicaciones web y móviles a medida, con foco en el usuario",
+		bullets: [
+			"Entregas Iterativas & mejora continua",
+			"Diseño centrado en el usuario",
+			"Arquitectura escalable",
+		],
 	},
 	{
 		title: "Prototipado Rápido",
 		slug: "blog/prototyping",
 		description:
-			"Con nuestro enfoque de prototipado rápido, transformamos ideas en soluciones tangibles en poco tiempo, dando lugar a la validación de conceptos.",
+			"Iterando prototipos ágilmente, transformamos ideas en soluciones tangibles y validamos conceptos.",
+		bullets: [
+			"Mockups conceptuales",
+			"Validación de flujos",
+			"Prototipos navegables",
+		],
 	},
 	{
 		title: "Lanzamiento de MVP",
 		slug: "blog/mvp",
 		description:
-			"Ayudamos a lanzar tu Producto Mínimo Viable (MVP) al mercado de manera ágil y eficiente, permitiendo tener una retroalimentación temprana y reducir riesgos.",
+			"Lanzamos ágilmente tu MVP para obtener retroalimentación valiosa en etapas tempranas de desarrollo",
+		bullets: [
+			"Identificación del caso de negocio",
+			"Definción propuesta de valor",
+			"Diseño de Roadmap",
+		],
 	},
 ];

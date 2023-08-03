@@ -5,6 +5,7 @@ import Hero from "./home/Hero/Hero";
 import About from "./home/About/About";
 import ServiceCatalog from "./home/ServiceCatalog/ServiceCatalog";
 import Wave from "react-wavify";
+import Carrousel from "./home/carrousel/Carrousel.js";
 
 const Home = () => {
 	const [displayHome, setDisplayHome] = useState(false);
@@ -31,7 +32,7 @@ const Home = () => {
 					<Hero />
 					{true && (
 						<Styled.Container>
-							<div style={{ transform: "translateY(80px)" }}>
+							{/* <div style={{ transform: "translateY(80px)" }}>
 								<Wave
 									fill="#190D2A"
 									paused={false}
@@ -42,8 +43,9 @@ const Home = () => {
 										points: 3,
 									}}
 								/>
-							</div>
+							</div> */}
 							<About />
+							<Carrousel />
 							<ServiceCatalog />
 						</Styled.Container>
 					)}

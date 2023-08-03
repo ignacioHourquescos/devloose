@@ -23,15 +23,18 @@ export const Styled = {
 		color: white;
 		margin-bottom: 2rem;
 	`,
-
+	Punch: styled.div`
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+	`,
 	Image: styled.img.attrs((props) => ({
 		type: "text",
 		image: props.image,
 	}))`
-		width: 15%;
+		width: 10%;
 		margin-bottom: 2rem;
 		@media ${UTILS.SCREEN.MOBILE} {
-			width: 60%;
+			width: 20%;
 		}
 	`,
 };

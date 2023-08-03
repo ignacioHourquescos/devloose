@@ -3,13 +3,23 @@ import { Styled } from "./styles";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import ListSubheader from "@mui/material/ListSubheader";
 import IconButton from "@mui/material/IconButton";
+import { isMobile } from "react-device-detect";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Carrousel = (props) => {
+	const [columns, setColumns] = useState(2);
+	useEffect(() => {
+		if (isMobile) {
+			setColumns(1);
+		} else {
+			setColumns(3);
+		}
+	}, []);
 	return (
 		<Styled.Inner>
-			<ImageList cols={3} rowHeight={300} style={{ overflow: "hidden" }}>
+			<ImageList cols={columns} rowHeight={300} style={{ overflow: "hidden" }}>
 				{itemData.map((item) => (
 					<ImageListItem key={item.img} style={{ overflow: "hidden" }}>
 						<img
@@ -18,18 +28,7 @@ const Carrousel = (props) => {
 							alt={item.title}
 							loading="lazy"
 						/>
-						<ImageListItemBar
-							title={item.title}
-							subtitle={item.author}
-							actionIcon={
-								<IconButton
-									sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-									aria-label={`info about ${item.title}`}
-								>
-									+
-								</IconButton>
-							}
-						/>
+						<ImageListItemBar sx={{ height: "100%" }} subtitle={item.author} />
 					</ImageListItem>
 				))}
 			</ImageList>
