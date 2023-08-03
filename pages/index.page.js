@@ -45,7 +45,7 @@ const Home = () => {
 								/>
 							</div> */}
 							<About />
-							<Carrousel />
+							{/* <Carrousel /> */}
 							<ServiceCatalog />
 						</Styled.Container>
 					)}
