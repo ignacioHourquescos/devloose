@@ -17,7 +17,7 @@ const HeroLaunched = () => {
 				<Styled.Name>PROPULZ</Styled.Name>
 			</Styled.LogoContainer>
 
-			<Styled.Subtitle>ELEVA TUS IDEAS</Styled.Subtitle>
+			<Styled.Subtitle>De la idea a la accion</Styled.Subtitle>
 			<Styled.Bounce>
 				<TbTriangleInverted size={35} />
 			</Styled.Bounce>
