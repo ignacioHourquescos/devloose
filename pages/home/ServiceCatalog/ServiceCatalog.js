@@ -6,7 +6,6 @@ import SectionTitle from "../../../components/common/SectionTitle/SectionTitle.j
 const ServiceCatalog = (props) => {
 	return (
 		<Styled.Inner>
-			<SectionTitle>Servicios</SectionTitle>
 			<Styled.CardContainer>
 				{services.map((element, idx) => (
 					<>
@@ -17,6 +16,7 @@ const ServiceCatalog = (props) => {
 							doodle={element.doodle}
 							slug={element.slug}
 							bullet={element.bullets}
+							icon={element.icon}
 						></CardService>
 					</>
 				))}
@@ -38,6 +38,7 @@ const services = [
 			"Diseño centrado en el usuario",
 			"Arquitectura escalable",
 		],
+		icon: "propulz/icon1.png",
 	},
 	{
 		title: "Prototipado Rápido",
@@ -49,6 +50,7 @@ const services = [
 			"Validación de flujos",
 			"Prototipos navegables",
 		],
+		icon: "propulz/icon2.png",
 	},
 	{
 		title: "Lanzamiento de MVP",
@@ -60,5 +62,6 @@ const services = [
 			"Definción propuesta de valor",
 			"Diseño de Roadmap",
 		],
+		icon: "propulz/icon3.png",
 	},
 ];

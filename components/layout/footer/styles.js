@@ -1,40 +1,35 @@
-import styled, { keyframes, css } from "styled-components";
-import UTILS from "../../../utils/utils";
+import styled from "styled-components";
 
 export const Styled = {
-	Inner: styled.div`
-		height: 60vh;
-		width: 100%;
+	FooterContainer: styled.div`
+		background-image: url("/propulz/footer.png");
+		background-size: contain;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-content: center;
+		justify-content: space-between;
 		align-items: center;
-		color: white;
-		background-color: ${UTILS.COLORS.BLACK};
-		@media ${UTILS.SCREEN.MOBILE} {
-			margin-top: 20%;
-		}
+		padding: 5% 10%;
+
+		background-color: #333;
+		color: #fff;
 	`,
-	Item: styled.div`
-		margin-top: 1rem;
+
+	LeftSection: styled.div`
+		display: flex;
+		align-items: center;
 	`,
-	Text: styled.div`
-		color: white;
-		margin-bottom: 2rem;
+
+	RightSection: styled.div`
+		display: flex;
+		align-items: center;
 	`,
-	Punch: styled.div`
-		font-size: 1.2rem;
-		margin-bottom: 1rem;
+
+	Link: styled.a`
+		color: #fff;
+		text-decoration: none;
+		margin: 0 10px;
 	`,
-	Image: styled.img.attrs((props) => ({
-		type: "text",
-		image: props.image,
-	}))`
-		width: 10%;
-		margin-bottom: 2rem;
-		@media ${UTILS.SCREEN.MOBILE} {
-			width: 20%;
-		}
+
+	Copyright: styled.div`
+		margin-left: 10px;
 	`,
 };

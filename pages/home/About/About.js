@@ -6,17 +6,8 @@ import { Styled } from "./styles.js";
 const About = () => {
 	return (
 		<Styled.Inner>
-			<Styled.Title>
-				<Styled.Highlight>
-					<br />
-					Desarrollo & Diseño
-				</Styled.Highlight>
-				<Styled.TextLine>
-					para la creación de soluciones digitales.
-				</Styled.TextLine>
-
-				<Styled.TextLine>Desde la idea hasta el lanzamiento.</Styled.TextLine>
-			</Styled.Title>
+			Somos diseñadores, programadores y estrategas ayudando a empresas y
+			emprendimientos a montar la ola digital.
 		</Styled.Inner>
 	);
 };

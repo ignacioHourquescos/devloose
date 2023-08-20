@@ -1,32 +1,18 @@
 import React from "react";
-import { Styled } from "./styles.js";
-import { useEffect } from "react";
-import { useState } from "react";
-import { AiFillLinkedin } from "react-icons/ai";
-import Link from "next/link.js";
+import { Styled } from "./styles";
 
-const Footer = (props) => {
-	const [color, setColor] = useState("red");
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setColor((prevColor) => (prevColor === "red" ? "blue" : "red"));
-		}, 5000);
-
-		return () => {
-			clearInterval(interval);
-		};
-	}, []);
+const Footer = () => {
 	return (
-		<Styled.Inner>
-			<Styled.Image src="./logo_blanco.png" />
-			<Styled.Punch>De la idea a la acción.</Styled.Punch>
-			<Styled.Text>Bs. As. Argentina</Styled.Text>
-			{/* <Styled.Text>hola@devloose.com</Styled.Text> */}
-
-			<Link href="https://www.linkedin.com/company/devloose">
-				<AiFillLinkedin size={35} />
-			</Link>
-		</Styled.Inner>
+		<Styled.FooterContainer>
+			<Styled.LeftSection>
+				<Styled.Link href="#">Contacto</Styled.Link>
+				<Styled.Link href="#">Política de privacidad</Styled.Link>
+			</Styled.LeftSection>
+			<Styled.RightSection>
+				<div>2023</div>
+				<Styled.Copyright>Propulz©️</Styled.Copyright>
+			</Styled.RightSection>
+		</Styled.FooterContainer>
 	);
 };
 

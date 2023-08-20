@@ -1,92 +1,39 @@
 import styled, { keyframes, css } from "styled-components";
 import UTILS from "../../../utils/utils";
-import { motion } from "framer-motion";
-import variants from "./animation";
 
-const dasharray = 1000;
-
-const dash = keyframes`
-  0%  {stroke-dashoffset: -800; opacity:0, }
-  99% {stroke-dashoffset: 0;    opacity:1;}
-  100%{stroke-dashoffset: 0;    opacity:1;}
-`;
-
-const animationPropulsion = (props) =>
-	css`
-		${dash} 1.5s ease-in forwards
-	`;
-
-export const StyledHeader = {
+export const Styled = {
 	Inner: styled.div`
-		height: 100vh;
-		width: 100vw;
-		display: flex;
-		justify-content: center;
-		align-content: center;
+		background-image: url("/propulz/background.png");
+		background-size: cover;
 
-		align-items: center;
-		position: relative;
-		overflow-x: hidden;
-		overflow-y: hidden;
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		padding: 20% 10%;
+
 		@media ${UTILS.SCREEN.MOBILE} {
 			overflow-x: hidden;
 			overflow-y: hidden;
 		}
 	`,
-
-	// prettier-ignore
-	Ball: styled(motion.div).attrs(() => ({variants}))`
-		position: absolute;
-		height: 200px;
-		width: 200px;
-
-		z-index: 100;
-		background-color: ${UTILS.COLORS.BLACK};
-	`,
-
-	// prettier-ignore
-	Rocket: styled(motion.div).attrs(() => ({variants}))`
-		position: absolute;
-		top: 50%;
-		left: 46.8%;
-		-webkit-animation-fill-mode: forwards;
-		z-index: 201;
-		margin-bottom: 2rem;
-		@media ${UTILS.SCREEN.MOBILE} {
-			top: 50%;
-			left: 37%;
-		}
-	`,
-
-	PropulsionContainer: styled.div`
-		position: absolute;
-		top: 31%;
-		left: 30;
-		z-index: 200;
-	`,
-
-	Propulsion: styled.path`
-		animation-delay: 4s;
-		opacity: 0;
-		animation: ${(props) => (props.animate ? animationPropulsion : "")};
-		animation-delay: ${(props) => (props.animate ? "1s" : "1s")};
-		stroke-dasharray: ${dasharray};
-		-webkit-animation-fill-mode: forwards;
-		z-index: 200;
-	`,
-
-	Launch: styled.div`
-		position: absolute;
-		top: 80%;
-		left: 30;
-		z-index: 200;
-	`,
-	Counter: styled.div`
-		width: 100%;
-		font-size: 2rem;
-		margin-left: 45%;
+	Title: styled.div`
+		font-size: 4rem;
 		color: white;
 		font-weight: bold;
-		margin-top: 2rem;
+		padding-right: 30%;
+		@media ${UTILS.SCREEN.MOBILE} {
+			overflow-x: hidden;
+			overflow-y: hidden;
+		}
+	`,
+	SubTitle: styled.div`
+		font-size: 2rem;
+		color: white;
+		font-weight: normal;
+		padding-right: 30%;
+		@media ${UTILS.SCREEN.MOBILE} {
+			overflow-x: hidden;
+			overflow-y: hidden;
+		}
 	`,
 };

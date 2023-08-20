@@ -4,55 +4,25 @@ import Head from "next/head";
 import Hero from "./home/Hero/Hero";
 import About from "./home/About/About";
 import ServiceCatalog from "./home/ServiceCatalog/ServiceCatalog";
-import Wave from "react-wavify";
-import Carrousel from "./home/carrousel/Carrousel.js";
+import Contact from "./home/contact/Contact.js";
+import Universe from "./home/universe/Universe.js";
 
 const Home = () => {
-	const [displayHome, setDisplayHome] = useState(false);
-	const [rendererReference, setRendererReference] = useState(false);
+	const [displayUniverse, setDisplayUniverse] = useState(false);
 
-	const displayHomeHandler = () => {
-		setDisplayHome(true);
+	const toggleUniverse = () => {
+		setDisplayUniverse((prev) => !prev);
 	};
-
-	const rendererHandler = (selectedMenuItem) => {
-		setRendererReference(selectedMenuItem);
-	};
-
 	return (
 		<>
-			{/* prettier-ignore */}
-			<Head>
-        {metaData}
-			</Head>
-			{rendererReference ? (
-				""
-			) : (
-				<>
-					<Hero />
-					{true && (
-						<Styled.Container>
-							{/* <div style={{ transform: "translateY(80px)" }}>
-								<Wave
-									fill="#190D2A"
-									paused={false}
-									options={{
-										height: 30,
-										amplitude: 30,
-										speed: 0.1,
-										points: 3,
-									}}
-								/>
-							</div> */}
-							<About />
-							{/* <Carrousel /> */}
-							<ServiceCatalog />
-						</Styled.Container>
-					)}
-				</>
-			)}
-
-			{displayHome && <>HOME</>}
+			<Head>{metaData}</Head>
+			<>
+				<Universe show={displayUniverse} />
+				<Hero />
+				<About />
+				<ServiceCatalog />
+				<Contact toggleUniverse={toggleUniverse} />
+			</>
 		</>
 	);
 };

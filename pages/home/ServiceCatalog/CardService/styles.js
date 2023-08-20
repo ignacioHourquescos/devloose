@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import UTILS from "../../../../utils/utils";
 
-export const StyledCard = {
+export const Styled = {
 	Inner: styled.div`
 		border: ${UTILS.DRAFT};
 		width: 30%;
@@ -13,7 +13,7 @@ export const StyledCard = {
 		justify-items: center;
 		justify-content: flex-start;
 		background: rgba(0, 0, 0, 0.05);
-		border-left: 8px solid rgba(0, 0, 0, 0.3);
+		/* border-left: 8px solid rgba(0, 0, 0, 0.3);  */
 
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 80%;
@@ -22,18 +22,23 @@ export const StyledCard = {
 		}
 	`,
 	Title: styled.div`
-		border: ${UTILS.DRAFT};
 		font-size: 1.5rem;
 		font-weight: bold;
 		margin: 10% 0;
-		padding: 0 8%;
+		padding: 0 10%;
+		width: 80%;
+		text-align: center;
+		color: white;
+		font-weight: normal;
 	`,
 	Description: styled.div`
 		border: ${UTILS.DRAFT};
-		font-size: 1.2rem;
+		font-size: 0.8;
 		margin-bottom: 0.5rem;
 		padding: 0 8%;
-		min-height: 30%;
+		min-height: 20%;
+		color: white;
+		font-weight: 100;
 	`,
 	BulletContainer: styled.div`
 		margin-left: 8%;
@@ -41,6 +46,7 @@ export const StyledCard = {
 	`,
 	Bullet: styled.div`
 		padding-bottom: 0.5rem;
+		color: white;
 	`,
 	Button: styled.button`
 		background-color: ${UTILS.COLORS.BLACK};
@@ -55,5 +61,9 @@ export const StyledCard = {
 			color: white;
 			cursor: pointer;
 		}
+	`,
+	Logo: styled.div`
+		padding: 0 auto;
+		margin: auto;
 	`,
 };

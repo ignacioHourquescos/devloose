@@ -3,6 +3,9 @@ import UTILS from "../../../utils/utils";
 export const Styled = {
 	Inner: styled.div`
 		padding: 5% 0;
+		background-image: url("/propulz/background.png");
+		background-size: cover;
+
 		@media ${UTILS.SCREEN.MOBILE} {
 			width: 100%;
 			padding: 0%;

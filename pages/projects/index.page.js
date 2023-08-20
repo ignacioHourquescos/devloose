@@ -6,10 +6,10 @@ import SubHeader from "../../components/common/sub-header/SubHeader";
 const Projects = (props) => {
 	return (
 		<Styled.Inner>
-			<SubHeader
+			{/* <SubHeader
 				title="Proyectos realizados"
 				subtitle="Conocé alguno de nuestros trabajos realizados"
-			></SubHeader>
+			></SubHeader> */}
 			<OurWork />
 		</Styled.Inner>
 	);
