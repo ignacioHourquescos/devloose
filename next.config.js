@@ -13,18 +13,7 @@ const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
 	output: "standalone",
-	pageExtensions: [
-		"mdx",
-		"md",
-		"jsx",
-		"js",
-		"tsx",
-		"ts",
-		"page.tsx",
-		"page.ts",
-		"page.jsx",
-		"page.js",
-	],
+	pageExtensions: ["page.tsx", "page.ts", "page.jsx", "page.js"],
 };
 
 module.exports = nextConfig;
