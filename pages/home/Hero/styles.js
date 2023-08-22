@@ -5,7 +5,7 @@ export const Styled = {
 	Inner: styled.div`
 		background-image: url("/propulz/background.png");
 		background-size: cover;
-
+		position: relative;
 		width: 80%;
 		display: flex;
 		flex-direction: column;

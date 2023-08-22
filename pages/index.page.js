@@ -5,20 +5,35 @@ import Hero from "./home/Hero/Hero";
 import About from "./home/About/About";
 import ServiceCatalog from "./home/ServiceCatalog/ServiceCatalog";
 import Contact from "./home/contact/Contact.js";
-import Universe from "./home/universe/Universe.js";
+import Universe from "./home/Hero/universe/Universe.js";
+import { useRef } from "react";
+import * as Scroll from "react-scroll";
+import {
+	Link,
+	Button,
+	Element,
+	Events,
+	animateScroll as scroll,
+	scrollSpy,
+	scroller,
+} from "react-scroll";
 
 const Home = () => {
 	const [displayUniverse, setDisplayUniverse] = useState(false);
+	const ref = useRef(null);
 
 	const toggleUniverse = () => {
 		setDisplayUniverse((prev) => !prev);
+		scroll.scrollTo("containerElement", {
+			duration: 1500,
+			smooth: "easeInOutQuad",
+		});
 	};
 	return (
 		<>
 			<Head>{metaData}</Head>
 			<>
-				<Universe show={displayUniverse} />
-				<Hero />
+				<Hero show={displayUniverse} />
 				<About />
 				<ServiceCatalog />
 				<Contact toggleUniverse={toggleUniverse} />

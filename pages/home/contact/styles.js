@@ -4,7 +4,7 @@ import UTILS from "../../../utils/utils";
 export const Styled = {
 	Inner: styled.div`
 		display: flex;
-		padding: 5% 10%;
+		padding: 15% 10%;
 		justify-content: space-between;
 		align-items: center;
 		color: #aeb6c7;

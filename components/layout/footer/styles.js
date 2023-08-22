@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 export const Styled = {
 	FooterContainer: styled.div`
-		background-image: url("/propulz/footer.png");
-		background-size: contain;
+		position: relative; /* Set position to relative */
+		background-color: #241b17; /* Brownish-black color */
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 5% 10%;
-
-		background-color: #333;
 		color: #fff;
 	`,
 
+	SvgContainer: styled.div`
+		transform: translateY(5px);
+		top: 0px; /* Adjust this value to control the curvature effect */
+	`,
 	LeftSection: styled.div`
 		display: flex;
 		align-items: center;
@@ -31,5 +33,10 @@ export const Styled = {
 
 	Copyright: styled.div`
 		margin-left: 10px;
+	`,
+	RocketContainer: styled.div`
+		position: fixed;
+		bottom: 5%;
+		left: 47.5%;
 	`,
 };
