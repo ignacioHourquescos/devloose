@@ -1,7 +1,7 @@
 const path = require("path");
 const withImages = require("next-images");
 
-const nextConfig = {
+module.exports = {
 	webpack(config) {
 		config.module.rules.push({
 			test: /\.svg$/,
@@ -10,10 +10,7 @@ const nextConfig = {
 
 		return config;
 	},
-	reactStrictMode: true,
-	swcMinify: true,
-	output: "standalone",
 	pageExtensions: ["page.tsx", "page.ts", "page.jsx", "page.js"],
 };
 
-module.exports = nextConfig;
+module.exports = withImages();
